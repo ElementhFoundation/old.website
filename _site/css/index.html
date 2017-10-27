@@ -1,115 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="autor" content="elementh">
 
     <title>CSS</title>
     <meta name="description" content="A Site Starter Materialize Templates for Jekyll" />
 
-  
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="/assets/materialize.css" />
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="/assets/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/slick-theme.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic" rel="stylesheet">
     <link rel="canonical" href="/css/" />
     <link rel="alternate" type="application/rss+xml" title="Starter Template" href="/feed.xml" />
   
     
 </head>
 
+<body>
 
-  <body>
+	<header>
+    <a href="#" class="logo icon" title="up"></a>
+    <a href="#" class="menu icon" title="menu"></a>
+    <img src="img/details/a_small.svg" class="angle left top">
+    <img src="img/details/a_small.svg" class="angle right bottom">
+    <div class="dots_bg"></div>
+</header>
 
-    <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo" href="/">Logo</a>
-    
-    
-
-          <ul class="right hide-on-med-and-down">
-            <li><a href="/">Home </a></li>
-            
-                
-                    
-                    
-                
-                    
-                    
-                    <li><a href="/Buttoms/">Buttons</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/css/">CSS</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/table/">Table</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/carousel/">Carousel</a></li>
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                          
-          </ul>
-
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Home</a></li>
-                            
-                
-                    
-                    
-                
-                    
-                    
-                    <li><a href="/Buttoms/">Buttons</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/css/">CSS</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/table/">Table</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/carousel/">Carousel</a></li>
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-             
-          </ul>        
-
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
-
-
-        <div class="container">
+	<div class="container">
 
     <h1 class="page-title">CSS</h1>
 
@@ -163,50 +85,43 @@
 </div>
 
 
-      <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <div>
-                Made by <a target="_blank" class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-                <span style="text-align: right; float: right">
-                Copyright © 2017 <a href="http://www.panoramedia.it" class="orange-text text-lighten-3">Marco Damiani</a>. Powered by <a target="_blank" href="http://jekyllrb.com/" class="orange-text text-lighten-3">Jekyll</a>
-                </span>
-            </div>
-        </div>
-    </div>
-</footer>
-      
-    <!--  Scripts-->                                                                               
+	<div id="display_bg"><div id="lines"></div></div>
+
+	<!--  Scripts-->                                                                               
 <script src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/js/slick.min.js"></script>
 <script src="/js/materialize.min.js"></script>
 <script src="/js/init.js"></script>
+<script type="text/javascript">$(document).ready(function(){$('.collapsible').collapsible();});</script>
+<script type="text/javascript">$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });</script>
+<script type="text/javascript">$('.slicker').slick({
+  centerMode: true,
+  centerPadding: '15px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '15px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '15px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});</script>
 
-  </body>
+</body>
 
 </html>

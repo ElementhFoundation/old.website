@@ -1,264 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="autor" content="elementh">
 
     <title>Starter Template</title>
     <meta name="description" content="A Site Starter Materialize Templates for Jekyll" />
 
-  
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="/assets/materialize.css" />
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="/assets/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/slick-theme.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic" rel="stylesheet">
     <link rel="canonical" href="/" />
     <link rel="alternate" type="application/rss+xml" title="Starter Template" href="/feed.xml" />
   
     
 </head>
 
+<body>
 
-  <body>
+	<header>
+    <a href="#" class="logo icon" title="up"></a>
+    <a href="#" class="menu icon" title="menu"></a>
+    <img src="img/details/a_small.svg" class="angle left top">
+    <img src="img/details/a_small.svg" class="angle right bottom">
+    <div class="dots_bg"></div>
+</header>
 
-    <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo" href="/">Logo</a>
-    
-    
+	<div id="content">
 
-          <ul class="right hide-on-med-and-down">
-            <li><a href="/">Home </a></li>
-            
-                
-                    
-                    
-                
-                    
-                    
-                    <li><a href="/Buttoms/">Buttons</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/css/">CSS</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/table/">Table</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/carousel/">Carousel</a></li>
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                          
-          </ul>
-
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Home</a></li>
-                            
-                
-                    
-                    
-                
-                    
-                    
-                    <li><a href="/Buttoms/">Buttons</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/css/">CSS</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/table/">Table</a></li>
-                    
-                
-                    
-                    
-                    <li><a href="/carousel/">Carousel</a></li>
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-             
-          </ul>        
-
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
-
-
-          <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light"><p>A Site Starter Materialize Templates for Jekyll.</p>
-</h5>
-      </div>
-        
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-      </div>
-      <br><br>
-
+  <div class="section" id="hero">
+    <img src="img/text_logo.svg" id="text_logo" title="elementh">
+    <p class="description">
+      <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
+    </p>
+    <a href="#" class="modal button">
+      <img src="img/details/a_medium.svg" class="angle left top">
+      SUBSCRIBE
+      <img src="img/details/a_medium.svg" class="angle right bottom">
+    </a>
+    <div>
+      <a href="#anchor" class="scroll icon"></a>
     </div>
   </div>
 
-  <div class="container">
-    <div class="section">
+  <div id="anchor"></div>
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+  <div class="section" id="features">
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image f1">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="bigdots_bg"></div>
           </div>
+          <p class="title">Systematization of goods</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
         </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Наряду с системой токенов, в блокчейне Elementh присутствует система
+          товаров, которая также может быть использована в большом количестве
+          приложений, таких как: отслеживание движения конкретного товара от его
+          создания до текущего владельца, отслеживание оригинальных товаров и
+          обнаружение поддельных. В отличие от системы токенов, система товаров
+          предусматривает также возможность “эмитирования” конкретного товара на
+          конкретном адресе, с указанием всевозможных данных по этому товару (таких
+          как название, производитель, штрихкод и т.д.). Причем если абсолютно такой
+          же товар уже присутствует в блокчейне, то эмитент получит сообщение об
+          этом, и у него останется возможность только лишь указать какое количество
+          единиц этого товара он хочет “эмитировать”.</p>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+          <p class="body">При наличии серийного номера продукта есть возможность указания его при
+          совершении операции трансфера. Для обеспечения защиты от подделывания
+          данных в системе фиксируется только хэш от серийного номера,
+          следовательно возможность совершить корректную транзакцию есть только у
+          лица, знающего исходный номер.</p>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          <p class="body">При отсутствии серийного номера в момент “эмитирования” товара система
+          генерирует его случайным образом и владелец получает возможность
+          использовать его для идентификации конкретной единицы товара распечатав
+          QR-код на упаковке, записав в RFID-метку или любым другим удобным
+          способом.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image f2">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="bigdots_bg"></div>
           </div>
+          <p class="title">Uniqueness of each product</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
         </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Каждый поставщик/дистрибьютор/продавец в мире имеет свой собственный
+          формат данных по товарам, и, что более важно, свою собственную
+          номенклатуру, причем их количество огромно и растет с каждым днем.</p>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          <p class="body">Очевидным решением данной проблемы является создание единой товарной
+          номенклатуры, что позволит пользователям видеть предложения по
+          интересующему их товару на одной товарной карточке, а магазинам выбирать
+          наиболее выгодного для них поставщика.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image f3">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="bigdots_bg"></div>
           </div>
+          <p class="title">Blockchain technology</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
         </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Сделки в цепочке блоков должны быть безопасными, однозначными и необратимыми, и совершаться настолько быстро, насколько это возможно, чтобы облегчить надежность и децентрализацию системы. На практике затруднения возникают в двух различных аспектах этого процесса: выборе уникального узла для производства блока и придание записи необратимого характера.</p>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="cases">
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header line">
+          <p class="title">Jack's shoes store</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Джеку, владельцу небольшого магазина, друзья рассказали о блокчейне Elementh и возможностях, которые он дает. Джек раньше ничего не продавал в интернете, ознакомившись с новыми возможностями, он решил что пора уже попробовать продавать их обувь через блокчейн Elementh, используя специальные приложения для продавцов. Создание магазина оказалось совсем простым и заняло несколько минут.</p>
+
+          <p class="body">Подключив свою программу по учету остатков к приложению, Джеку удалось распознать все остатки и привязать их к единой номенклатуре с красивыми карточками товаров с полными данными по характеристикам продуктов. Информация о товарах Джека сразу стала доступна для всех участник сети Elementh. Стив, увидев, что появился магазин рядом с ним с нужными ему ботинками, сразу оформил заказ, а Джеку пришло оповещение что его ботинки хотят купить. Деньги от клиента сразу зачислены на смарт контракт, а это значит что заказ настоящий. Быстро оформив доставку товара Стиву, Джек принялся за свой привычный труд в магазине. Как только курьер отвез товар, средства моментально поступили на счет Джека, а это значит что он может не ждать долгого зачисления денег от процессинга и сразу вложить полученную выручку в новый товар.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header line">
+          <p class="title">Jack's shoes storeJack and the problems of counterfeiting</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Однажды Джек захотел расширить ассортимент и вместе с обувью торговать еще и брендовыми сумками. Не долго думая, он открыл b2b приложение по поиску поставщиков и производителей, работающее на блокчейне Elementh, и нашел производителя сумок LOUIS VUITTON, разместил заказ, внеся за него криптовалюту на смарт контракт.</p>
+
+          <p class="body">Поставщик, получив информацию о заказе Джека, сразу сформировал отправку и перевел данные о серийных номерах на смарт контракт,теперь в момент когда состоится сделка, все смогут проверить что у Джека в магазине находятся настоящие сумки LOUIS VUITTON, а не подделка, потому что в сети Elementh каждый производитель может отслеживать движение товара и, если появляется несколько владельцев одного серийного номера одного товара, значит появился контрафакт, и его происхождение очень легко отследить и принять нужные меру по оповещению клиентов о его существовании.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header line">
+          <p class="title">Happy Steve</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Стив уже давно пользуется приложениями по поиску самой низкой цены во всем мире на нужный ему товар. Сегодня он решил, что настало время заказать новую обувь, буквально за несколько минут он нашел нужную ему пару в магазине Джека и разместил заказ, отправив деньги на смарт контракт. Стив уже давно не боится совершать покупки онлайн и отправлять деньги неизвестным ему продавцам, так как в случае если Стив не получит товар, он просто укажет это в смарт контракте и деньги вернутся ему.</p>
+
+          <p class="body">В этот раз его заказ был обработан практически моментально и курьер приехал уже через час, убедившись в том что обувь нужного качества Стив завершил смарт контракт и деньги отправились Джеку, а Стив стал владельцем новой пары обуви. Он сможет с легкостью продать эту пару обуви на вторичном рынке, как только она ему надоест, ведь сети Elementh известно что у него настоящий товар, а не контрафакт, и буквально в два клика он сможет выставить его на продажу.</p>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="dapps">
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header line number">
+          <p class="number">1</p>
+          <p class="title">Decentralized marketplaces</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header line number">
+          <p class="number">2</p>
+          <p class="title">Tracking the movement of goods</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header line number">
+          <p class="number">3</p>
+          <p class="title">Search for products by location</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header line number">
+          <p class="number">4</p>
+          <p class="title">Decentralized sending of messages</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="mission">
+    <div class="titleblock">
+      <div class="liner"></div>
+      <p class="title block">Mission</p>
+      <div class="liner right"></div>
+    </div>
+    <p class="body">
+      <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+    </p>
+  </div>
+
+  <div class="section" id="team"><a href="#close" class="icon close" title="Close"></a>
+
+  <div class="slicker">
+
+    <a href="#person1" class="item"><div id="person1" class="person">
+
+      <div class="image t1">
+        <img src="img/details/star.svg" class="star left top"><img src="img/details/star.svg" class="star right top">
+        <img src="img/details/star.svg" class="star left bottom"><img src="img/details/star.svg" class="star right bottom">
+        <div class="alldots_bg"></div><div class="dots_bg"></div>
       </div>
 
-    </div>
-      
-    </div>
-    <div style="background: #ddd">
-    <div class="container last-post">
-    <section>
-        <h5>Latest Post</h5>
-        <ul class="collection">
-        
-        <li class="collection-item avatar">
-          
-          <div class="date-post">05/20</div>
-          <span class="title"><a class="post-link" href="/2016/05/20/welcome-to-jekyll.html">Welcome To Jekyll</a></span>
-          <p>
-             <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go...
-          </p>
-          <a href="/2016/05/20/welcome-to-jekyll.html" class="secondary-content"><i class="material-icons">navigate_next</i></a>
-        </li>
-        
-        <li class="collection-item avatar">
-          
-          <div class="date-post">05/20</div>
-          <span class="title"><a class="post-link" href="/junk/2016/05/20/this-post-demonstrates-post-content-styles.html">This post demonstrates post content styles</a></span>
-          <p>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum...
-          </p>
-          <a href="/junk/2016/05/20/this-post-demonstrates-post-content-styles.html" class="secondary-content"><i class="material-icons">navigate_next</i></a>
-        </li>
-        
-        <li class="collection-item avatar">
-          
-          <div class="date-post">05/20</div>
-          <span class="title"><a class="post-link" href="/misc/2016/05/20/super-long-article.html">Some articles are just so long they deserve a really long title to see if things will break well</a></span>
-          <p>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum...
-          </p>
-          <a href="/misc/2016/05/20/super-long-article.html" class="secondary-content"><i class="material-icons">navigate_next</i></a>
-        </li>
-        
-        <li class="collection-item avatar">
-          
-          <div class="date-post">05/20</div>
-          <span class="title"><a class="post-link" href="/2016/05/20/my-example-post.html">My Example Post</a></span>
-          <p>
-             <p>Eos eu docendi tractatos sapientem, brute option menandri in vix,...
-          </p>
-          <a href="/2016/05/20/my-example-post.html" class="secondary-content"><i class="material-icons">navigate_next</i></a>
-        </li>
-        
-        </ul>  
-    </section>
-    </div>
+      <img src="img/icon/ic_more.svg" class="more right bottom" title="more"><div class="liner"></div>
+
+      <p class="name">Sergey Ryabov</p>
+      <p class="role">CEO</p>
+
+      <a href="/" target="_blank" class="linkedin icon button">
+        <img src="img/details/a_small.svg" class="angle left top">
+        <img src="img/details/a_small.svg" class="angle right top">
+        <img src="img/details/a_small.svg" class="angle right bottom">
+        <img src="img/details/a_small.svg" class="angle left bottom">
+      </a>
+
+      <p class="body">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+      </p>
+
+    </div></a>
+
+    <a href="#person2" class="item"><div id="person2" class="person">
+
+      <div class="image t1">
+        <img src="img/details/star.svg" class="star left top"><img src="img/details/star.svg" class="star right top">
+        <img src="img/details/star.svg" class="star left bottom"><img src="img/details/star.svg" class="star right bottom">
+        <div class="alldots_bg"></div><div class="dots_bg"></div>
+      </div>
+
+      <img src="img/icon/ic_more.svg" class="more right bottom" title="more"><div class="liner"></div>
+
+      <p class="name">Dmitriy Bereznitskiy</p>
+      <p class="role">CTO</p>
+
+      <a href="/" target="_blank" class="linkedin icon button">
+        <img src="img/details/a_small.svg" class="angle left top">
+        <img src="img/details/a_small.svg" class="angle right top">
+        <img src="img/details/a_small.svg" class="angle right bottom">
+        <img src="img/details/a_small.svg" class="angle left bottom">
+      </a>
+
+      <p class="body">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+      </p>
+
+    </div></a>
+
+  </div>
+
 </div>
 
+  <div class="section" id="advisors">
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image a1">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">Eli Taranto</p>
+          <p class="subhead twoline">Security Advisor</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="linkedin icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">Linkedin</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image a2">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">Cecilia Mueller Chen</p>
+          <p class="subhead twoline">Compliance Advisor</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="linkedin icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">Linkedin</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image a3">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">Abhijith Naraparaju</p>
+          <p class="subhead twoline">Blockchain Solution Architect</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="linkedin icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">Linkedin</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image a4">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">Sandris Murins</p>
+          <p class="subhead twoline">CTO of LAT Back Office</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="linkedin icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">Linkedin</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
+        </div>
+      </li>
+    </ul>
   </div>
 
-      <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+  <div class="section" id="meetup">
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image m1">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">BlockChain at Acronis</p>
+          <p class="subhead threeline">New York, USA</p>
+          <p class="subhead data threeline">Sep 8, 2017</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="facebook icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">BlockChain at Acronis</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image m2">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">Crypto 2020</p>
+          <p class="subhead threeline">Singapore</p>
+          <p class="subhead data threeline">Sep 11, 2017</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
         </div>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="facebook icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">Crypto 2020</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image m3">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">Blockchain & Tokens</p>
+          <p class="subhead threeline">London, UK</p>
+          <p class="subhead data threeline">Sep 12, 2017</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="facebook icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">Blockchain & Tokens</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header pic">
+          <div class="image m4">
+            <img src="img/details/star.svg" class="star left top">
+            <img src="img/details/star.svg" class="star right top">
+            <img src="img/details/star.svg" class="star left bottom">
+            <img src="img/details/star.svg" class="star right bottom">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+            <div class="alldots_bg"></div>
+          </div>
+          <p class="title twoline">ICO Summit in Zurich</p>
+          <p class="subhead threeline">Zürich</p>
+          <p class="subhead data threeline">Oct 2, 2017</p>
+          <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+        </div>
+        <div class="collapsible-body">
+          <span>
+          <a href="/" target="_blank" class="facebook icon button">
+            <img src="img/details/a_small.svg" class="angle left top">
+            <img src="img/details/a_small.svg" class="angle right top">
+            <img src="img/details/a_small.svg" class="angle right bottom">
+            <img src="img/details/a_small.svg" class="angle left bottom">
+          </a>
+          <p class="title link">ICO Summit in Zurich</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="media">
+    <ul>
+      <li><a href="/" target="_blank">
+        <div class="collapsible-header line pic">
+          <div class="image me1">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+          </div>
+          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+          <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
+          <p class="title twoline">Elementh it's future</p>
+          <p class="subhead twoline">Foxico's report</p>
+        </div>
+      </a></li>
+      <li><a href="/" target="_blank">
+        <div href="/" target="_blank" class="collapsible-header line pic">
+          <div class="image me2">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+          </div>
+          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+          <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
+          <p class="title twoline">Future is coming</p>
+          <p class="subhead twoline">Foxico's report</p>
+        </div>
+      </a></li>
+      <li><a href="/" target="_blank">
+        <div href="/" target="_blank" class="collapsible-header line pic">
+          <div class="image me3">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+          </div>
+          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+          <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
+          <p class="title twoline">Ahoolee2: reborn</p>
+          <p class="subhead twoline">Foxico's report</p>
+        </div>
+      </a></li>
+      <li><a href="/" target="_blank">
+        <div href="/" target="_blank" class="collapsible-header line pic">
+          <div class="image me4">
+            <img src="img/details/quadr.svg" class="quadr left top">
+            <img src="img/details/quadr.svg" class="quadr right top">
+            <img src="img/details/quadr.svg" class="quadr left bottom">
+            <img src="img/details/quadr.svg" class="quadr right bottom">
+          </div>
+          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+          <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
+          <p class="title twoline">How i buy car</p>
+          <p class="subhead twoline">Foxico's report</p>
+        </div>
+      </a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="contact">
+    <div class="titleblock">
+      <div class="liner"></div>
+      <p class="title block">Join us</p>
+      <div class="liner right"></div>
+    </div>
+    <form id="sbmt">
+      <img src="img/details/a_medium.svg" class="angle left top">
+      <img src="img/details/a_medium.svg" class="angle right bottom">
+      <div>
+        <div class="inputdiv"><input type="email" form="sbmt" name="email" placeholder="Your Email" required></div>
+        <button type="submit" form="sbmt" class="top right"><img src="img/icon/ic_submit.svg" class="icon"></button>
       </div>
+    </form>
+    <p class="description">
+      <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
+    </p>
+    <div class="iconpack">
+    <a href="/" target="_blank" class="telegram icon button link">
+      <img src="img/details/a_small.svg" class="angle left top">
+      <img src="img/details/a_small.svg" class="angle right top">
+      <img src="img/details/a_small.svg" class="angle right bottom">
+      <img src="img/details/a_small.svg" class="angle left bottom">
+    </a>
+    <a href="/" target="_blank" class="facebook icon button link">
+      <img src="img/details/a_small.svg" class="angle left top">
+      <img src="img/details/a_small.svg" class="angle right top">
+      <img src="img/details/a_small.svg" class="angle right bottom">
+      <img src="img/details/a_small.svg" class="angle left bottom">
+    </a>
+    <a href="/" target="_blank" class="twitter icon button link">
+      <img src="img/details/a_small.svg" class="angle left top">
+      <img src="img/details/a_small.svg" class="angle right top">
+      <img src="img/details/a_small.svg" class="angle right bottom">
+      <img src="img/details/a_small.svg" class="angle left bottom">
+    </a>
+    <a href="/" target="_blank" class="email icon button link">
+      <img src="img/details/a_small.svg" class="angle left top">
+      <img src="img/details/a_small.svg" class="angle right top">
+      <img src="img/details/a_small.svg" class="angle right bottom">
+      <img src="img/details/a_small.svg" class="angle left bottom">
+    </a>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <div>
-                Made by <a target="_blank" class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-                <span style="text-align: right; float: right">
-                Copyright © 2017 <a href="http://www.panoramedia.it" class="orange-text text-lighten-3">Marco Damiani</a>. Powered by <a target="_blank" href="http://jekyllrb.com/" class="orange-text text-lighten-3">Jekyll</a>
-                </span>
-            </div>
-        </div>
-    </div>
-</footer>
-      
-    <!--  Scripts-->                                                                               
+  </div>
+
+  <footer><p class="subhead">© 2017 Elementh, All rights reserved.</p></footer>
+
+</div>
+
+	<div id="display_bg"><div id="lines"></div></div>
+
+	<!--  Scripts-->                                                                               
 <script src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/js/slick.min.js"></script>
 <script src="/js/materialize.min.js"></script>
 <script src="/js/init.js"></script>
+<script type="text/javascript">$(document).ready(function(){$('.collapsible').collapsible();});</script>
+<script type="text/javascript">$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });</script>
+<script type="text/javascript">$('.slicker').slick({
+  centerMode: true,
+  centerPadding: '15px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '15px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '15px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});</script>
 
-  </body>
+</body>
 
 </html>
