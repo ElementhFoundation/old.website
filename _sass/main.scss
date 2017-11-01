@@ -4,7 +4,7 @@ html, body {
 	height: 100%;
 	font-family: 'Play', Helvetica, sans-serif;
 	letter-spacing: .2px;
-	background-color: #000;
+	background-color: #FFF;
 	color: rgba(255,255,255,.8);
 	margin: 0px !important;
 	padding: 0px !important;
@@ -37,22 +37,27 @@ a:link, a:active, a:visited {
 
 /*-------------- BG --------------*/
 
-#display_bg, #lines, .dots_bg {
+.display_bg, .lines, .dots_bg, .bigdots_bg, .alldots_bg {
 	width: 100%;
 	height: 100%;
+}
+
+.display_bg, .lines, .dots_bg {
 	position: fixed;
 	top: 0px;
 	left: 0px;
 }
 
-#display_bg {
-	background-image: url(../img/bg/bg_mobile.jpg);
-	background-size: cover;
-	background-position: 50% 50%;
+.display_bg {
+	background: {
+		image: url(../img/bg/bg_mobile.jpg);
+		size: cover;
+		position: 50% 50%;
+	}
 	z-index: 0;
 }
 
-#lines {
+.lines {
 	background: transparent url(../img/bg/lines.svg) repeat top left;
 	opacity: .2;
 }
@@ -63,9 +68,7 @@ a:link, a:active, a:visited {
 	opacity: .3;
 }
 
-.bigdots_bg, .alldots_bg {
-	width: 100%;
-	height: 100%;
+.bigdots_bg {
 	background: transparent url(../img/bg/bigdots.svg) repeat top left;
 }
 
@@ -73,85 +76,65 @@ a:link, a:active, a:visited {
 	background: transparent url(../img/bg/alldots.svg) repeat top left;
 }
 
-/*------------ ANGLES ------------*/
+.grid {
+	background: transparent url(../img/bg/grid.svg) repeat top left;
+}
+
+/*------------ DETAILS ------------*/
 
 .angle, .more, .star, .quadr {
 	position: absolute;
 	opacity: .4;
 }
 
-.top {
-	top: 0px;
+.top { top: 0px; }
+
+.right { right: 0px; }
+
+.bottom { bottom: 0px; }
+
+.left { left: 0px; }
+
+.star {
+	&.top { top: 12px; }
+	&.right { right: 12px; }
+	&.bottom { bottom: 12px; }
+	&.left { left: 12px; }
 }
 
-.right {
-	right: 0px;
+.quadr {
+	&.top { top: -2px; }
+	&.right { right: -2px; }
+	&.bottom { bottom: -2px; }
+	&.left { left: -2px; }
 }
 
-.bottom {
-	bottom: 0px;
-}
-
-.left {
-	left: 0px;
-}
-
-.star.top {
-	top: 12px;
-}
-
-.star.right {
-	right: 12px;
-}
-
-.star.bottom {
-	bottom: 12px;
-}
-
-.star.left {
-	left: 12px;
-}
-
-.quadr.top {
-	top: -2px;
-}
-
-.quadr.right {
-	right: -2px;
-}
-
-.quadr.bottom {
-	bottom: -2px;
-}
-
-.quadr.left {
-	left: -2px;
-}
-
-.angle.right.top {
-	-webkit-transform: rotate(90deg);
-	   -moz-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		 -o-transform: rotate(90deg);
-			transform: rotate(90deg);
-}
-.angle.left.bottom {
+.angle {
+	&.right.top {
+		-webkit-transform: rotate(90deg);
+		   -moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			 -o-transform: rotate(90deg);
+				transform: rotate(90deg);
+	}
+	&.left.bottom {
 	-webkit-transform: rotate(-90deg);
 	   -moz-transform: rotate(-90deg);
 		-ms-transform: rotate(-90deg);
 		 -o-transform: rotate(-90deg);
 			transform: rotate(-90deg);
-}
-.angle.right.bottom {
+	}
+	&.right.bottom {
 	-webkit-transform: rotate(180deg);
 	   -moz-transform: rotate(180deg);
 		-ms-transform: rotate(180deg);
 		 -o-transform: rotate(180deg);
 			transform: rotate(180deg);
+	}
 }
 
 .liner {
-	width: 33%;
+	width: 100%;
 	height: 0px;
 	position: absolute;
 	top: 8px;
@@ -159,12 +142,38 @@ a:link, a:active, a:visited {
 	border-top: dotted 1px #ffffff;
 }
 
+#menu ul li.liner {
+	width: 100%;
+	height: 0px;
+	position: relative;
+	top: 0px;
+	margin: 31px 0 31px 0;
+}
+
 /*------------- ICON -------------*/
 
 .icon {
 	margin: 12px;
 	opacity: .7;
-	z-index: 3;
+}
+
+.icon:hover,.icon.button:hover,.button:hover, li:active, .item:active, #menu ul li:hover {
+	background-color: rgba(255,255,255,.25);
+}
+
+.logo {
+	width: 33px;
+	height: 33px;
+	position: absolute;
+	margin: 8px;
+	background: url(../img/icon/ic_logo.svg)  center center no-repeat;
+	z-index: 2;
+}
+
+.icon.logo:hover, .icon.menu:hover, .icon.close:hover {
+	width: 49px;
+	height: 49px;
+	margin: 0;
 }
 
 .more {
@@ -185,8 +194,21 @@ a:link, a:active, a:visited {
 	float: left;
 }
 
+.menu, .close {
+	width: 25px;
+	height: 25px;
+	position: fixed;
+	top: 16px;
+	right: 15px;
+}
+
+.menu {
+	background: url(../img/icon/ic_menu.svg)  center center no-repeat;
+}
+
 .close {
 	background: url(../img/icon/ic_close.svg)  center center no-repeat;
+	z-index: 2;
 }
 
 .linkedin {
@@ -233,7 +255,6 @@ a:link, a:active, a:visited {
 	height: 49px;
 	padding-top: 16px;
 	font-size: 24px;
-	background-color: rgba(255,255,255,.1);
 }
 
 .collapsible li {
@@ -244,7 +265,7 @@ li {
 	margin: 0px 15px 31px 16px;
 }
 
-.collapsible-header, .collapsible-body, .image {
+.button, .collapsible-header, .collapsible-body, .person, .image {
 	position: relative;
 	background-color: rgba(255,255,255,.1);
 }
@@ -254,7 +275,6 @@ li {
 }
 
 .image {
-	position: absolute;
 	width: 129px;
 	background-size: cover;
 	opacity: .75;
@@ -271,19 +291,6 @@ li {
 
 .line.pic .image {
 	width: 81px;
-}
-
-.person {
-	position: relative;
-	width: 193px;
-	height: 337px;
-	margin-right: 15px;
-	background-color: rgba(255,255,255,.1);
-}
-
-.person .image {
-	width: 193px;
-	height: 257px;
 }
 
 .title {
@@ -314,25 +321,6 @@ li {
 		 -o-transform: none;
 			transform: none;
 	text-align: center;
-}
-
-.name {
-	position: absolute;
-	bottom: 45px;
-	font-size: 18px;
-	line-height: 24px;
-	margin-left: 8px;
-	margin-right: 8px;
-}
-
-.role {
-	position: absolute;
-	bottom: 13px;
-	font-size: 16px;
-	line-height: 24px;
-	margin-left: 8px;
-	margin-right: 8px;
-	opacity: .75;
 }
 
 .title.twoline {
@@ -406,7 +394,7 @@ li {
 
 #mission .body {
 	position: relative;
-	margin: 16px 15px 15px 16px;
+	margin: 0px 15px 15px 16px;
 	padding: 32px 31px 33px 32px;
 	text-align: left;
 }
@@ -454,21 +442,52 @@ header {
 	z-index: 3;
 }
 
-.logo {
-	width: 33px;
-	height: 33px;
-	position: absolute;
-	margin: 8px;
-	background: url(../img/icon/ic_logo.svg)  center center no-repeat;
+#menu {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	overflow: auto;
+	z-index: 10;
+
 }
 
-.menu {
-	width: 25px;
-	height: 25px;
-	position: fixed;
-	top: 16px;
-	right: 15px;
-	background: url(../img/icon/ic_menu.svg)  center center no-repeat;
+#menu ul {
+	padding: 96px 15px 0px 16px;
+	background: transparent url(../img/bg/grid.svg) repeat top left;
+}
+
+#menu .display_bg {
+	z-index: -1;
+}
+
+#menu ul li {
+	margin: 0px;
+	margin-bottom: 15px;
+}
+
+#menu ul li a {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 17px;
+	padding: 16px 0;
+	background-color: rgba(255,255,255,.1);
+}
+
+#menu ul li a p {
+	margin-left: 16px;
+}
+
+#menu:target, #menu:target a.icon.close {
+	display: block;
+
+}
+
+#menu:target + #content {
+	display: none;
 }
 
 /*------------ FOOTER ------------*/
@@ -492,18 +511,25 @@ footer .subhead {
 #content {
 	width: 100%;
 	position: absolute;
-	background: transparent url(../img/bg/grid.svg) repeat top left;
 	z-index: 2;
 }
 
 .section {
-	margin-top: 112px;
+	margin-top: 31px;
+}
+
+.anchor {
+	height: 52px;
+	padding: 22px 88px;
+	font-size: 32px;
+	color: #fff;
 }
 
 /*----- HERO -----*/
 
-#hero {
+#hero{
 	text-align: center;
+	margin-top: 112px;
 }
 
 #text_logo {
@@ -520,10 +546,6 @@ footer .subhead {
 	background: url(../img/icon/ic_scroll.svg)  center center no-repeat;
 }
 
-#anchor {
-	margin-top: 16px;
-}
-
 /*--- PROBLEMS ---*/
 
 #problems {
@@ -532,6 +554,7 @@ footer .subhead {
 /*--- FEATURES ---*/
 
 #features {
+	margin-top: 32px;
 }
 
 .image.f1 {
@@ -548,8 +571,17 @@ footer .subhead {
 
 /*---- CASES ----*/
 
-#cases, #dapps, #mission, #team, #advisors, #meetup, #media, #contact {
-	margin-top: 111px;
+#cases {
+}
+
+/*---- DAPPS ----*/
+
+#dapps {
+}
+
+/*--- MISSION ---*/
+
+#mission {
 }
 
 /*----- TEAM -----*/
@@ -559,6 +591,10 @@ footer .subhead {
 
 .image.t1 {
 	background-image: url(../img/advisors/a_1.png);
+}
+
+#person1:target a .t1 {
+	background-image: url(../img/team/t_1c.jpg);
 }
 
 .image.t2 {
@@ -573,12 +609,79 @@ footer .subhead {
 	background-image: url(../img/advisors/a_1.png);
 }
 
-.item {
-	float: left;
+.personmodal {
+	position: absolute;
+}
+
+.person, .person .image, .personmodal {
+	width: 193px;
+	height: 337px;
+}
+
+.person .image {
+	height: 257px;
+}
+
+.name, .role {
+	font-size: 18px;
+	line-height: 24px;
+	margin: 10px 8px;
+}
+
+.role {
+	font-size: 16px;
+	opacity: .75;
 }
 
 .person a.icon.button, .person .liner, .person .body, .close, .person .image .dots_bg {
 	display: none;
+}
+
+#person1:target {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-image: url(../img/bg/bg_mobile.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+	overflow: auto;
+	z-index: 100;
+
+	.close {
+		display: block;
+	}
+
+	.personmodal {
+		width: 100%;
+
+		.image {
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+
+			.quadr, .alldots_bg {
+				display: none;
+			}
+
+			.dots_bg {
+				display: block;
+				opacity: 0.2;
+			}
+		}
+
+		.more {
+			display: none;
+		}
+
+		.name {
+	margin: 10px 8px;
+		}
+
+	}
+
+	
 }
 
 /*--- ADVISORS ---*/
@@ -623,9 +726,9 @@ footer .subhead {
 	background-image: url(../img/meetup/m_1.jpeg);
 }
 
-/*---- MEETUP ----*/
+/*---- MEDIA ----*/
 
-#meetup {
+#media {
 }
 
 .image.me1 {

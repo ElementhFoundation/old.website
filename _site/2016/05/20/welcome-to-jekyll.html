@@ -10,12 +10,10 @@
     <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa..." />
 
     <link rel="stylesheet" type="text/css" href="/assets/main.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/slick-theme.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="canonical" href="/2016/05/20/welcome-to-jekyll.html" />
+    <link rel="canonical" href="http://localhost:4000/2016/05/20/welcome-to-jekyll.html" />
     <link rel="alternate" type="application/rss+xml" title="Starter Template" href="/feed.xml" />
   
     
@@ -23,13 +21,95 @@
 
 <body>
 
+	<div class="display_bg"><div class="lines"></div></div>
+
+	<a href="#team" class="icon close" title="Close"></a>
+
 	<header>
-    <a href="#" class="logo icon" title="up"></a>
-    <a href="#" class="menu icon" title="menu"></a>
-    <img src="img/details/a_small.svg" class="angle left top">
-    <img src="img/details/a_small.svg" class="angle right bottom">
-    <div class="dots_bg"></div>
+	<a href="#" class="logo icon" title="up"></a>
+	<a href="#menu" class="menu icon" title="menu"></a>
+	<img src="img/details/a_small.svg" class="angle left top">
+	<img src="img/details/a_small.svg" class="angle right bottom">
+	<div class="dots_bg"></div>
 </header>
+
+<nav id="menu">
+	<a href="#" class="icon close" title="Close"></a>
+	<ul>
+		<li>
+			<a href="/" target="_blank">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Whitepaper</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li class="liner"></li>
+		<li>
+			<a href="#features">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Features</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#cases">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Cases</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#dapps">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Dapps</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#mission">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Mission</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#team">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Team</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#advisors">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Advisors</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#meetup">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Meetups</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#media">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Media</p>
+					<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+		<li>
+			<a href="#contact">
+				<img src="img/details/a_small.svg" class="angle left top">
+				<p>Contacts</p>
+				<img src="img/details/a_small.svg" class="angle right bottom">
+			</a>
+		</li>
+	</ul>
+	<div class="display_bg"><div class="lines"></div></div>
+</nav>
 
 	<div class="container">
     <div class="section">
@@ -69,42 +149,12 @@
 </div>
 <script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>
 
-	<div id="display_bg"><div id="lines"></div></div>
-
 	<!--  Scripts-->                                                                               
 <script src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="/js/slick.min.js"></script>
 <script src="/js/materialize.min.js"></script>
 <script src="/js/init.js"></script>
 <script type="text/javascript">$(document).ready(function(){$('.collapsible').collapsible();});</script>
 <script type="text/javascript">$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });</script>
-<script type="text/javascript">$('.slicker').slick({
-  centerMode: true,
-  centerPadding: '15px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '15px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '15px',
-        slidesToShow: 1
-      }
-    }
-  ]
-});</script>
 
 </body>
 
