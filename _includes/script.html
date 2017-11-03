@@ -1,6 +1,23 @@
 <!--  Scripts-->                                                                               
+
+
 <script src="{{ "js/jquery.min.js" | relative_url }}"></script>
 <script src="{{ "js/materialize.min.js" | relative_url }}"></script>
 <script src="{{ "js/init.js" | relative_url }}"></script>
 <script type="text/javascript">$(document).ready(function(){$('.collapsible').collapsible();});</script>
-<script type="text/javascript">$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });</script>
+<script type="text/javascript">
+$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });
+</script>
+
+<script src="/js/flickity.pkgd.js"></script>
+
+<script type="text/javascript">
+$('.main-carousel').flickity({
+	// options
+	freeScroll: true,
+	contain: true,
+	prevNextButtons: false,
+	pageDots: false,
+	cellAlign: 'left'
+});
+</script>

@@ -9,6 +9,8 @@
     <title>Buttons</title>
     <meta name="description" content="A Site Starter Materialize Templates for Jekyll" />
 
+    <link rel="stylesheet" href="/assets/flickity.css" media="screen">
+
     <link rel="stylesheet" type="text/css" href="/assets/main.css" />
     <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet">
@@ -23,7 +25,79 @@
 
 	<div class="display_bg"><div class="lines"></div></div>
 
-	<a href="#team" class="icon close" title="Close"></a>
+	<div id="personmodal">
+
+	<div class="personmodal" id="person1">
+		<div class="grid"><div class="image t1">
+	<img src="img/details/star.svg" class="star left top">
+	<img src="img/details/star.svg" class="star right top">
+	<img src="img/details/star.svg" class="star left bottom">
+	<img src="img/details/star.svg" class="star right bottom">
+	<img src="img/details/quadr.svg" class="quadr left top">
+	<img src="img/details/quadr.svg" class="quadr right top">
+	<img src="img/details/quadr.svg" class="quadr left bottom">
+	<img src="img/details/quadr.svg" class="quadr right bottom">
+	<div class="alldots_bg"></div>
+	<div class="dots_bg"></div>
+</div>
+
+<p class="firstline">Sergey Ryabov</p>
+<p class="secondline">CEO</p>
+
+<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+
+<a href="/" target="_blank" class="linkedin icon button">
+	<img src="img/details/a_small.svg" class="angle left top">
+	<img src="img/details/a_small.svg" class="angle right top">
+	<img src="img/details/a_small.svg" class="angle right bottom">
+	<img src="img/details/a_small.svg" class="angle left bottom">
+</a>
+
+<div class="liner"></div>
+
+<p class="body">
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+</p></div>
+		<a href="#team" class="icon close" title="Close"></a>
+		<div class="display_bg"><div class="lines"></div></div>
+	</div>
+
+	<div class="personmodal" id="person2">
+		<div class="grid"><div class="image t1">
+	<img src="img/details/star.svg" class="star left top">
+	<img src="img/details/star.svg" class="star right top">
+	<img src="img/details/star.svg" class="star left bottom">
+	<img src="img/details/star.svg" class="star right bottom">
+	<img src="img/details/quadr.svg" class="quadr left top">
+	<img src="img/details/quadr.svg" class="quadr right top">
+	<img src="img/details/quadr.svg" class="quadr left bottom">
+	<img src="img/details/quadr.svg" class="quadr right bottom">
+	<div class="alldots_bg"></div>
+	<div class="dots_bg"></div>
+</div>
+
+<p class="firstline">Sergey Ryabov</p>
+<p class="secondline">CEO</p>
+
+<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+
+<a href="/" target="_blank" class="linkedin icon button">
+	<img src="img/details/a_small.svg" class="angle left top">
+	<img src="img/details/a_small.svg" class="angle right top">
+	<img src="img/details/a_small.svg" class="angle right bottom">
+	<img src="img/details/a_small.svg" class="angle left bottom">
+</a>
+
+<div class="liner"></div>
+
+<p class="body">
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+</p></div>
+		<a href="#team" class="icon close" title="Close"></a>
+		<div class="display_bg"><div class="lines"></div></div>
+	</div>
+
+</div>
 
 	<header>
 	<a href="#" class="logo icon" title="up"></a>
@@ -35,7 +109,7 @@
 
 <nav id="menu">
 	<a href="#" class="icon close" title="Close"></a>
-	<ul>
+	<ul class="grid">
 		<li>
 			<a href="/" target="_blank">
 				<img src="img/details/a_small.svg" class="angle left top">
@@ -167,11 +241,28 @@
 
 
 	<!--  Scripts-->                                                                               
+
+
 <script src="/js/jquery.min.js"></script>
 <script src="/js/materialize.min.js"></script>
 <script src="/js/init.js"></script>
 <script type="text/javascript">$(document).ready(function(){$('.collapsible').collapsible();});</script>
-<script type="text/javascript">$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });</script>
+<script type="text/javascript">
+$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });
+</script>
+
+<script src="/js/flickity.pkgd.js"></script>
+
+<script type="text/javascript">
+$('.main-carousel').flickity({
+	// options
+	freeScroll: true,
+	contain: true,
+	prevNextButtons: false,
+	pageDots: false,
+	cellAlign: 'left'
+});
+</script>
 
 </body>
 

@@ -9,6 +9,8 @@
     <title>Starter Template</title>
     <meta name="description" content="A Site Starter Materialize Templates for Jekyll" />
 
+    <link rel="stylesheet" href="/assets/flickity.css" media="screen">
+
     <link rel="stylesheet" type="text/css" href="/assets/main.css" />
     <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet">
@@ -23,7 +25,79 @@
 
 	<div class="display_bg"><div class="lines"></div></div>
 
-	<a href="#team" class="icon close" title="Close"></a>
+	<div id="personmodal">
+
+	<div class="personmodal" id="person1">
+		<div class="grid"><div class="image t1">
+	<img src="img/details/star.svg" class="star left top">
+	<img src="img/details/star.svg" class="star right top">
+	<img src="img/details/star.svg" class="star left bottom">
+	<img src="img/details/star.svg" class="star right bottom">
+	<img src="img/details/quadr.svg" class="quadr left top">
+	<img src="img/details/quadr.svg" class="quadr right top">
+	<img src="img/details/quadr.svg" class="quadr left bottom">
+	<img src="img/details/quadr.svg" class="quadr right bottom">
+	<div class="alldots_bg"></div>
+	<div class="dots_bg"></div>
+</div>
+
+<p class="firstline">Sergey Ryabov</p>
+<p class="secondline">CEO</p>
+
+<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+
+<a href="/" target="_blank" class="linkedin icon button">
+	<img src="img/details/a_small.svg" class="angle left top">
+	<img src="img/details/a_small.svg" class="angle right top">
+	<img src="img/details/a_small.svg" class="angle right bottom">
+	<img src="img/details/a_small.svg" class="angle left bottom">
+</a>
+
+<div class="liner"></div>
+
+<p class="body">
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+</p></div>
+		<a href="#team" class="icon close" title="Close"></a>
+		<div class="display_bg"><div class="lines"></div></div>
+	</div>
+
+	<div class="personmodal" id="person2">
+		<div class="grid"><div class="image t1">
+	<img src="img/details/star.svg" class="star left top">
+	<img src="img/details/star.svg" class="star right top">
+	<img src="img/details/star.svg" class="star left bottom">
+	<img src="img/details/star.svg" class="star right bottom">
+	<img src="img/details/quadr.svg" class="quadr left top">
+	<img src="img/details/quadr.svg" class="quadr right top">
+	<img src="img/details/quadr.svg" class="quadr left bottom">
+	<img src="img/details/quadr.svg" class="quadr right bottom">
+	<div class="alldots_bg"></div>
+	<div class="dots_bg"></div>
+</div>
+
+<p class="firstline">Sergey Ryabov</p>
+<p class="secondline">CEO</p>
+
+<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+
+<a href="/" target="_blank" class="linkedin icon button">
+	<img src="img/details/a_small.svg" class="angle left top">
+	<img src="img/details/a_small.svg" class="angle right top">
+	<img src="img/details/a_small.svg" class="angle right bottom">
+	<img src="img/details/a_small.svg" class="angle left bottom">
+</a>
+
+<div class="liner"></div>
+
+<p class="body">
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+</p></div>
+		<a href="#team" class="icon close" title="Close"></a>
+		<div class="display_bg"><div class="lines"></div></div>
+	</div>
+
+</div>
 
 	<header>
 	<a href="#" class="logo icon" title="up"></a>
@@ -35,7 +109,7 @@
 
 <nav id="menu">
 	<a href="#" class="icon close" title="Close"></a>
-	<ul>
+	<ul class="grid">
 		<li>
 			<a href="/" target="_blank">
 				<img src="img/details/a_small.svg" class="angle left top">
@@ -119,208 +193,235 @@
     <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
   </p>
-  <a href="#" class="modal button">
+  <a href="#" class="button">
     <img src="img/details/a_medium.svg" class="angle left top">
     SUBSCRIBE
     <img src="img/details/a_medium.svg" class="angle right bottom">
   </a>
-  <div>
+  <div style="height: 49px;">
     <a href="#features" class="scroll icon"></a>
   </div>
 </div>
 
   <div class="section" id="features">
-  <div class="anchor">FEATURES</div>
-  <ul class="collapsible" data-collapsible="expandable">
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image f1">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="bigdots_bg"></div>
-        </div>
-        <p class="title">Systematization of goods</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image f2">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="bigdots_bg"></div>
-        </div>
-        <p class="title">Uniqueness of each product</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image f3">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="bigdots_bg"></div>
-        </div>
-        <p class="title">Blockchain technology</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-  </ul>
+	<div class="title">FEATURES</div>
+	<ul class="collapsible" data-collapsible="expandable">
+		<li>
+			<div class="collapsible-header singleline pic large">
+				<div class="image f1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">System of goods</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header singleline pic large">
+				<div class="image f1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">Unified product line</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header singleline pic large">
+				<div class="image f1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">The uniqueness of each unit of goods</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+	</ul>
 </div>
 
   <div class="section" id="cases">
-  <div class="anchor">CASES</div>
-  <ul class="collapsible" data-collapsible="expandable">
-    <li>
-      <div class="collapsible-header line">
-        <p class="title">Jack's shoes store</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header line">
-        <p class="title">Jack's shoes storeJack and the problems of counterfeiting</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header line">
-        <p class="title">Happy Steve</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-  </ul>
+	<div class="title">CASES</div>
+	<ul class="collapsible" data-collapsible="expandable">
+		<li>
+			<div class="collapsible-header singleline">
+				<p class="firstline">Jack's shoes store</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header singleline">
+				<p class="firstline">Jack and the problems of counterfeiting</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header singleline">
+				<p class="firstline">Happy Steve</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+	</ul>
 </div>
 
   <div class="section" id="dapps">
-  <div class="anchor">DAPPS</div>
-  <ul class="collapsible" data-collapsible="expandable">
-    <li>
-      <div class="collapsible-header line number">
-        <p class="number">1</p>
-        <p class="title">Decentralized marketplaces</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header line number">
-        <p class="number">2</p>
-        <p class="title">Tracking the movement of goods</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header line number">
-        <p class="number">3</p>
-        <p class="title">Search for products by location</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header line number">
-        <p class="number">4</p>
-        <p class="title">Decentralized sending of messages</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        </span>
-      </div>
-    </li>
-  </ul>
+	<div class="title">DAPPS</div>
+	<ul class="collapsible" data-collapsible="expandable">
+		<li>
+			<div class="collapsible-header singleline number">
+				<p class="number">1</p>
+				<p class="firstline">Decentralized marketplaces</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header singleline number">
+				<p class="number">2</p>
+				<p class="firstline">Tracking the movement of goods</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header singleline number">
+				<p class="number">3</p>
+				<p class="firstline">Search for products by location</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header singleline number">
+				<p class="number">4</p>
+				<p class="firstline">Decentralized sending of messages</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+	</ul>
 </div>
 
   <div class="section" id="mission">
-  <div class="anchor">MISSION</div>
-  <p class="body">
-    <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-  </p>
+	<div class="title">MISSION</div>
+	<p class="body-angle">
+		<img src="img/details/a_big.svg" class="angle left top">
+		<img src="img/details/a_big.svg" class="angle left bottom">
+		<img src="img/details/a_big.svg" class="angle right top">
+		<img src="img/details/a_big.svg" class="angle right bottom">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+	</p>
 </div>
 
   <div class="section" id="team">
-  <div class="anchor">TEAM</div>
-
-  
-  <a href="#person1"></a>
-<div class="image t1">
-	<img src="img/details/star.svg" class="star left top"><img src="img/details/star.svg" class="star right top">
-	<img src="img/details/star.svg" class="star left bottom"><img src="img/details/star.svg" class="star right bottom">
-	<img src="img/details/quadr.svg" class="quadr left top"><img src="img/details/quadr.svg" class="quadr right top">
-	<img src="img/details/quadr.svg" class="quadr left bottom"><img src="img/details/quadr.svg" class="quadr right bottom">
-	<div class="alldots_bg"></div><div class="dots_bg"></div>
+	<div class="title">TEAM</div>
+	<div class="main-carousel">
+		<div class="carousel-cell team first">
+			<a href="#person1" class="person-link"></a>
+			<div class="person">
+				<div class="image t1">
+	<img src="img/details/star.svg" class="star left top">
+	<img src="img/details/star.svg" class="star right top">
+	<img src="img/details/star.svg" class="star left bottom">
+	<img src="img/details/star.svg" class="star right bottom">
+	<img src="img/details/quadr.svg" class="quadr left top">
+	<img src="img/details/quadr.svg" class="quadr right top">
+	<img src="img/details/quadr.svg" class="quadr left bottom">
+	<img src="img/details/quadr.svg" class="quadr right bottom">
+	<div class="alldots_bg"></div>
+	<div class="dots_bg"></div>
 </div>
 
+<p class="firstline">Sergey Ryabov</p>
+<p class="secondline">CEO</p>
+
 <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-
-<p class="name">Sergey Ryabov</p>
-<p class="role">CEO</p>
-
-<div class="liner"></div>
 
 <a href="/" target="_blank" class="linkedin icon button">
 	<img src="img/details/a_small.svg" class="angle left top">
@@ -329,395 +430,448 @@
 	<img src="img/details/a_small.svg" class="angle left bottom">
 </a>
 
+<div class="liner"></div>
+
 <p class="body">
 	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
 </p>
+			</div>
+		</div>
+		<div class="carousel-cell team">
+			<a href="#person2" class="person-link"></a>
+			<div class="person">
+				<div class="image t1">
+	<img src="img/details/star.svg" class="star left top">
+	<img src="img/details/star.svg" class="star right top">
+	<img src="img/details/star.svg" class="star left bottom">
+	<img src="img/details/star.svg" class="star right bottom">
+	<img src="img/details/quadr.svg" class="quadr left top">
+	<img src="img/details/quadr.svg" class="quadr right top">
+	<img src="img/details/quadr.svg" class="quadr left bottom">
+	<img src="img/details/quadr.svg" class="quadr right bottom">
+	<div class="alldots_bg"></div>
+	<div class="dots_bg"></div>
+</div>
 
+<p class="firstline">Sergey Ryabov</p>
+<p class="secondline">CEO</p>
+
+<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+
+<a href="/" target="_blank" class="linkedin icon button">
+	<img src="img/details/a_small.svg" class="angle left top">
+	<img src="img/details/a_small.svg" class="angle right top">
+	<img src="img/details/a_small.svg" class="angle right bottom">
+	<img src="img/details/a_small.svg" class="angle left bottom">
+</a>
+
+<div class="liner"></div>
+
+<p class="body">
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+</p>
+			</div>
+		</div>
+	</div>
 </div>
 
   <div class="section" id="advisors">
-  <div class="anchor">ADVISORS</div>
-  <ul class="collapsible" data-collapsible="expandable">
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image a1">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">Eli Taranto</p>
-        <p class="subhead twoline">Security Advisor</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="linkedin icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">Linkedin</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image a2">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">Cecilia Mueller Chen</p>
-        <p class="subhead twoline">Compliance Advisor</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="linkedin icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">Linkedin</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image a3">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">Abhijith Naraparaju</p>
-        <p class="subhead twoline">Blockchain Solution Architect</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="linkedin icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">Linkedin</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image a4">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">Sandris Murins</p>
-        <p class="subhead twoline">CTO of LAT Back Office</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="linkedin icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">Linkedin</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-  </ul>
+	<div class="title">ADVISORS</div>
+	<ul class="collapsible" data-collapsible="expandable">
+		<li>
+			<div class="collapsible-header twoline pic large">
+				<div class="image a1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">Eli Taranto</p>
+				<p class="secondline">Security Advisor</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span class="singleline link">
+					<a href="/" target="_blank" class="linkedin icon button">
+						<img src="img/details/a_small.svg" class="angle left top">
+						<img src="img/details/a_small.svg" class="angle right top">
+						<img src="img/details/a_small.svg" class="angle right bottom">
+						<img src="img/details/a_small.svg" class="angle left bottom">
+					</a>
+					<p class="firstline link">Linkedin</p>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header twoline pic large">
+				<div class="image a2">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">Cecilia Mueller Chen</p>
+				<p class="secondline">Compliance Advisor</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span class="singleline link">
+					<a href="/" target="_blank" class="linkedin icon button">
+						<img src="img/details/a_small.svg" class="angle left top">
+						<img src="img/details/a_small.svg" class="angle right top">
+						<img src="img/details/a_small.svg" class="angle right bottom">
+						<img src="img/details/a_small.svg" class="angle left bottom">
+					</a>
+					<p class="firstline link">Linkedin</p>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header twoline pic large">
+				<div class="image a3">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">Abhijith Naraparaju</p>
+				<p class="secondline">Blockchain Solution Architect</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span class="singleline link">
+					<a href="/" target="_blank" class="linkedin icon button">
+						<img src="img/details/a_small.svg" class="angle left top">
+						<img src="img/details/a_small.svg" class="angle right top">
+						<img src="img/details/a_small.svg" class="angle right bottom">
+						<img src="img/details/a_small.svg" class="angle left bottom">
+					</a>
+					<p class="firstline link">Linkedin</p>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+	</ul>
 </div>
 
   <div class="section" id="meetup">
-  <div class="anchor">MEETUP</div>
-  <ul class="collapsible" data-collapsible="expandable">
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image m1">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">BlockChain at Acronis</p>
-        <p class="subhead threeline">New York, USA</p>
-        <p class="subhead data threeline">Sep 8, 2017</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="facebook icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">BlockChain at Acronis</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image m2">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">Crypto 2020</p>
-        <p class="subhead threeline">Singapore</p>
-        <p class="subhead data threeline">Sep 11, 2017</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="facebook icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">Crypto 2020</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image m3">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">Blockchain & Tokens</p>
-        <p class="subhead threeline">London, UK</p>
-        <p class="subhead data threeline">Sep 12, 2017</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="facebook icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">Blockchain & Tokens</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header pic">
-        <div class="image m4">
-          <img src="img/details/star.svg" class="star left top">
-          <img src="img/details/star.svg" class="star right top">
-          <img src="img/details/star.svg" class="star left bottom">
-          <img src="img/details/star.svg" class="star right bottom">
-          <img src="img/details/quadr.svg" class="quadr left top">
-          <img src="img/details/quadr.svg" class="quadr right top">
-          <img src="img/details/quadr.svg" class="quadr left bottom">
-          <img src="img/details/quadr.svg" class="quadr right bottom">
-          <div class="alldots_bg"></div>
-        </div>
-        <p class="title twoline">ICO Summit in Zurich</p>
-        <p class="subhead threeline">Zürich</p>
-        <p class="subhead data threeline">Oct 2, 2017</p>
-        <img src="img/icon/ic_more.svg" class="more right bottom" title="more">
-      </div>
-      <div class="collapsible-body">
-        <span>
-          <a href="/" target="_blank" class="facebook icon button">
-            <img src="img/details/a_small.svg" class="angle left top">
-            <img src="img/details/a_small.svg" class="angle right top">
-            <img src="img/details/a_small.svg" class="angle right bottom">
-            <img src="img/details/a_small.svg" class="angle left bottom">
-          </a>
-          <p class="title link">ICO Summit in Zurich</p>
-          <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</p>
-        </span>
-      </div>
-    </li>
-  </ul>
+	<div class="title">MEETUP</div>
+	<ul class="collapsible" data-collapsible="expandable">
+		<li>
+			<div class="collapsible-header threeline pic large">
+				<div class="image m1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">BlockChain at Acronis</p>
+				<p class="secondline">New York, USA</p>
+				<p class="thirdline">Sep 8, 2017</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span class="singleline link">
+					<a href="/" target="_blank" class="facebook icon button">
+						<img src="img/details/a_small.svg" class="angle left top">
+						<img src="img/details/a_small.svg" class="angle right top">
+						<img src="img/details/a_small.svg" class="angle right bottom">
+						<img src="img/details/a_small.svg" class="angle left bottom">
+					</a>
+					<p class="firstline link">BlockChain at Acronis</p>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header threeline pic large">
+				<div class="image m1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">Crypto 2020</p>
+				<p class="secondline">Singapore</p>
+				<p class="thirdline">Sep 11, 2017</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span class="singleline link">
+					<a href="/" target="_blank" class="facebook icon button">
+						<img src="img/details/a_small.svg" class="angle left top">
+						<img src="img/details/a_small.svg" class="angle right top">
+						<img src="img/details/a_small.svg" class="angle right bottom">
+						<img src="img/details/a_small.svg" class="angle left bottom">
+					</a>
+					<p class="firstline link">Crypto 2020</p>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header threeline pic large">
+				<div class="image m1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">Blockchain & Tokens</p>
+				<p class="secondline">London, UK</p>
+				<p class="thirdline">Sep 12, 2017</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span class="singleline link">
+					<a href="/" target="_blank" class="facebook icon button">
+						<img src="img/details/a_small.svg" class="angle left top">
+						<img src="img/details/a_small.svg" class="angle right top">
+						<img src="img/details/a_small.svg" class="angle right bottom">
+						<img src="img/details/a_small.svg" class="angle left bottom">
+					</a>
+					<p class="firstline link">Blockchain & Tokens</p>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header threeline pic large">
+				<div class="image m1">
+					<img src="img/details/star.svg" class="star left top">
+					<img src="img/details/star.svg" class="star left bottom">
+					<img src="img/details/star.svg" class="star right top">
+					<img src="img/details/star.svg" class="star right bottom">
+					<img src="img/details/quadr.svg" class="quadr left top">
+					<img src="img/details/quadr.svg" class="quadr left bottom">
+					<img src="img/details/quadr.svg" class="quadr right top">
+					<img src="img/details/quadr.svg" class="quadr right bottom">
+					<div class="alldots_bg"></div>
+				</div>
+				<p class="firstline">ICO Summit in Zurich</p>
+				<p class="secondline">Zürich</p>
+				<p class="thirdline">Sep 28, 2017</p>
+				<img src="img/icon/ic_more.svg" class="more right bottom" title="more">
+			</div>
+			<div class="collapsible-body">
+				<span class="singleline link">
+					<a href="/" target="_blank" class="facebook icon button">
+						<img src="img/details/a_small.svg" class="angle left top">
+						<img src="img/details/a_small.svg" class="angle right top">
+						<img src="img/details/a_small.svg" class="angle right bottom">
+						<img src="img/details/a_small.svg" class="angle left bottom">
+					</a>
+					<p class="firstline link">ICO Summit in Zurich</p>
+					<p class="body">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+					</p>
+				</span>
+			</div>
+		</li>
+	</ul>
 </div>
 
   <div class="section" id="media">
-  <div class="anchor">MEDIA</div>
-  <ul>
-    <li>
-      <a href="/" target="_blank">
-        <div class="collapsible-header line pic">
-         <div class="image me1">
-            <img src="img/details/quadr.svg" class="quadr left top">
-            <img src="img/details/quadr.svg" class="quadr right top">
-            <img src="img/details/quadr.svg" class="quadr left bottom">
-            <img src="img/details/quadr.svg" class="quadr right bottom">
-          </div>
-          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-         <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
-          <p class="title twoline">Elementh it's future</p>
-          <p class="subhead twoline">Foxico's report</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="/" target="_blank">
-        <div href="/" target="_blank" class="collapsible-header line pic">
-          <div class="image me2">
-            <img src="img/details/quadr.svg" class="quadr left top">
-            <img src="img/details/quadr.svg" class="quadr right top">
-            <img src="img/details/quadr.svg" class="quadr left bottom">
-            <img src="img/details/quadr.svg" class="quadr right bottom">
-          </div>
-          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-          <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
-          <p class="title twoline">Future is coming</p>
-          <p class="subhead twoline">Foxico's report</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="/" target="_blank">
-        <div href="/" target="_blank" class="collapsible-header line pic">
-          <div class="image me3">
-            <img src="img/details/quadr.svg" class="quadr left top">
-            <img src="img/details/quadr.svg" class="quadr right top">
-            <img src="img/details/quadr.svg" class="quadr left bottom">
-            <img src="img/details/quadr.svg" class="quadr right bottom">
-          </div>
-          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-          <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
-          <p class="title twoline">Ahoolee2: reborn</p>
-          <p class="subhead twoline">Foxico's report</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="/" target="_blank">
-        <div href="/" target="_blank" class="collapsible-header line pic">
-          <div class="image me4">
-            <img src="img/details/quadr.svg" class="quadr left top">
-            <img src="img/details/quadr.svg" class="quadr right top">
-            <img src="img/details/quadr.svg" class="quadr left bottom">
-            <img src="img/details/quadr.svg" class="quadr right bottom">
-          </div>
-          <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-          <img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle left bottom">
-          <p class="title twoline">How i buy car</p>
-          <p class="subhead twoline">Foxico's report</p>
-        </div>
-      </a>
-    </li>
-  </ul>
+	<div class="title">MEDIA</div>
+	<ul>
+		<li>
+			<a href="/" target="_blank">
+				<div class="collapsible-header twoline pic">
+					<div class="image me1">
+						<img src="img/details/star.svg" class="star left top">
+						<img src="img/details/star.svg" class="star left bottom">
+						<img src="img/details/star.svg" class="star right top">
+						<img src="img/details/star.svg" class="star right bottom">
+					</div>
+					<img src="img/details/a_medium.svg" class="angle left top">
+					<img src="img/details/a_medium.svg" class="angle left bottom">
+					<img src="img/details/a_medium.svg" class="angle right top">
+					<img src="img/details/a_medium.svg" class="angle right bottom">
+					<p class="firstline">Elementh it's future</p>
+					<p class="secondline">Foxico's report</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/" target="_blank">
+				<div class="collapsible-header twoline pic">
+					<div class="image me2">
+						<img src="img/details/star.svg" class="star left top">
+						<img src="img/details/star.svg" class="star left bottom">
+						<img src="img/details/star.svg" class="star right top">
+						<img src="img/details/star.svg" class="star right bottom">
+					</div>
+					<img src="img/details/a_medium.svg" class="angle left top">
+					<img src="img/details/a_medium.svg" class="angle left bottom">
+					<img src="img/details/a_medium.svg" class="angle right top">
+					<img src="img/details/a_medium.svg" class="angle right bottom">
+					<p class="firstline">Future is coming</p>
+					<p class="secondline">Foxico's report</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/" target="_blank">
+				<div class="collapsible-header twoline pic">
+					<div class="image me3">
+						<img src="img/details/star.svg" class="star left top">
+						<img src="img/details/star.svg" class="star left bottom">
+						<img src="img/details/star.svg" class="star right top">
+						<img src="img/details/star.svg" class="star right bottom">
+					</div>
+					<img src="img/details/a_medium.svg" class="angle left top">
+					<img src="img/details/a_medium.svg" class="angle left bottom">
+					<img src="img/details/a_medium.svg" class="angle right top">
+					<img src="img/details/a_medium.svg" class="angle right bottom">
+					<p class="firstline">Ahoolee2: reborn</p>
+					<p class="secondline">Foxico's report</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="/" target="_blank">
+				<div class="collapsible-header twoline pic">
+					<div class="image me4">
+						<img src="img/details/star.svg" class="star left top">
+						<img src="img/details/star.svg" class="star left bottom">
+						<img src="img/details/star.svg" class="star right top">
+						<img src="img/details/star.svg" class="star right bottom">
+					</div>
+					<img src="img/details/a_medium.svg" class="angle left top">
+					<img src="img/details/a_medium.svg" class="angle left bottom">
+					<img src="img/details/a_medium.svg" class="angle right top">
+					<img src="img/details/a_medium.svg" class="angle right bottom">
+					<p class="firstline">How i buy car</p>
+					<p class="secondline">Foxico's report</p>
+				</div>
+			</a>
+		</li>
+	</ul>
 </div>
 
   <div class="section" id="contact">
-  <div class="anchor">CONTACTS</div>
-  <div class="titleblock">
-    <div class="liner"></div>
-    <p class="title block">Join us</p>
-    <div class="liner right"></div>
-  </div>
-  <form id="sbmt">
-    <img src="img/details/a_medium.svg" class="angle left top">
-    <img src="img/details/a_medium.svg" class="angle right bottom">
-    <div>
-      <div class="inputdiv"><input type="email" form="sbmt" name="email" placeholder="Your Email" required></div>
-      <button type="submit" form="sbmt" class="top right"><img src="img/icon/ic_submit.svg" class="icon"></button>
-    </div>
-  </form>
-  <p class="description">
-    <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
-  </p>
-  <div class="iconpack">
-  <a href="/" target="_blank" class="telegram icon button link">
-    <img src="img/details/a_small.svg" class="angle left top">
-    <img src="img/details/a_small.svg" class="angle right top">
-    <img src="img/details/a_small.svg" class="angle right bottom">
-    <img src="img/details/a_small.svg" class="angle left bottom">
-  </a>
-  <a href="/" target="_blank" class="facebook icon button link">
-    <img src="img/details/a_small.svg" class="angle left top">
-    <img src="img/details/a_small.svg" class="angle right top">
-    <img src="img/details/a_small.svg" class="angle right bottom">
-    <img src="img/details/a_small.svg" class="angle left bottom">
-  </a>
-  <a href="/" target="_blank" class="twitter icon button link">
-    <img src="img/details/a_small.svg" class="angle left top">
-    <img src="img/details/a_small.svg" class="angle right top">
-    <img src="img/details/a_small.svg" class="angle right bottom">
-    <img src="img/details/a_small.svg" class="angle left bottom">
-  </a>
-  <a href="/" target="_blank" class="email icon button link">
-    <img src="img/details/a_small.svg" class="angle left top">
-    <img src="img/details/a_small.svg" class="angle right top">
-    <img src="img/details/a_small.svg" class="angle right bottom">
-    <img src="img/details/a_small.svg" class="angle left bottom">
-  </a>
-  </div>
+	<div class="title">CONTACTS</div>
+	<div class="headline">
+		<div class="liner left"></div>
+		<p class="headliner">Join us</p>
+		<div class="liner right"></div>
+	</div>
+	<form id="sbmt">
+		<img src="img/details/a_medium.svg" class="angle left top">
+		<img src="img/details/a_medium.svg" class="angle right bottom">
+		<div>
+			<div class="inputdiv">
+				<input type="email" form="sbmt" name="email" placeholder="Your Email" required>
+			</div>
+			<button type="submit" form="sbmt" class="top right icon submit"></button>
+		</div>
+	</form>
+	<p class="description">
+		<img src="img/details/a_big.svg" class="angle left top">
+		<img src="img/details/a_big.svg" class="angle left bottom">
+		<img src="img/details/a_big.svg" class="angle right top">
+		<img src="img/details/a_big.svg" class="angle right bottom">
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
+	</p>
+	<div class="iconpack">
+		<a href="/" target="_blank" class="telegram icon button link">
+			<img src="img/details/a_small.svg" class="angle left top">
+			<img src="img/details/a_small.svg" class="angle left bottom">
+			<img src="img/details/a_small.svg" class="angle right top">
+			<img src="img/details/a_small.svg" class="angle right bottom">
+		</a>
+		<a href="/" target="_blank" class="facebook icon button link">
+			<img src="img/details/a_small.svg" class="angle left top">
+			<img src="img/details/a_small.svg" class="angle left bottom">
+			<img src="img/details/a_small.svg" class="angle right top">
+			<img src="img/details/a_small.svg" class="angle right bottom">
+		</a>
+		<a href="/" target="_blank" class="twitter icon button link">
+			<img src="img/details/a_small.svg" class="angle left top">
+			<img src="img/details/a_small.svg" class="angle left bottom">
+			<img src="img/details/a_small.svg" class="angle right top">
+			<img src="img/details/a_small.svg" class="angle right bottom">
+		</a>
+		<a href="/" target="_blank" class="email icon button link">
+			<img src="img/details/a_small.svg" class="angle left top">
+			<img src="img/details/a_small.svg" class="angle left bottom">
+			<img src="img/details/a_small.svg" class="angle right top">
+			<img src="img/details/a_small.svg" class="angle right bottom">
+		</a>
+	</div>
 </div>
 
-  <footer><p class="subhead">© 2017 Elementh, All rights reserved.</p></footer>
+  <footer><p class="secondline">© 2017 Elementh, All rights reserved</p></footer>
 
 </div>
 
 	<!--  Scripts-->                                                                               
+
+
 <script src="/js/jquery.min.js"></script>
 <script src="/js/materialize.min.js"></script>
 <script src="/js/init.js"></script>
 <script type="text/javascript">$(document).ready(function(){$('.collapsible').collapsible();});</script>
-<script type="text/javascript">$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });</script>
+<script type="text/javascript">
+$('.collapsible').collapsible({ expandable: true, onOpen: function(el) { alert('Open'); }, onClose: function(el) { alert('Closed'); } });
+</script>
+
+<script src="/js/flickity.pkgd.js"></script>
+
+<script type="text/javascript">
+$('.main-carousel').flickity({
+	// options
+	freeScroll: true,
+	contain: true,
+	prevNextButtons: false,
+	pageDots: false,
+	cellAlign: 'left'
+});
+</script>
 
 </body>
 
