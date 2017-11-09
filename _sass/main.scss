@@ -169,13 +169,20 @@ a:link, a:active, a:visited {
 	opacity: .7;
 }
 
-.logo {
+.logo, .logo-text {
 	width: 33px;
 	height: 33px;
 	position: absolute;
 	margin: 8px;
 	background: url(../img/icon/ic_logo.svg)  center center no-repeat;
 	z-index: 2;
+	&-text {
+		display: none;
+		width: 225px;
+		height: 65px;
+		margin: 0px;
+		background: url(../img/text_logo.svg)  center center no-repeat;
+	}
 }
 
 .more, .menu, .close, .submit {
@@ -358,10 +365,7 @@ footer .secondline { top: 32px; }
 	}
 }
 
-li {
-	margin: 0px 15px 31px 16px;
-	.collapsible & { margin-bottom: 15px; }
-}
+li { margin: 0px 15px 15px 16px; }
 
 .button, .collapsible-header, .collapsible-body, .image, form, #menu ul li {
 	position: relative;
@@ -403,7 +407,7 @@ header {
 	width: 49px;
 	height: 49px;
 	position: fixed;
-	margin: 16px 15px 16px 16px;
+	margin: 16px 15px 15px 16px;
 	z-index: 3;
 }
 
@@ -420,7 +424,7 @@ header {
 	.display_bg { z-index: -1; }
 
 	ul {
-		padding: 96px 15px 0px 16px;
+		padding: 96px 15px 16px 16px;
 		li {
 			margin: 0px;
 			margin-bottom: 15px;
@@ -428,7 +432,7 @@ header {
 				display: inline-block;
 				width: 100%;
 				height: 17px;
-				padding: 16px 0;
+				padding: 13px 0 19px 0;
 				:hover { background-color: none; }
 				p { margin-left: 16px; }
 			}
@@ -517,7 +521,7 @@ footer {
 .t4 { background-image: url(../img/advisors/a_1.png); }
 
 .personmodal:target {
-	& .grid {
+	& .card {
 		.t1 { background-image: url(../img/team/t_1c.jpg); }
 		.t2 { background-image: url(../img/team/t_1c.jpg); }
 		.t3 { background-image: url(../img/team/t_1c.jpg); }
@@ -527,13 +531,15 @@ footer {
 
 .team {
 	width: 193px;
-	height: 337px;
+	overflow: hidden;
 	padding: {
 		top: 2px;
-		right: 15px;
+		left: 2px;
+		right: 13px;
 		bottom: 2px;
 	}
 	&.first { padding-left: 16px; }
+	&.last { padding-right: 15px; }
 }
 
 .person-link {
@@ -545,7 +551,7 @@ footer {
 
 .person {
 	width: 193px;
-	position: absolute;
+	position: relative;
 	background-color: rgba(255,255,255,.1);
 	.image {
 		width: 193px;
@@ -565,7 +571,7 @@ footer {
 
 .personmodal:target { display: block !important; }
 
-.personmodal .grid {
+.personmodal .card {
 	.image {
 		height: 321px;
 		opacity: 1;
@@ -594,12 +600,16 @@ footer {
 		}
 	}
 	.more { display: none; }
-	.icon { display: none; }
+	.icon {
+		position: absolute;
+		top: 337px;
+		right: 0px;
+	}
 	.liner {
 		position: relative;
 		top: 0px;
 	}
-	.body { padding: 32px;}
+	.body { padding: 24px 32px;}
 
 
 
@@ -607,7 +617,7 @@ footer {
 
 /*--- ADVISORS ---*/
 
-#advisors {}
+#advisors { margin-top: 27px; }
 
 .a1 { background-image: url(../img/advisors/a_1.png); }
 
@@ -644,3 +654,5 @@ footer {
 /*--- CONTACTS ---*/
 
 #contact {}
+
+@import 'media';
