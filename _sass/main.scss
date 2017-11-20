@@ -236,7 +236,7 @@ a:link, a:active, a:visited {
 
 li:active { background-color: rgba(255,255,255,.20); }
 
-.iconpack	{ height: 80px; }
+.iconpack	{ overflow: hidden; }
 
 .close { z-index: 2; }
 
@@ -253,6 +253,12 @@ li:active { background-color: rgba(255,255,255,.20); }
 .telegram	{ background: url(../img/icon/ic_telegram.svg)  center center no-repeat; }
 
 .twitter	{ background: url(../img/icon/ic_twitter.svg)  center center no-repeat; }
+
+.reddit	{ background: url(../img/icon/ic_reddit.svg)  center center no-repeat; }
+
+.medium	{ background: url(../img/icon/ic_medium.svg)  center center no-repeat; }
+
+.steemit	{ background: url(../img/icon/ic_steemit.svg)  center center no-repeat; }
 
 .behance	{ background: url(../img/icon/ic_behance.svg)  center center no-repeat; }
 
