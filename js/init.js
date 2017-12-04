@@ -7,7 +7,7 @@
         $('#sbmt').submit(function(e) {
             e.preventDefault();
             $.ajax({
-                url: 'http://apimail.ahoolee.io/api/subscribe',
+                url: 'https://apimail.ahoolee.io/api/subscribe',
                 type: 'post',
                 data: $('#sbmt').serialize(),
                 success: function() {
