@@ -35,6 +35,7 @@
 		}
 	}
 	.section { margin-top: 63px; }
+	#advisors { margin-top: 60px; }
 	#hero { margin-top: 185px; }
 	#text_logo {
 		width: 432px;
@@ -76,6 +77,21 @@
 				top: 56px;
 				margin-left: 112px;
 			}
+		}
+		&.year {
+			height: 128px;
+			margin: 0px 31px 0px 32px;
+			.secondline {
+				position: absolute;
+				top: 40px;
+				margin: 0px 0px 0px 113px;
+				-webkit-transform: translate(0,-50%);
+				   -moz-transform: translate(0,-50%);
+					-ms-transform: translate(0,-50%);
+					 -o-transform: translate(0,-50%);
+						transform: translate(0,-50%);
+			}
+			.liner { height: 47px; }
 		}
 	}
 	.number {
@@ -124,12 +140,12 @@
 		}
 		.body { padding: 24px 32px;}
 	}
-	#media {
+	#media, #rewards {
 		margin: {
 			left: 16px;
 			right: 16px;
 		}
-		.title { padding: 41px 96px; }
+		.title { padding: 41px 96px 42px; }
 		ul {
 			overflow: hidden;
 			li {
@@ -222,7 +238,7 @@
 			margin-left: 288px;
 		}
 	}
-	#media {
+	#media, #rewards {
 		max-width: 992px;
 		margin-left: 304px;
 	}
@@ -240,7 +256,7 @@
 			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 96px; }
 		}
 	}
-	#media { margin-left: 368px; }
+	#media, #rewards { margin-left: 368px; }
 	footer .secondline { margin-left: 96px; }
 }
 
@@ -252,7 +268,7 @@
 			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 176px; }
 		}
 	}
-	#media { margin-left: 448px; }
+	#media, #rewards { margin-left: 448px; }
 	footer .secondline { margin-left: 176px; }
 }
 
@@ -275,7 +291,7 @@
 			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 304px; }
 		}
 	}
-	#media { margin-left: 608px; }
+	#media, #rewards { margin-left: 608px; }
 	footer{
 		width: calc(100% - 320px);
 		left: 320px;
@@ -291,6 +307,6 @@
 			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 464px; }
 		}
 	}
-	#media { margin-left: 768px; }
+	#media, #rewards { margin-left: 768px; }
 	footer .secondline { margin-left: 464px; }
 }

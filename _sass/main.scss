@@ -193,7 +193,7 @@ a:link, a:active, a:visited {
 .icon.button {
 	width: 49px;
 	height: 49px;
-	margin: 15px 15px 4px 16px;
+	margin: 15px 15px 9px 16px;
 	padding-top: 0;
 	&.link {
 		margin: 16px 15px 15px 16px;
@@ -340,6 +340,39 @@ footer .secondline { top: 32px; }
 			margin-left: 80px;
 		}
 	}
+	&.year {
+		height: 100%;
+		position: relative;
+		margin: 0px 15px 0px 16px;
+		overflow: hidden;
+		.year {
+			width: 81px;
+			height: 26px;
+			padding: 25px 0px 30px;
+			float: left;
+			text-align: center;
+		}
+		.secondline {
+			position: relative;
+			margin: 25px 0px 55px 97px;
+			-webkit-transform: none;
+			   -moz-transform: none;
+				-ms-transform: none;
+				 -o-transform: none;
+					transform: none;
+			opacity: 1;
+			.underline { text-decoration: underline; }
+		}
+		.liner {
+			width: 0px;
+			height: 100%;
+			top: 81px;
+			bottom: 0px;
+			left: 40px;
+			border-top: none;
+			border-right: dotted 1px #ffffff;
+		}
+	}
 }
 
 .twoline {
@@ -356,7 +389,7 @@ footer .secondline { top: 32px; }
 .number {
 	.number {
 		width: 17px;
-		padding-top: 32px;
+		padding-top: 30px;
 		padding-left: 16px;
 		text-align: center;
 	}
@@ -375,10 +408,12 @@ footer .secondline { top: 32px; }
 
 li { margin: 0px 15px 15px 16px; }
 
-.button, .collapsible-header, .collapsible-body, .image, form, #menu ul li {
+.button, .collapsible-header, .collapsible-body, .image, form, #menu ul li, .singleline.year .year {
 	position: relative;
 	background-color: rgba(255,255,255,.1);
 }
+
+.nonebg { background-color: rgba(255,255,255,.0); }
 
 .collapsible-body {
 	display: none;
@@ -516,6 +551,18 @@ footer {
 
 #mission {}
 
+/*--- REWARDS ---*/
+
+#rewards {}
+
+.winner { background-image: url(../img/rewards/winner.svg); }
+
+.finalist { background-image: url(../img/rewards/finalist.svg); }
+
+.semifinalist { background-image: url(../img/rewards/semifinalist.svg); }
+
+.hse { background-image: url(../img/rewards/hse.svg); }
+
 /*----- TEAM -----*/
 
 #team {}
@@ -644,7 +691,7 @@ footer {
 
 /*--- ADVISORS ---*/
 
-#advisors { margin-top: 27px; }
+#advisors { margin-top: 3px; }
 
 .a1 { background-image: url(../img/advisors/a_1.png); }
 
