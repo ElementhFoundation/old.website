@@ -282,6 +282,8 @@ li:active { background-color: rgba(255,255,255,.20); }
 	#rewards & { padding: 29px 15px 30px 80px; }
 }
 
+.description.contact { margin-top: 127px; }
+
 .description, .button {
 	position: relative;
 	margin: 16px 15px 15px 16px;
@@ -293,10 +295,23 @@ li:active { background-color: rgba(255,255,255,.20); }
 
 .button, form, input, button { height: 49px; }
 
+form { text-align: center; }
+
 .button {
 	display: inline-block;
 	width: 193px;
 	padding-top: 16px;
+	&.bttn {
+		height: 65px;
+		font-family: 'Play', Helvetica, sans-serif;
+		color: rgba(255,255,255,.8);
+		margin: {
+			top: 31px;
+			left: 14px;
+		}
+		padding-top: 0px;
+		border-radius: 0px;
+	}
 }
 
 .body {
@@ -452,6 +467,7 @@ input::placeholder {
 button {
 	position: absolute;
 	background-color: rgba(255,255,255,0);
+	border-radius: 0px;
 }
 
 /*------------ HEADER ------------*/
