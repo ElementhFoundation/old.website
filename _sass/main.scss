@@ -415,6 +415,16 @@ li { margin: 0px 15px 15px 16px; }
 	background-color: rgba(255,255,255,.1);
 }
 
+.collapsible-header:hover {
+	background-color: rgba(255,255,255,.2);
+	cursor: pointer;
+	&.nolink {
+		background-color: rgba(255,255,255,.1);
+		cursor: default;
+	}
+	& .image .alldots_bg { display: none; }
+}
+
 .collapsible-body {
 	display: none;
 	padding-bottom: 16px;
