@@ -1,19 +1,6 @@
-@media (orientation: portrait) {
-	.personmodal .card {
-		@media (min-width: 360px) {
-			.image { height: 369px; }
-			.icon { top: 385px; }
-		}
-		@media (min-width: 480px) {
-			.image { height: 481px; }
-			.icon { top: 497px; }
-		}
-	}
-}
 @media (min-width: 600px) {
 	body { line-height: 32px; }
 	.display_bg { background-image: url(../img/bg/bg_tablet.jpg); }
-	#personmodal, .person-link { display: none; }
 	.headline {
 		margin-bottom: 65px;
 		.liner { width: calc(50% - 48px); }
@@ -107,39 +94,6 @@
 			.firstline, .secondline, .thirdline { margin-left: 160px; }
 		}
 	}
-	.team {
-		width: 385px;
-		padding-right: 29px;
-		&.first { padding-left: 32px; }
-		&.last { padding-right: 31px; }
-	}
-	.person {
-		width: 385px;
-		.image {
-			width: 385px;
-			height: 385px;
-			.star {
-				&.top { top: 28px; }
-				&.right { right: 28px; }
-				&.bottom { bottom: 28px; }
-				&.left { left: 28px; }
-}
-		}
-		.more { display: none; }
-		.firstline { margin: 24px 112px 0px 32px; }
-		.secondline { margin: 0px 112px 23px 32px; }
-		.liner, .icon, .body { display: block; }
-		.icon {
-			position: absolute;
-			top: 401px;
-			right: 17px;
-		}
-		.liner {
-			position: relative;
-			top: 0px;
-		}
-		.body { padding: 24px 32px;}
-	}
 	#media, #rewards {
 		margin: {
 			left: 16px;
@@ -163,6 +117,9 @@
 			}
 		}
 	}
+	#team .title { padding-bottom: 42px; }
+	#advisors .title { padding-bottom: 44px; }
+	#contact .title { padding-bottom: 40px; }
 	footer {
 		height: 111px;
 		margin-top: 48px;
@@ -201,6 +158,9 @@
 		height: 46px;
 		padding: 49px 112px;
 	}
+	#team .title { padding-bottom: 50px; }
+	#advisors .title { padding-bottom: 52px; }
+	#contact .title { padding-bottom: 48px; }
 	#menu {
 		display: block;
 		width: 289px;
@@ -233,10 +193,6 @@
 	.section {
 		max-width: 1024px;
 		margin-left: 288px;
-		&#team {
-			max-width: none;
-			margin-left: 288px;
-		}
 	}
 	#media, #rewards {
 		max-width: 992px;
@@ -249,25 +205,13 @@
 }
 
 @media (min-width: 1440px) {
-	.section {
-		margin-left: 352px;
-		&#team {
-			.title { margin-left: 64px; }
-			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 96px; }
-		}
-	}
+	.section { margin-left: 352px; }
 	#media, #rewards { margin-left: 368px; }
 	footer .secondline { margin-left: 96px; }
 }
 
 @media (min-width: 1600px) {
-	.section {
-		margin-left: 432px;
-		&#team {
-			.title { margin-left: 144px; }
-			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 176px; }
-		}
-	}
+	.section { margin-left: 432px; }
 	#media, #rewards { margin-left: 448px; }
 	footer .secondline { margin-left: 176px; }
 }
@@ -283,14 +227,7 @@
 		width: 321px;
 		.grid { padding: 208px 48px 48px 48px; }
 	}
-	.section {
-		margin-left: 592px;
-		&#team {
-			margin-left: 320px;
-			.title { margin-left: 272px; }
-			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 304px; }
-		}
-	}
+	.section { margin-left: 592px; }
 	#media, #rewards { margin-left: 608px; }
 	footer{
 		width: calc(100% - 320px);
@@ -300,13 +237,7 @@
 }
 
 @media (min-width: 2560px) {
-	.section {
-		margin-left: 752px;
-		&#team {
-			.title { margin-left: 432px; }
-			.main-carousel .flickity-viewport .flickity-slider .team.first { padding-left: 464px; }
-		}
-	}
+	.section { margin-left: 752px; }
 	#media, #rewards { margin-left: 768px; }
 	footer .secondline { margin-left: 464px; }
 }
