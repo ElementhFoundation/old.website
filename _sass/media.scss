@@ -45,6 +45,23 @@
 			padding: 32px 31px 33px 32px;
 		}
 	}
+	.illustration {
+		&.i1 {
+			width: 600px;
+			height: 600px;
+			margin-bottom: 24px;
+		}
+		&.i2 {
+			width: 500px;
+			height: 700px;
+			margin-bottom: 20px;
+		}
+		&.i3 {
+			width: 642px;
+			height: 552px;
+			margin-bottom: 24px;
+		}
+	}
 	li {
 		margin: 0px 31px 31px 32px;
 		.collapsible & { margin-bottom: 31px; }

@@ -329,8 +329,28 @@ form { text-align: center; }
 	&-angle {
 		position: relative;
 		margin: 0px 15px 15px 16px;
-		padding: 32px 31px 33px 32px;
+		padding: 16px 15px 17px 16px;
 		text-align: left;
+	}
+}
+
+.illustration {
+	display: block;
+	margin: auto;
+	&.i1 {
+		width: 258px;
+		height: 258px;
+		margin-bottom: 14px;
+	}
+	&.i2 {
+		width: 250px;
+		height: 350px;
+		margin-bottom: 18px;
+	}
+	&.i3 {
+		width: 258px;
+		height: 225px;
+		margin-bottom: 15px;
 	}
 }
 
