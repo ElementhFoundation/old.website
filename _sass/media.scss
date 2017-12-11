@@ -112,7 +112,7 @@
 			.firstline, .secondline, .thirdline { margin-left: 160px; }
 		}
 	}
-	#media, #rewards {
+	#media, #rewards, #partner {
 		margin: {
 			left: 16px;
 			right: 16px;
@@ -212,7 +212,7 @@
 		max-width: 1024px;
 		margin-left: 288px;
 	}
-	#media, #rewards {
+	#media, #rewards, #partner {
 		max-width: 992px;
 		margin-left: 304px;
 	}
@@ -224,13 +224,13 @@
 
 @media (min-width: 1440px) {
 	.section { margin-left: 352px; }
-	#media, #rewards { margin-left: 368px; }
+	#media, #rewards, #partner { margin-left: 368px; }
 	footer .secondline { margin-left: 96px; }
 }
 
 @media (min-width: 1600px) {
 	.section { margin-left: 432px; }
-	#media, #rewards { margin-left: 448px; }
+	#media, #rewards, #partner { margin-left: 448px; }
 	footer .secondline { margin-left: 176px; }
 }
 
@@ -246,7 +246,7 @@
 		.grid { padding: 208px 48px 48px 48px; }
 	}
 	.section { margin-left: 592px; }
-	#media, #rewards { margin-left: 608px; }
+	#media, #rewards, #partner { margin-left: 608px; }
 	footer{
 		width: calc(100% - 320px);
 		left: 320px;
@@ -256,6 +256,6 @@
 
 @media (min-width: 2560px) {
 	.section { margin-left: 752px; }
-	#media, #rewards { margin-left: 768px; }
+	#media, #rewards, #partner { margin-left: 768px; }
 	footer .secondline { margin-left: 464px; }
 }

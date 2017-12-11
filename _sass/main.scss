@@ -246,6 +246,9 @@ a:link, a:active, a:visited {
 
 li:active { background-color: rgba(255,255,255,.20); }
 
+li.nolink:active { background-color: rgba(255,255,255,.0); }
+
+
 .iconpack	{ overflow: hidden; }
 
 .close { z-index: 2; }
@@ -618,6 +621,18 @@ footer {
 .semifinalist { background-image: url(../img/rewards/semifinalist.svg); }
 
 .hse { background-image: url(../img/rewards/hse.svg); }
+
+/*----- TEAM -----*/
+
+#partner {}
+
+.p1 { background-image: url(../img/partner/hybris.svg); }
+
+.p2 { background-image: url(../img/partner/sberbank.svg); }
+
+.p3 { background-image: url(../img/partner/foxico.svg); }
+
+.p4 { background-image: url(../img/partner/bitrewards.svg); }
 
 /*----- TEAM -----*/
 
