@@ -24,6 +24,7 @@
                 data: $('#whitelist').serialize(),
                 success: function(){
                     $('#wlmodal').removeClass( 'disblock' ).addClass( 'disnone' );
+                    Materialize.toast('Message send!', 2000);
                 }
             });
         });
