@@ -490,6 +490,21 @@ button {
 	border-radius: 0px;
 }
 
+.calltoaction {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1000;
+	.button {
+		width: 100%;
+		height: 48px;
+		margin: 0px;
+		background-color: rgba(255,193,7,.95);
+		.angle { display: none; }
+	}
+}
+
 /*------------ MODAL -------------*/
 
 .disnone { display: none; }

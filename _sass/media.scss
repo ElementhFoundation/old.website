@@ -225,6 +225,16 @@
 }
 
 @media (min-width: 1440px) {
+	.calltoaction {
+		width: 225px;
+		bottom: 30px;
+		left: 32px;
+		.button {
+			width: 225px;
+			height: 49px;
+			.angle { display: block; }
+		}
+	}
 	.section { margin-left: 352px; }
 	#media, #rewards, #partner { margin-left: 368px; }
 	footer .secondline { margin-left: 96px; }
@@ -237,6 +247,10 @@
 }
 
 @media (min-width: 1920px) {
+	.calltoaction {
+		bottom: 46px;
+		left: 48px;
+	}
 	.display_bg { background-image: url(../img/bg/bg_full_hd.jpg); }
 	header { margin: 48px 47px 47px 48px; }
 	.title {
