@@ -19,7 +19,7 @@
             $('#whitelist input[name=email]').val($('#sbmt input[name=email]').val());
             e.preventDefault();
             $.ajax({
-                url: 'https://apimail.ahoolee.io/api/subscribe',
+                url: 'https://apimail.ahoolee.io/api/invest',
                 type: 'post',
                 data: $('#whitelist').serialize(),
                 success: function(){
