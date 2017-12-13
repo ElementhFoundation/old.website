@@ -1,24 +1,36 @@
 (function($) {
     $(function() {
 
+        $('.collapsible').collapsible({ expandable: true });
         $('.button-collapse').sideNav();
-        $('.carousel').carousel();
+        $('#wlmodal').modal();
+
 
         $('#sbmt').submit(function(e) {
+            $('#wlmodal').removeClass( 'disnone' ).addClass( 'disblock' );
             e.preventDefault();
             $.ajax({
                 url: 'https://apimail.ahoolee.io/api/subscribe',
                 type: 'post',
-                data: $('#sbmt').serialize(),
-                success: function() {
-                    var $toastContent = $('<a href="#contact" class="button" style="position: fixed; z-index: 9999; left: 48%; top: 35%;"><img src="img/details/a_medium.svg" class="angle left top">SUCCESS<img src="img/details/a_medium.svg" class="angle right bottom"></a>')
-                    // var $toastContent = $('<div style="position: fixed; z-index: 9999; right: 42%; top: 45%;">I am toast content</div>');
-                    Materialize.toast($toastContent, 4000);
-        
-                    // alert('SUCCESS');
+                data: $('#sbmt').serialize()
+            });
+        });
+        $('#whitelist').submit(function(e) {
+            $('#whitelist input[name=email]').val($('#sbmt input[name=email]').val());
+            e.preventDefault();
+            $.ajax({
+                url: 'https://apimail.ahoolee.io/api/subscribe',
+                type: 'post',
+                data: $('#whitelist').serialize(),
+                success: function(){
+                    $('#wlmodal').removeClass( 'disblock' ).addClass( 'disnone' );
                 }
             });
         });
 
-    }); // end of document ready
-})(jQuery); // end of jQuery name space
+        $('#wlmodalclose').on('click', function() {
+            $('#wlmodal').removeClass( 'disblock' ).addClass( 'disnone' );
+        })
+
+    });
+})(jQuery);

@@ -21,6 +21,7 @@
 			}
 		}
 	}
+	#whitelist { margin: 31px 31px 95px 32px !important; }
 	.section { margin-top: 63px; }
 	#advisors { margin-top: 60px; }
 	#hero { margin-top: 185px; }
@@ -159,6 +160,7 @@
 }
 
 @media (min-width: 1280px) {
+	#whitelist { margin: auto !important; }
 	.display_bg { background-image: url(../img/bg/bg_hd.jpg); }
 	header {
 		width: 225px;
