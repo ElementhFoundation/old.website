@@ -4,6 +4,9 @@
         $('.collapsible').collapsible({ expandable: true });
         $('.button-collapse').sideNav();
         $('#wlmodal').modal();
+        $(document).ready(function(){
+            $('.scrollspy').scrollSpy();
+        });
 
 
         $('#sbmt').submit(function(e) {
