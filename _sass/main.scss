@@ -196,8 +196,7 @@ a:link, a:active, a:visited {
 	margin: 15px 15px 9px 16px;
 	padding-top: 0;
 	&.link {
-		margin: 16px 15px 15px 16px;
-		float: left;
+		margin: 16px 13px 8px 14px;
 	}
 }
 
@@ -239,7 +238,11 @@ li:active { background-color: rgba(255,255,255,.20); }
 li.nolink:active { background-color: rgba(255,255,255,.0); }
 
 
-.iconpack	{ overflow: hidden; }
+.iconpack	{
+	overflow: hidden;
+	text-align: center;
+	.icon { display: inline-block; }
+}
 
 .close { z-index: 2; }
 
@@ -257,9 +260,11 @@ li.nolink:active { background-color: rgba(255,255,255,.0); }
 
 .twitter	{ background: url(../img/icon/ic_twitter.svg)  center center no-repeat; }
 
-.reddit	{ background: url(../img/icon/ic_reddit.svg)  center center no-repeat; }
+.bitcointalk{ background: url(../img/icon/ic_bitcointalk.svg)  center center no-repeat; }
 
-.medium	{ background: url(../img/icon/ic_medium.svg)  center center no-repeat; }
+.reddit		{ background: url(../img/icon/ic_reddit.svg)  center center no-repeat; }
+
+.medium		{ background: url(../img/icon/ic_medium.svg)  center center no-repeat; }
 
 .steemit	{ background: url(../img/icon/ic_steemit.svg)  center center no-repeat; }
 
@@ -490,7 +495,7 @@ button {
 	border-radius: 0px;
 }
 
-.calltoaction {
+#calltoaction {
 	width: 100%;
 	position: fixed;
 	bottom: 0px;
@@ -515,7 +520,8 @@ button {
 	width: 100%;
 	overflow: inherit;
 	.description {
-		margin: 0px;
+		max-width: 961px;
+		margin: auto;
 		padding-top: 64px;
 	}
 	#whitelist {
@@ -572,18 +578,18 @@ button {
 	top: 0px;
 	left: 0px;
 	z-index: 1000;
-	background-color: rgba(0,0,0,.75);
+	background-color: rgba(0,0,0,.95);
 	.toast {
 		position: absolute;
 		left: 50%;
 		font: inherit;
-		color: rgba(255,255,255,.9);
-		padding-top: 50%;
+		padding-top: 20%;
 		-webkit-transform: translate(-50%,0);
 		   -moz-transform: translate(-50%,0);
 			-ms-transform: translate(-50%,0);
 			 -o-transform: translate(-50%,0);
 				transform: translate(-50%,0);
+		.button:hover { background-color: rgba(255,255,255,.1); }
 	}
 }
 

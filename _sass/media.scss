@@ -21,6 +21,7 @@
 			}
 		}
 	}
+	.wlmodal .description { padding-bottom: 65px; }
 	#whitelist { margin: 31px 31px 95px 32px !important; }
 	.section { margin-top: 63px; }
 	#advisors { margin-top: 60px; }
@@ -70,7 +71,7 @@
 	.collapsible-body { padding-bottom: 24px; }
 	.iconpack {
 		margin-top: 47px;
-		padding-left: 16px;
+		margin-bottom: -4px;
 	}
 	.firstline, .secondline, .thirdline {
 		margin-left: 32px;
@@ -160,6 +161,17 @@
 }
 
 @media (min-width: 1280px) {
+	#calltoaction {
+		width: 225px;
+		bottom: 30px;
+		left: 32px;
+		.button {
+			width: 225px;
+			height: 49px;
+			.angle { display: block; }
+		}
+	}
+	.wlmodal .description { font-size: 24px; }
 	#whitelist { margin: auto !important; }
 	.display_bg { background-image: url(../img/bg/bg_hd.jpg); }
 	header {
@@ -225,16 +237,6 @@
 }
 
 @media (min-width: 1440px) {
-	.calltoaction {
-		width: 225px;
-		bottom: 30px;
-		left: 32px;
-		.button {
-			width: 225px;
-			height: 49px;
-			.angle { display: block; }
-		}
-	}
 	.section { margin-left: 352px; }
 	#media, #rewards, #partner { margin-left: 368px; }
 	footer .secondline { margin-left: 96px; }

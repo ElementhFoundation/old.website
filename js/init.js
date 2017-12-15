@@ -27,13 +27,17 @@
                 data: $('#whitelist').serialize(),
                 success: function(){
                     $('#wlmodal').removeClass( 'disblock' ).addClass( 'disnone' );
-                    Materialize.toast('Message send!', 2000);
+                    Materialize.toast('<div class="button"><img src="img/details/a_medium.svg" class="angle left top">SACSES<img src="img/details/a_medium.svg" class="angle right bottom"></div>', 2000);
                 }
             });
         });
 
         $('#wlmodalclose').on('click', function() {
             $('#wlmodal').removeClass( 'disblock' ).addClass( 'disnone' );
+        })
+
+        $('#calltoaction').on('click', function() {
+            $('#calltoaction').addClass( 'disnone' );
         })
 
     });
