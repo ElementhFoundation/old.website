@@ -39,7 +39,7 @@
                 data: $('#whitelist').serialize(),
                 success: function(){
                     $('#wlmodal').removeClass( 'disblock' ).addClass( 'disnone' );
-                    Materialize.toast('<div class="button"><img src="img/details/a_medium.svg" class="angle left top">SACSES<img src="img/details/a_medium.svg" class="angle right bottom"></div>', 2000);
+                    Materialize.toast('<div class="button"><img src="img/details/a_medium.svg" class="angle left top">SUCCESS<img src="img/details/a_medium.svg" class="angle right bottom"></div>', 2000);
                 }
             });
         });
