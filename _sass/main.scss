@@ -545,11 +545,20 @@ button {
 		.radioblock{
 			height: 48px;
 			margin-bottom: 16px;
+			&.round {
+				height: 100%;
+				overflow: hidden;
+			}
 			.inputradio {
 				width: 96px;
 				height: 48px;
 				text-align: left;
 				float: left;
+				&.round {
+					width: 100%;
+					height: 100%;
+					max-width: 288px;
+				}
 				input {
 					width: 16px;
 					height: 16px;
@@ -559,6 +568,14 @@ button {
 				p {
 					padding-top: 13px;
 					float: left;
+					&.caption {
+						margin-left: 48px;
+						padding-top: 40px;
+						font-size: 14px;
+						line-height: 20px;
+						opacity: .7;
+						float: none;
+					}
 				}
 			}
 		}

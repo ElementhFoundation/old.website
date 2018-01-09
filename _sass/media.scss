@@ -23,6 +23,10 @@
 	}
 	.wlmodal .description { padding-bottom: 65px; }
 	#whitelist { margin: 31px 31px 95px 32px !important; }
+	.radioblock .inputradio p {
+		padding-top: 9px !important;
+		&.caption {padding-top: 48px !important;}
+	}
 	.section { margin-top: 63px; }
 	#advisors { margin-top: 60px; }
 	#hero { margin-top: 185px; }

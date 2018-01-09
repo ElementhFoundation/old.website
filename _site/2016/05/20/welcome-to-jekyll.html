@@ -166,25 +166,42 @@
 
 	<div id="wlmodal" class="disnone">
 	<div class="wlmodal">
-		<p class="description">You've sucessfully subscribed to Elementh ICO campaign. If you want to invest in Elementh ICO and  get bonus, please fill in the form below to participate in whitelist.</p>
+		<p class="description">You've successfully subscribed to Elementh ICO campaign. If you want to invest in Elementh ICO and  get bonus, please fill in the form below to participate in whitelist.</p>
 		<form id="whitelist">
+			<div class="radioblock round">
+				<div class="inputradio round">
+					<input type="radio" form="whitelist" name="round" class="radiobox" value="Close Pre-ICO" checked>
+					<p>Close Pre-ICO</p>
+					<p class="caption">15.01 - 01.02<br>Only whitelist<br>min. 10ETH or 1BTC<br>max. 100 investors<br>1EEE = 0,0001ETH<br>Whitelist BONUS: 50%</p>
+				</div>
+				<div class="inputradio round">
+					<input type="radio" form="whitelist" name="round" class="radiobox" value="Pre-ICO">
+					<p>Pre-ICO</p>
+					<p class="caption">01.02 - 14.02<br>min. 1ETH or 0.1BTC<br>max. 1000 investors<br>1EEE = 0,0001ETH<br>Whitelist BONUS:<br>First day Pre-ICO: 30%<br>Second day Pre-ICO: 15%</p>
+				</div>
+				<div class="inputradio round">
+					<input type="radio" form="whitelist" name="round" class="radiobox" value="ICO">
+					<p>ICO</p>
+					<p class="caption">01.03 - 01.04<br>1EEE = 0,0002ETH<br>Whitelist BONUS:<br>First day ICO: 30%<br>Second day ICO: 15%</p>
+				</div>
+			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
 				<input type="text" form="whitelist" name="amount" maxlength="100" placeholder="How much will you invest?*" required>
 			</div>
 			<div class="radioblock">
-			<div class="inputradio">
-				<input type="radio" form="whitelist" name="currency" class="radiobox" value="eth" checked>
-				<p>ETH</p>
+				<div class="inputradio">
+					<input type="radio" form="whitelist" name="currency" class="radiobox" value="eth" checked>
+					<p>ETH</p>
+				</div>
+				<div class="inputradio">
+					<input type="radio" form="whitelist" name="currency" class="radiobox" value="btc">
+					<p>BTC</p>
+				</div>
 			</div>
-			<div class="inputradio">
-				<input type="radio" form="whitelist" name="currency" class="radiobox" value="btc">
-				<p>BTC</p>
-			</div>
-			<div class="inputradio">
-				<input type="radio" form="whitelist" name="currency" class="radiobox" value="usd">
-				<p>USD</p>
-			</div>
+			<div class="inputtext">
+				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+				<input type="text" form="whitelist" name="wallet" maxlength="100" placeholder="Your wallet*" required>
 			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
@@ -198,6 +215,7 @@
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
 				<textarea form="whitelist" name="information" maxlength="1000" placeholder="Your message"></textarea>
 			</div>
+			<input type="hidden" form="whitelist" name="email">
 			<button type="submit" form="whitelist" class="button bttn">
 				<img src="img/details/a_medium.svg" class="angle left top">
 				JOIN
@@ -205,7 +223,7 @@
 			</button>
 			<a id="wlmodalclose" href="#contact" class="button">
 				<img src="img/details/a_medium.svg" class="angle left top">
-				CANSEL
+				CANCEL
 				<img src="img/details/a_medium.svg" class="angle right bottom">
 			</a>
 		</form>
