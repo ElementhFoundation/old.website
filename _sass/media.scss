@@ -92,6 +92,10 @@
 		&.year {
 			height: 128px;
 			margin: 0px 31px 0px 32px;
+			&.ico.last {
+				height: 81px;
+				margin-bottom: 47px;
+			}
 			.secondline {
 				position: absolute;
 				top: 40px;
