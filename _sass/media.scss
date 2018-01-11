@@ -45,9 +45,9 @@
 		padding: 41px 112px;
 	}
 	.body {
-		padding: 24px 31px 0px 32px;
+		padding: 24px 31px 0 32px;
 		&-angle {
-			margin: 0px 31px 31px 32px;
+			margin: 0 31px 31px 32px;
 			padding: 32px 31px 33px 32px;
 		}
 	}
@@ -69,7 +69,7 @@
 		}
 	}
 	li {
-		margin: 0px 31px 31px 32px;
+		margin: 0 31px 31px 32px;
 		.collapsible & { margin-bottom: 31px; }
 	}
 	.collapsible-body { padding-bottom: 24px; }
@@ -91,7 +91,7 @@
 		}
 		&.year {
 			height: 128px;
-			margin: 0px 31px 0px 32px;
+			margin: 0 31px 0 32px;
 			&.ico.last {
 				height: 81px;
 				margin-bottom: 47px;
@@ -99,7 +99,7 @@
 			.secondline {
 				position: absolute;
 				top: 40px;
-				margin: 0px 0px 0px 113px;
+				margin: 0 0 0 113px;
 				-webkit-transform: translate(0,-50%);
 				   -moz-transform: translate(0,-50%);
 					-ms-transform: translate(0,-50%);
@@ -212,7 +212,7 @@
 			padding-right: 32px;
 			background: none;
 			li {
-				margin: 0px;
+				margin: 0;
 				a {
 					height: 32px;
 					padding: 8px 0;
@@ -220,11 +220,11 @@
 				}
 			}
 			.liner {
-				width: 0px;
+				width: 0;
 				height: 100%;
 				position: absolute;
 				top: -32px;
-				right: 0px;
+				right: 0;
 				border-left: dotted 1px #ffffff;
 			}
 			.down a { height: 33px; }
