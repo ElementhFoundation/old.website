@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include header.html %}
+
 <div id="content" class="grid">
 
   {% include hero.html %}
@@ -29,3 +31,35 @@ layout: default
   {% include footer.html %}
 
 </div>
+
+{% include calltoaction.html %}
+
+{% include wlmodal.html %}
+
+<div id="loading" class="disnone"><div class="small_modal">Loading...</div></div>
+
+<div id="wl_ps_error" class="disnone">
+  <div class="small_modal">
+    <p class="description">
+      <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+      Oops, something went wrong! Please, fill the form again.
+    </p>
+    <div id="wl_ps_error_close" class="button floatnone">
+      <img src="img/details/a_medium.svg" class="angle left top">
+      OK
+      <img src="img/details/a_medium.svg" class="angle right bottom">
+    </div>
+  </div>
+</div>
+
+<div id="wl_ps_ok" class="disnone">
+  <div class="small_modal">
+    <div id="wl_ps_ok_close" class="button floatnone">
+      <img src="img/details/a_medium.svg" class="angle left top">
+      SUCCESS
+      <img src="img/details/a_medium.svg" class="angle right bottom">
+    </div>
+  </div>
+</div>
+
+{% include script.html %}
