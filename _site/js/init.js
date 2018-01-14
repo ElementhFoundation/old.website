@@ -127,6 +127,28 @@ $(function () {
     $('#wallet_btc_copy_ok').addClass('visible');
   });
 
+  $('#wallet_eth_copy').on('click', function(e) {
+    e.preventDefault();
+    var $temp = $('<input>');
+    $('body').append($temp);;
+    $temp.val($('#address_eth_div').text()).select();
+    document.execCommand('copy');
+    $temp.remove();
+
+    $('#wallet_eth_copy_ok').addClass('visible');
+  })
+
+  $('#wallet_btc_copy').on('click', function(e) {
+    e.preventDefault();
+    var $temp = $('<input>');
+    $('body').append($temp);;
+    $temp.val($('#address_btc_div').text()).select();
+    document.execCommand('copy');
+    $temp.remove();
+
+    $('#wallet_btc_copy_ok').addClass('visible');
+  })
+
   $('#join_wl').on('click', function () {
     $('#wl_ps').addClass('disblock').removeClass('disnone');
   })
