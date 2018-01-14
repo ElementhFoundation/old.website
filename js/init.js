@@ -82,14 +82,14 @@ $(function () {
         }
 
         if (data.response.status == 'Ok') {
-          if ($('#yourwallet').val().trim().length == 34) {
+          if ($('#yourwallet').val().trim().length > 26 && $('#yourwallet').val().trim().length < 35) {
             // btc
             $('#wallet_btc_ok').addClass('disblock').removeClass('disnone');
             $('#address_btc_div').html(data.response.btc);
             $('#address_btc_form').html(data.response.btc);
           }
 
-          if ($('#yourwallet').val().trim().length == 42) {
+          if ($('#yourwallet').val().trim().length > 39 && $('#yourwallet').val().trim().length < 45) {
             // eth
             $('#wallet_eth_ok').addClass('disblock').removeClass('disnone');
             $('#address_eth_div').html(data.response.eth);
