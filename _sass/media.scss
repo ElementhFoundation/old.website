@@ -1,4 +1,13 @@
 @media (min-width: 600px) {
+	#content.height {
+		height: 100%;
+		#page {
+			margin: 25px auto;
+			#text_logo {margin-bottom: 0;}
+			form {margin:0 auto;}
+		}
+	}
+	.small_modal {width: 320px;}
 	body { line-height: 32px; }
 	.display_bg { background-image: url(../img/bg/bg_tablet.jpg); }
 	.headline {
@@ -22,7 +31,7 @@
 		}
 	}
 	.wlmodal .description { padding-bottom: 65px; }
-	#whitelist { margin: 31px 31px 95px 32px !important; }
+	#wl_ps_form, #whitelist { margin: 31px 31px 95px 32px !important; }
 	.radioblock .inputradio p {
 		padding-top: 9px !important;
 		&.caption {padding-top: 48px !important;}
@@ -180,7 +189,7 @@
 		}
 	}
 	.wlmodal .description { font-size: 24px; }
-	#whitelist { margin: auto !important; }
+	#wl_ps_form, #whitelist { margin: auto !important; }
 	.display_bg { background-image: url(../img/bg/bg_hd.jpg); }
 	header {
 		width: 225px;
@@ -257,6 +266,9 @@
 }
 
 @media (min-width: 1920px) {
+	#content.height #page {
+		margin: 169px auto;
+	}
 	.calltoaction {
 		bottom: 46px;
 		left: 48px;

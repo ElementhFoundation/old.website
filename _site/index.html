@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="canonical" href="/" />
+    <link rel="canonical" href="http://localhost:4000/" />
     <link rel="alternate" type="application/rss+xml" title="Elementh Foundation" href="/feed.xml" />
   
     
@@ -118,7 +118,7 @@
 	<div class="display_bg"><div class="lines"></div></div>
 </nav>
 
-	<div id="content" class="grid">
+<div id="content" class="grid">
 
   <div class="section" id="hero">
   <img src="img/text_logo.svg" id="text_logo" title="elementh">
@@ -181,6 +181,11 @@
     SUBSCRIBE
     <img src="img/details/a_medium.svg" class="angle right bottom">
   </a>
+  <!-- <a href="/presale.html" class="button">
+    <img src="img/details/a_medium.svg" class="angle left top">
+    PRE-SALE
+    <img src="img/details/a_medium.svg" class="angle right bottom">
+  </a> -->
   <div style="height: 49px;">
     <a href="#features" class="scroll icon"></a>
   </div>
@@ -740,6 +745,7 @@
 	</ul>
 </div>
 
+
   <div class="section scrollspy" id="team">
 	<div class="title">TEAM</div>
 	<ul class="collapsible" data-collapsible="expandable">
@@ -1289,9 +1295,10 @@
 
   <footer><p class="secondline">© 2017 Elementh, All rights reserved<br>info@elementh.io</p></footer>
 
+
 </div>
 
-	<div id="calltoaction">
+<div id="calltoaction">
 	<a href="#contact" class="button">
 		<img src="img/details/a_medium.svg" class="angle left top">
 		SUBSCRIBE
@@ -1299,7 +1306,7 @@
 	</a>
 </div>
 
-	<div id="wlmodal" class="disnone">
+<div id="wlmodal" class="disnone">
 	<div class="wlmodal">
 		<p class="description">You've successfully subscribed to Elementh ICO campaign. If you want to invest in Elementh ICO and  get bonus, please fill in the form below to participate in whitelist.</p>
 		<form id="whitelist">
@@ -1336,7 +1343,7 @@
 			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-				<input type="text" form="whitelist" name="wallet" maxlength="100" placeholder="Your wallet*" required>
+				<input type="text" form="whitelist" name="wallet" maxlength="100" placeholder="Your wallet address*" required>
 			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
@@ -1366,7 +1373,34 @@
 	<div class="display_bg"><div class="lines"></div></div>
 </div>
 
-	<!--  Scripts-->                                                                               
+
+<div id="loading" class="disnone"><div class="small_modal">Loading...</div></div>
+
+<div id="wl_ps_error" class="disnone">
+  <div class="small_modal">
+    <p class="description">
+      <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+      Oops, something went wrong! Please, fill the form again.
+    </p>
+    <div id="wl_ps_error_close" class="button floatnone">
+      <img src="img/details/a_medium.svg" class="angle left top">
+      OK
+      <img src="img/details/a_medium.svg" class="angle right bottom">
+    </div>
+  </div>
+</div>
+
+<div id="wl_ps_ok" class="disnone">
+  <div class="small_modal">
+    <div id="wl_ps_ok_close" class="button floatnone">
+      <img src="img/details/a_medium.svg" class="angle left top">
+      SUCCESS
+      <img src="img/details/a_medium.svg" class="angle right bottom">
+    </div>
+  </div>
+</div>
+
+<!--  Scripts-->                                                                               
 
 
 <script src="/js/jquery.min.js" defer></script>
