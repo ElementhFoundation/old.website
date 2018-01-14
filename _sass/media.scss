@@ -1,5 +1,9 @@
 @media (min-width: 600px) {
 	body { line-height: 32px; }
+	#timerTitle {
+		font-size: 24px;
+		line-height: 64px;
+	}
 	.display_bg { background-image: url(../img/bg/bg_tablet.jpg); }
 	.headline {
 		margin-bottom: 65px;
