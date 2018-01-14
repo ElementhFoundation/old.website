@@ -127,6 +127,14 @@ $(function () {
     $('#wallet_btc_copy_ok').addClass('visible');
   });
 
+  $('#wallet_eth_copy').on('click', function(e) {
+    e.preventDefault();
+  })
+
+  $('#wallet_btc_copy').on('click', function(e) {
+    e.preventDefault();
+  })
+
   $('#join_wl').on('click', function () {
     $('#wl_ps').addClass('disblock').removeClass('disnone');
   })
