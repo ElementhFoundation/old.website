@@ -74,7 +74,7 @@ var contact = $("#contact").offset();
     $('#wallet').submit(function(e) {
         e.preventDefault();
         $.ajax({
-            url: 'https://apimail.ahoolee.io/api/presale?wallet=' + $('#yourwallet').val(),
+            url: 'https://apimail.ahoolee.io/api/presale?wallet=' + $('#yourwallet').val().trim(),
             type: 'get',
             dataType: 'json'
         }).done(
@@ -85,13 +85,13 @@ var contact = $("#contact").offset();
                 }
 
                 if(data.response.status == 'Ok'){
-                    if($('#yourwallet').val().length == 34) {
+                    if($('#yourwallet').val().trim().length == 34) {
                         // btc
                         $('#wallet_btc_ok').addClass( 'disblock' ).removeClass( 'disnone' );
                         $('#address_btc_div').html(data.response.btc);
                     }
 
-                    if($('#yourwallet').val().length == 42) {
+                    if($('#yourwallet').val().trim().length == 42) {
                         // eth
                         $('#wallet_eth_ok').addClass( 'disblock' ).removeClass( 'disnone' );
                         $('#address_eth_div').html(data.response.eth);
@@ -186,20 +186,17 @@ var contact = $("#contact").offset();
         }
     })
 
-
-
-
-
-});
     if($('#timer').length) {
       var curDate = new Date().getTime();
       var countDownDate = 1515974400000;
-      if (curDate < 1515974400000) {
+
+      if (curDate < countDownDate) {
         $('#timerTitle').html('50% bonus at closed pre-sale round starts in:')
       } else {
         countDownDate = 1517443200000;
         $('#timerTitle').html('50% bonus at closed pre-sale round ends in:')
-
+        $('#presaleLink').show(0)
+        $('#contactLink').hide(0)
       }
 
       var x = setInterval(function () {
@@ -230,7 +227,11 @@ var contact = $("#contact").offset();
         $('#timer').html(days + "d " + hours + ":" + minutes + ":" + seconds)
         // If the count down is finished, write some text
         if (distance < 0) {
-          clearInterval(x);
+
+          $('#timerTitle').html('50% bonus at closed pre-sale round ends in:')
+          countDownDate = 1517443200000;
+          $('#presaleLink').show(0)
+          $('#contactLink').hide(0)
         }
       }, 1000);
     }

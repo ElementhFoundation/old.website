@@ -57,25 +57,24 @@ $(function() {
         $( "#youremail" ).focus();
     })
 
-    var contact = $("#contact").offset();
 
-    $(document).ready(function() {
-        $(window).scroll(function(){
-            var screenPosition = $(document).scrollTop();
-            if (contact && screenPosition > contact.top) {
-                $( "#calltoaction" ).removeClass( 'disblock' ).addClass( 'disnone' );
-            }
-            if (contact && screenPosition < contact.top) {
-                $( "#calltoaction" ).addClass( 'disblock' ).removeClass( 'disnone' );
-            }
-        });
+var contact = $("#contact").offset();
+
+    $(window).scroll(function(){
+        var screenPosition = $(document).scrollTop();
+        if (screenPosition > contact.top) {
+            $( "#calltoaction" ).removeClass( 'disblock' ).addClass( 'disnone' );
+        }
+        if (screenPosition < contact.top) {
+            $( "#calltoaction" ).addClass( 'disblock' ).removeClass( 'disnone' );
+        }
     });
 
 
     $('#wallet').submit(function(e) {
         e.preventDefault();
         $.ajax({
-            url: 'https://apimail.ahoolee.io/api/presale?wallet=' + $('#yourwallet').val(),
+            url: 'https://apimail.ahoolee.io/api/presale?wallet=' + $('#yourwallet').val().trim(),
             type: 'get',
             dataType: 'json'
         }).done(
@@ -86,13 +85,13 @@ $(function() {
                 }
 
                 if(data.response.status == 'Ok'){
-                    if($('#yourwallet').val().length == 34) {
+                    if($('#yourwallet').val().trim().length == 34) {
                         // btc
                         $('#wallet_btc_ok').addClass( 'disblock' ).removeClass( 'disnone' );
                         $('#address_btc_div').html(data.response.btc);
                     }
 
-                    if($('#yourwallet').val().length == 42) {
+                    if($('#yourwallet').val().trim().length == 42) {
                         // eth
                         $('#wallet_eth_ok').addClass( 'disblock' ).removeClass( 'disnone' );
                         $('#address_eth_div').html(data.response.eth);
@@ -187,8 +186,53 @@ $(function() {
         }
     })
 
+    if($('#timer').length) {
+      var curDate = new Date().getTime();
+      var countDownDate = 1515974400000;
 
+      if (curDate < countDownDate) {
+        $('#timerTitle').html('50% bonus at closed pre-sale round starts in:')
+      } else {
+        countDownDate = 1517443200000;
+        $('#timerTitle').html('50% bonus at closed pre-sale round ends in:')
+        $('#presaleLink').show(0)
+        $('#contactLink').hide(0)
+      }
 
+      var x = setInterval(function () {
 
+        // Get todays date and time
+        var now = new Date().getTime();
 
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (hours < 10) {
+          hours = '0' + hours
+        }
+        if (minutes < 10) {
+          minutes = '0' + minutes
+        }
+        if (seconds < 10) {
+          seconds = '0' + seconds
+        }
+        // Display the result in the element with id="demo"
+
+        $('#timer').html(days + "d " + hours + ":" + minutes + ":" + seconds)
+        // If the count down is finished, write some text
+        if (distance < 0) {
+
+          $('#timerTitle').html('50% bonus at closed pre-sale round ends in:')
+          countDownDate = 1517443200000;
+          $('#presaleLink').show(0)
+          $('#contactLink').hide(0)
+        }
+      }, 1000);
+    }
 });
