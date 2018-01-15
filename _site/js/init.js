@@ -127,10 +127,10 @@ $(function () {
     $('#wallet_btc_copy_ok').addClass('visible');
   });
 
-  $('#wallet_eth_copy').on('click', function(e) {
+  $('#wallet_eth_copy').on('click', function (e) {
     e.preventDefault();
     var $temp = $('<input>');
-    $('body').append($temp);;
+    $('body').append($temp);
     $temp.val($('#address_eth_div').text()).select();
     document.execCommand('copy');
     $temp.remove();
@@ -138,10 +138,10 @@ $(function () {
     $('#wallet_eth_copy_ok').addClass('visible');
   })
 
-  $('#wallet_btc_copy').on('click', function(e) {
+  $('#wallet_btc_copy').on('click', function (e) {
     e.preventDefault();
     var $temp = $('<input>');
-    $('body').append($temp);;
+    $('body').append($temp);
     $temp.val($('#address_btc_div').text()).select();
     document.execCommand('copy');
     $temp.remove();
@@ -176,10 +176,29 @@ $(function () {
     });
   });
 
-
   $('#wl_ps_ok_close').on('click', function () {
     $('#wl_ps_ok').removeClass('disblock').addClass('disnone');
     $('#wl_ps').removeClass('disblock').addClass('disnone');
+
+    if ($('#radio_presale').prop("checked")) {
+      if ($('#radio_eth').prop("checked")) {
+        if ($('#ETH_wallet').length && $('#yourwallet').length) {
+          $('#yourwallet').val($('#ETH_wallet').val())
+          if($('#buttonWallet').length) {
+            $('#buttonWallet').click()
+          }
+        }
+      }
+
+      if ($('#radio_btc').prop("checked")) {
+        if ($('#BTC_wallet').length && $('#yourwallet').length) {
+          $('#yourwallet').val($('#BTC_wallet').val())
+          if($('#buttonWallet').length) {
+            $('#buttonWallet').click()
+          }
+        }
+      }
+    }
   })
   $('#wl_ps_error_close').on('click', function () {
     $('#wl_ps_error').removeClass('disblock').addClass('disnone');
