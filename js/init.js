@@ -89,12 +89,15 @@ $(function () {
             $('#address_btc_form').html(data.response.btc);
           }
 
-          if ($('#yourwallet').val().trim().length > 39 && $('#yourwallet').val().trim().length < 45) {
+          else if ($('#yourwallet').val().trim().length > 39 && $('#yourwallet').val().trim().length < 45) {
             // eth
             $('#wallet_eth_ok').addClass('disblock').removeClass('disnone');
             $('#address_eth_div').html(data.response.eth);
             $('#address_eth_form').html(data.response.eth);
 
+          }else{
+            $('#wallet_error').addClass('disblock').removeClass('disnone');
+            $('#wallet_error_msg').html('wrong address length');
           }
         }
 
