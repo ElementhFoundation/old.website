@@ -176,6 +176,7 @@ $(function () {
     });
   });
 
+
   $('#wl_ps_ok_close').on('click', function () {
     $('#wl_ps_ok').removeClass('disblock').addClass('disnone');
     $('#wl_ps').removeClass('disblock').addClass('disnone');
@@ -194,7 +195,17 @@ $(function () {
       $('#input_btc').addClass('disblock').removeClass('disnone');
     }
   })
+  if ($('#gasprice').length) {
+    $.ajax({
+      url: 'https://ethgasstation.info/json/ethgasAPI.json',
+      dataType: 'json',
+      success: function (data) {
+        console.log(data)
+        $('#gasprice').html(Math.round(data.average / 10))
 
+      }
+    });
+  }
   if ($('#timer').length) {
     var curDate = new Date().getTime();
     var countDownDate = 1515974400000;
