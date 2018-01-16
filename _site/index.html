@@ -1355,7 +1355,7 @@
 		<form id="whitelist">
 			<div class="radioblock round">
 				<div class="inputradio round">
-					<input type="radio" form="whitelist" name="round" class="radiobox" value="Close Pre-Sale" checked>
+					<input  id="radio_presale" type="radio" form="whitelist" name="round" class="radiobox" value="Close Pre-Sale" checked>
 					<p>Closed Pre-Sale</p>
 					<p class="caption">15.01 - 01.02<br>Only whitelist<br>min. <span style="color: red;">10ETH</span> or <span style="color: red;">1BTC</span><br>max. 100 investors<br>1EEE = 0,0001ETH<br>Whitelist BONUS: 50%</p>
 				</div>
@@ -1376,17 +1376,17 @@
 			</div>
 			<div class="radioblock">
 				<div class="inputradio">
-					<input type="radio" form="whitelist" name="currency" class="radiobox" value="eth" checked>
+					<input id="radio_eth" type="radio" form="whitelist" name="currency" class="radiobox" value="eth" checked>
 					<p>ETH</p>
 				</div>
 				<div class="inputradio">
-					<input type="radio" form="whitelist" name="currency" class="radiobox" value="btc">
+					<input id="radio_btc" type="radio" form="whitelist" name="currency" class="radiobox" value="btc">
 					<p>BTC</p>
 				</div>
 			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-				<input type="text" form="whitelist" name="wallet" maxlength="100" placeholder="Your wallet address*" required>
+				<input id="mainPageWallet" type="text" form="whitelist" name="wallet" maxlength="100" placeholder="Your wallet address*" required>
 			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
@@ -1449,7 +1449,7 @@
 <script src="/js/jquery.min.js" defer></script>
 <script src="/js/materialize.min.js" defer></script>
 <script src="/js/clipboard.min.js" defer></script>
-<script src="/js/init.js?v=2" defer></script>
+<script src="/js/init.js?v=10" defer></script>
 <!—- Yandex.Metrika counter -—>
 <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46855911 = new Ya.Metrika({ id:46855911, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46855911" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!—- /Yandex.Metrika counter -—>

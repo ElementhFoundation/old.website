@@ -4,7 +4,7 @@
 		<form id="whitelist">
 			<div class="radioblock round">
 				<div class="inputradio round">
-					<input type="radio" form="whitelist" name="round" class="radiobox" value="Close Pre-Sale" checked>
+					<input  id="radio_presale" type="radio" form="whitelist" name="round" class="radiobox" value="Close Pre-Sale" checked>
 					<p>Closed Pre-Sale</p>
 					<p class="caption">15.01 - 01.02<br>Only whitelist<br>min. <span style="color: red;">10ETH</span> or <span style="color: red;">1BTC</span><br>max. 100 investors<br>1EEE = 0,0001ETH<br>Whitelist BONUS: 50%</p>
 				</div>
@@ -25,17 +25,17 @@
 			</div>
 			<div class="radioblock">
 				<div class="inputradio">
-					<input type="radio" form="whitelist" name="currency" class="radiobox" value="eth" checked>
+					<input id="radio_eth" type="radio" form="whitelist" name="currency" class="radiobox" value="eth" checked>
 					<p>ETH</p>
 				</div>
 				<div class="inputradio">
-					<input type="radio" form="whitelist" name="currency" class="radiobox" value="btc">
+					<input id="radio_btc" type="radio" form="whitelist" name="currency" class="radiobox" value="btc">
 					<p>BTC</p>
 				</div>
 			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-				<input type="text" form="whitelist" name="wallet" maxlength="100" placeholder="Your wallet address*" required>
+				<input id="mainPageWallet" type="text" form="whitelist" name="wallet" maxlength="100" placeholder="Your wallet address*" required>
 			</div>
 			<div class="inputtext">
 				<img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">

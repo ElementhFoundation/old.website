@@ -190,6 +190,8 @@ $(function () {
           if($('#buttonWallet').length) {
             $('#buttonWallet').click()
           }
+        }else {
+          window.location.href = "presale.html#" + $('#mainPageWallet').val();
         }
       }
 
@@ -199,6 +201,8 @@ $(function () {
           if($('#buttonWallet').length) {
             $('#buttonWallet').click()
           }
+        }else{
+          window.location.href = "presale.html#" + $('#mainPageWallet').val();
         }
       }
     }
@@ -227,6 +231,13 @@ $(function () {
 
       }
     });
+  }
+  var hash = window.location.hash.substr(1)
+  if(hash){
+    if($('#buttonWallet').length) {
+      $('#yourwallet').val(hash)
+      $('#buttonWallet').click()
+    }
   }
   if ($('#timer').length) {
     var curDate = new Date().getTime();
