@@ -539,17 +539,26 @@ button {
 	margin-top: 12px;
 	margin-bottom: 33px;
 	form {
-		max-width: 385px;
+		max-width: 513px;
 		margin: {
 			top: 31px;
-			bottom: 175px;
+			bottom: 239px;
+		}
+		div {
+			button.go, p {
+				margin: 31px 15px 0 16px;
+			}
+			p {
+				margin-top: 8px;
+				width: 31px;
+			}
+			button#join_wl {margin-top: 15px;}
 		}
 	}
 }
 
 #join_wl {
 	cursor: pointer;
-	text-decoration: underline;
 	line-height: 32px;
 }
 
