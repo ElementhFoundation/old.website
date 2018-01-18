@@ -4,7 +4,16 @@
 		#page {
 			margin: 25px auto;
 			#text_logo {margin-bottom: 0;}
-			form {margin:0 auto;}
+			form {
+				margin:0 auto;
+				div {
+					button.go, p {
+						float: left;
+						margin: 31px 16px 0 16px;
+					}
+					p {margin-top: 47px;}
+				}
+			}
 		}
 	}
 	.small_modal {width: 320px;}
@@ -89,6 +98,7 @@
 	.iconpack {
 		margin-top: 48px;
 		margin-bottom: -4px;
+		&.iconpack47 {margin-top: 47px;}
 	}
 	.firstline, .secondline, .thirdline {
 		margin-left: 32px;

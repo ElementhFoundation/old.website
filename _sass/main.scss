@@ -539,17 +539,26 @@ button {
 	margin-top: 12px;
 	margin-bottom: 33px;
 	form {
-		max-width: 385px;
+		max-width: 513px;
 		margin: {
 			top: 31px;
-			bottom: 175px;
+			bottom: 239px;
+		}
+		div {
+			button.go, p {
+				margin: 31px 15px 0 16px;
+			}
+			p {
+				margin-top: 8px;
+				width: 31px;
+			}
+			button#join_wl {margin-top: 15px;}
 		}
 	}
 }
 
 #join_wl {
 	cursor: pointer;
-	text-decoration: underline;
 	line-height: 32px;
 }
 
@@ -837,6 +846,8 @@ footer {
 
 .foundico { background-image: url(../img/partner/foundico.svg); }
 
+.icobench { background-image: url(../img/partner/icobench.svg); }
+
 /*----- TEAM -----*/
 
 #team {}
@@ -864,6 +875,8 @@ footer {
 /*--- ADVISORS ---*/
 
 #advisors { margin-top: 3px; }
+
+.yannam	{ background-image: url(../img/advisors/naveen_yannam.png); }
 
 .a1 { background-image: url(../img/advisors/a_1.png); }
 
