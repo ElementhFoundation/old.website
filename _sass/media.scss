@@ -56,11 +56,12 @@
 	}
 	.section { margin-top: 63px; }
 	#advisors { margin-top: 60px; }
-	#hero { margin-top: 185px; }
+	#hero { margin-top: 73px; }
 	#text_logo {
 		width: 432px;
-		margin-bottom: 52px;
+		margin-bottom: 20px;
 	}
+	#presaleLink {margin-top: 0px;}
 	.description { padding: 32px 31px 33px 32px; }
 	.description, .button, form { margin: 32px 31px 31px 32px; }
 	.button.bttn { margin-left: 31px; }
@@ -101,7 +102,7 @@
 	}
 	.collapsible-body { padding-bottom: 24px; }
 	.iconpack {
-		margin-top: 48px;
+		margin-top: 16px;
 		margin-bottom: -4px;
 		&.iconpack47 {margin-top: 47px;}
 	}
@@ -199,11 +200,12 @@
 @media (min-width: 1280px) {
 	#calltoaction {
 		width: 225px;
-		bottom: 30px;
+		bottom: 0px;
 		left: 32px;
 		.button {
 			width: 225px;
-			height: 49px;
+			height: 40px;
+			padding-top: 8px;
 			.angle { display: block; }
 		}
 	}
@@ -236,7 +238,7 @@
 		z-index: 3;
 		.close, .display_bg { display: none; }
 		.grid {
-			padding-top: 144px;
+			padding-top: 112px;
 			padding-right: 32px;
 			background: none;
 			li {
@@ -288,9 +290,13 @@
 	#content.height #page {
 		margin: 169px auto;
 	}
-	.calltoaction {
+	#calltoaction {
 		bottom: 46px;
 		left: 48px;
+		.button {
+			height: 49px;
+			padding-top: 16px;
+		}
 	}
 	.display_bg { background-image: url(../img/bg/bg_full_hd.jpg); }
 	header { margin: 48px 47px 47px 48px; }
