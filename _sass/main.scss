@@ -150,7 +150,7 @@ a:link, a:active, a:visited {
 
 #timerTitle {
 	font-size: 24px;
-	line-height: 32px;
+	line-height: 36px;
 }
 
 .headline {
@@ -347,6 +347,19 @@ form { text-align: center; }
 		margin: 0 15px 15px 16px;
 		padding: 16px 15px 17px 16px;
 		text-align: left;
+	}
+}
+
+.info {
+	width: 272px;
+	font-size: 14px;
+	margin: 0 -7px 0 -8px;
+	tbody {
+		tr {
+		.text_left 	{text-align: left;}
+		.text_right {text-align: right;}
+		.padd {padding-right: 8px;}
+		}
 	}
 }
 
@@ -788,7 +801,7 @@ footer {
 
 #hero{
 	text-align: center;
-	margin-top: 109px;
+	margin-top: 77px;
 }
 
 #text_logo {
