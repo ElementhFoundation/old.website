@@ -228,10 +228,10 @@ $(function () {
     var countDownDate = 1515974400000;
 
     if (curDate < countDownDate) {
-      $('#timerTitle').html('50% bonus at closed pre-sale round starts in:')
+      $('#timerTitle').html('50% bonus at Private Pre-Sale round starts in:')
     } else {
       countDownDate = 1517443200000;
-      $('#timerTitle').html('50% bonus at closed pre-sale round ends in:')
+      $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
       $('#presaleLink').show(0)
       $('#contactLink').hide(0)
     }
@@ -265,7 +265,7 @@ $(function () {
       // If the count down is finished, write some text
       if (distance < 0) {
 
-        $('#timerTitle').html('50% bonus at closed pre-sale round ends in:')
+        $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
         countDownDate = 1517443200000;
         $('#presaleLink').show(0)
         $('#contactLink').hide(0)
