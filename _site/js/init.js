@@ -52,22 +52,6 @@ $(function () {
     $('#wlmodal').removeClass('disblock').addClass('disnone');
   })
 
-  $('#calltoaction').on('click', function () {
-    $("#youremail").focus();
-  })
-
-  var contact = $("#contact").offset();
-
-  $(window).scroll(function () {
-    var screenPosition = $(document).scrollTop();
-    if (screenPosition > contact.top) {
-      $("#calltoaction").removeClass('disblock').addClass('disnone');
-    }
-    if (screenPosition < contact.top) {
-      $("#calltoaction").addClass('disblock').removeClass('disnone');
-    }
-  });
-
   $('#wallet').submit(function (e) {
     e.preventDefault();
     $.ajax({
