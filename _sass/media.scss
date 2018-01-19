@@ -1,4 +1,9 @@
 @media (min-width: 600px) {
+	.info {
+		width: 416px;
+		font-size: 18px;
+		margin: 0 auto;
+	}
 	#content.height {
 		height: 100%;
 		#page {
@@ -20,7 +25,7 @@
 	body { line-height: 32px; }
 	#timerTitle {
 		font-size: 24px;
-		line-height: 64px;
+		line-height: 56px;
 	}
 	.display_bg { background-image: url(../img/bg/bg_tablet.jpg); }
 	.headline {
