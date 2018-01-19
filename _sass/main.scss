@@ -143,6 +143,19 @@ a:link, a:active, a:visited {
 	border-top: dotted 1px #ffffff;
 }
 
+.info {
+	width: 272px;
+	font-size: 14px;
+	margin: 0 -7px 0 -8px;
+	tbody {
+		tr {
+		.text_left 	{text-align: left;}
+		.text_right {text-align: right;}
+		.padd {padding-right: 8px;}
+		}
+	}
+}
+
 #timer{
 	font-size: 40px;
 	line-height: 64px;
@@ -150,7 +163,7 @@ a:link, a:active, a:visited {
 
 #timerTitle {
 	font-size: 24px;
-	line-height: 36px;
+	line-height: 34px;
 }
 
 .headline {
@@ -347,19 +360,6 @@ form { text-align: center; }
 		margin: 0 15px 15px 16px;
 		padding: 16px 15px 17px 16px;
 		text-align: left;
-	}
-}
-
-.info {
-	width: 272px;
-	font-size: 14px;
-	margin: 0 -7px 0 -8px;
-	tbody {
-		tr {
-		.text_left 	{text-align: left;}
-		.text_right {text-align: right;}
-		.padd {padding-right: 8px;}
-		}
 	}
 }
 
@@ -801,7 +801,7 @@ footer {
 
 #hero{
 	text-align: center;
-	margin-top: 77px;
+	margin-top: 109px;
 }
 
 #text_logo {
@@ -922,5 +922,10 @@ footer {
 /*--- CONTACTS ---*/
 
 #contact {}
+
+.fb_iframe_widget span
+{
+	vertical-align: baseline !important;
+}
 
 @import 'media';

@@ -25,7 +25,7 @@
 	body { line-height: 32px; }
 	#timerTitle {
 		font-size: 24px;
-		line-height: 56px;
+		line-height: 54px;
 	}
 	.display_bg { background-image: url(../img/bg/bg_tablet.jpg); }
 	.headline {
@@ -56,14 +56,13 @@
 	}
 	.section { margin-top: 63px; }
 	#advisors { margin-top: 60px; }
-	#hero { margin-top: 121px; }
+	#hero { margin-top: 185px; }
 	#text_logo {
 		width: 432px;
-		margin-bottom: 20px;
+		margin-bottom: 52px;
 	}
 	.description { padding: 32px 31px 33px 32px; }
 	.description, .button, form { margin: 32px 31px 31px 32px; }
-	#presaleLink {margin-top: 16px;}
 	.button.bttn { margin-left: 31px; }
 	form { margin-bottom: 63px; }
 	.scroll { margin: 28px 32px; }
@@ -102,7 +101,7 @@
 	}
 	.collapsible-body { padding-bottom: 24px; }
 	.iconpack {
-		margin-top: 0px;
+		margin-top: 48px;
 		margin-bottom: -4px;
 		&.iconpack47 {margin-top: 47px;}
 	}
@@ -185,7 +184,6 @@
 }
 
 @media (min-width: 960px) {
-	#hero {margin-top: 41px;}
 	.number {
 		& + .collapsible-body .body { padding-left: 80px; }
 	}
