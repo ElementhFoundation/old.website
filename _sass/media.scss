@@ -335,8 +335,8 @@
 		-o-transform: translate(-50%,-50%);
 		transform: translate(-50%,-50%);
 		.description {
-			padding-top: 0;
-			.icon.close {top: -8px;}
+			padding-top: -8px;
+			.icon.close {top: 0;}
 		}
 	}
 	.section { margin-left: 352px; }
