@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div id="content" class="grid height">
+
+    <a href="/" title="home" class="rotate home icon button">
+        <img src="img/details/a_small.svg" class="angle left top">
+        <img src="img/details/a_small.svg" class="angle left bottom">
+        <img src="img/details/a_small.svg" class="angle right top">
+        <img src="img/details/a_small.svg" class="angle right bottom">
+    </a>
+
+    <div class="section" id="page">
+
+        <img src="img/text_logo.svg" id="text_logo" title="elementh">
+
+        <div class="description">
+            <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+            If you are in Private Pre-Sale whitelist then enter your Ethereum or Bitcoin address and click CONTRIBUTE to see Elementh smart-contract pre-sale address.<br>
+            If you are not in Private Pre-Sale whitelist then click "Join Whitelist", fill in the form to enter whitelist.
+            <div id="preico" class="progressbar">
+                <div id="percent_number" class="percent_number">33%</div>
+                <div class="progressdata">
+                    <div class="balance">
+                        <p class="description">Balance:</p>
+                        <p id="balance_data" class="title">500.5 ETH</p>
+                    </div>
+                    <div class="progressline"><div id="percent_line" style="width: 33%;"></div></div>
+                    <div class="hardcap">
+                        <p class="description">HardCap:</p>
+                        <p id="hardcap_data" class="title">1500.0 ETH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="preico_join" class="button">
+            <img src="img/details/a_medium.svg" class="angle left top">
+            CONTRIBUTE
+            <img src="img/details/a_medium.svg" class="angle right bottom">
+        </div>
+
+        {% include iconpack.html %}
+
+    </div>
+
+    {% include signup.html %}
+
+    {% include signin.html %}
+
+    {% include resetpass.html %}
+
+</div>
