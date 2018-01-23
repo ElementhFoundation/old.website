@@ -1,4 +1,30 @@
 @media (min-width: 600px) {
+
+	.progressbar {
+		margin-top: 32px;
+		.percent_number {
+			width: 145px;
+			margin-right: 31px;
+			font-size: 48px;
+		}
+		.progressdata {
+			width: calc(100% - 177px);
+			.balance, .hardcap {
+				height: 70px;
+				.description {
+					float: left;
+				}
+				.title {
+					float: right;
+				}
+				.description, .title {
+					height: 51px;
+					margin: 0;
+					padding: 19px 0 0 0;
+				}
+			}
+		}
+	}
 	.info {
 		width: 416px;
 		font-size: 18px;
@@ -7,7 +33,7 @@
 	#content.height {
 		height: 100%;
 		#page {
-			margin: 25px auto;
+			margin: 24px auto;
 			#text_logo {margin-bottom: 0;}
 			form {
 				margin:0 auto;
@@ -48,11 +74,30 @@
 			}
 		}
 	}
-	.wlmodal .description { padding-bottom: 65px; }
+	.wlmodal .description {
+		padding-bottom: 65px;
+	}
 	#wl_ps_form, #whitelist { margin: 31px 31px 95px 32px !important; }
 	.radioblock .inputradio p {
 		padding-top: 9px !important;
 		&.caption {padding-top: 48px !important;}
+	}
+
+	.sign {
+		.wlmodal {
+			.description {
+				padding-top: 64px;
+				.icon.close {
+					top: 56px;
+					right: 0px;
+				}
+			}
+			form {
+				max-width: 600px !important;
+				margin: 0 auto !important;
+				.body {padding: 0px;}
+			}
+		}
 	}
 	.section { margin-top: 63px; }
 	#advisors { margin-top: 60px; }
@@ -215,7 +260,7 @@
 		}
 	}
 	.wlmodal .description { font-size: 24px; }
-	#wl_ps_form, #whitelist { margin: auto !important; }
+	#wl_ps_form, .sign, #whitelist { margin: auto !important; }
 	.display_bg { background-image: url(../img/bg/bg_hd.jpg); }
 	header {
 		width: 225px;
@@ -280,6 +325,20 @@
 }
 
 @media (min-width: 1440px) {
+	.sign .wlmodal {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		.description {
+			padding-top: 0;
+			.icon.close {top: -8px;}
+		}
+	}
 	.section { margin-left: 352px; }
 	#media, #rewards, #partner, #rating { margin-left: 368px; }
 	footer .secondline { margin-left: 96px; }
