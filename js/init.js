@@ -13,7 +13,7 @@ $(function () {
     .resize(resize)
     .trigger('resize');
 
-  $(document).ready(function () { $('.scrollspy').scrollSpy(); });
+  $('.scrollspy').scrollSpy();
 
   $('.collapsible').collapsible({expandable: true});
   $('.button-collapse').sideNav();
