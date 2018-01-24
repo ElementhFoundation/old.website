@@ -1,4 +1,42 @@
+@media (min-width: 480px) {
+	#profile {
+		#wallet_data {
+			.data_text, #profile_data {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
 @media (min-width: 600px) {
+
+	#profile {
+		margin-top: 11px;
+		.title {
+			margin-bottom: 32px;
+			padding: 0 31px 0 32px;
+		}
+		#wallet_data, #profile_data {
+			.description {
+				margin-bottom: 20px !important;
+			}
+			overflow: hidden;
+			margin: 0 31px 0 32px;
+			.caption {
+				font-size: 14px;
+				line-height: 48px;
+				float: left;
+			}
+			.data_text {
+				line-height: 48px;
+				margin-left: 120px;
+			}
+			#get_eee {
+				margin: -96px 0 0 0;
+				float: right;
+			}
+		}
+	}
 
 	.progressbar {
 		margin-top: 32px;
@@ -82,7 +120,7 @@
 	.wlmodal .description {
 		padding-bottom: 65px;
 	}
-	#wl_ps_form, #whitelist { margin: 31px 31px 95px 32px !important; }
+	#wl_ps_form, #profile_data, #whitelist { margin: 31px 31px 95px 32px !important; }
 	.radioblock .inputradio p {
 		padding-top: 9px !important;
 		&.caption {padding-top: 48px !important;}
@@ -244,6 +282,14 @@
 }
 
 @media (min-width: 960px) {
+
+	#profile {
+		#wallet_data {
+			.data_text {
+				margin-left: 144px;
+			}
+		}
+	}
 	.number {
 		& + .collapsible-body .body { padding-left: 80px; }
 	}
@@ -269,7 +315,7 @@
 		}
 	}
 	.wlmodal .description { font-size: 24px; }
-	#wl_ps_form, .sign, #whitelist { margin: auto !important; }
+	#wl_ps_form, #profile_data, .sign, #whitelist { margin: auto !important; }
 	.display_bg { background-image: url(../img/bg/bg_hd.jpg); }
 	header {
 		width: 225px;

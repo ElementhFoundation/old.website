@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<div id="content" class="profile grid">
+
+    <a id="go_back" href="/" class="rotate home icon button">
+        <img src="img/details/a_small.svg" class="angle left top">
+        <img src="img/details/a_small.svg" class="angle left bottom">
+        <img src="img/details/a_small.svg" class="angle right top">
+        <img src="img/details/a_small.svg" class="angle right bottom">
+    </a>
+
+    <div class="section" id="profile">
+        {% include userblock.html %}
+        <div class="title">PROFILE</div>
+        <div id="verification" class="description">
+            <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+            You need to verify your email for contribute.
+        </div>
+        <div id="wallet_data">
+            <div class="caption">Your <span id="wallet_currency">ETH</span> wallet:</div>
+            <div id="user_wallet" class="data_text">0xa04197e566e13a7036aA185cF7cBd03898cF3cA8</div>
+            <div class="caption">Listed in:</div>
+            <div id="user_round" class="data_text">Private Pre-Sale</div>
+            <div class="caption">Token tracker:</div>
+            <div id="user_token" class="data_text">0</div>
+            <div id="get_eee" class="button pointer">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                GET EEE
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </div>
+        </div>
+        <form id="profile_data">
+            <div id="profile_data_fill" class="description">To complete registration, please fill in the form:</div>
+            <div id="profile_data_complete" class="description">Settings:</div>
+            <div class="radioblock round">
+                <div class="inputradio round">
+                    <input id="radio_preico" type="radio" form="profile_data" name="round" class="radiobox" value="Pre-ICO">
+                    <p><label for="radio_preico">Pre-ICO</label></p>
+                    <p class="caption">01.02 - 14.02<br>min. <span style="color: red;">1ETH</span> or <span style="color: red;">0.1BTC</span><br>max. 1000 investors<br>1EEE = 0,0001ETH<br>Whitelist BONUS:<br>First day Pre-ICO: 30%<br>Second day Pre-ICO: 15%</p>
+                </div>
+                <div class="inputradio round">
+                    <input id="radio_ico" type="radio" form="profile_data" name="round" class="radiobox" value="ICO">
+                    <p><label for="radio_ico">ICO</label></p>
+                    <p class="caption">01.03 - 01.04<br>1EEE = 0,0002ETH<br>Whitelist BONUS:<br>First day ICO: 30%<br>Second day ICO: 15%</p>
+                </div>
+            </div>
+            <div class="inputtext">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <input type="text" form="profile_data" name="amount" maxlength="100" placeholder="How much will you invest?*" required>
+            </div>
+            <div class="radioblock">
+                <div class="inputradio">
+                    <input id="radio_eth" type="radio" form="profile_data" name="currency" class="radiobox" value="eth" checked>
+                    <p><label for="radio_eth">ETH</label></p>
+                </div>
+                <div class="inputradio">
+                    <input id="radio_btc" type="radio" form="profile_data" name="currency" class="radiobox" value="btc">
+                    <p><label for="radio_btc">BTC</label></p>
+                </div>
+            </div>
+            <div class="inputtext">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <input type="email" form="profile_data" name="email" maxlength="100" placeholder="Your Email*" required>
+            </div>
+            <div id="input_btc" class="inputtext disnone">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <input id="BTC_wallet"  type="text" form="profile_data" name="BTC_wallet" maxlength="100" placeholder="Your BTC wallet address*">
+            </div>
+            <div class="inputtext">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <input id="ETH_wallet" type="text" form="profile_data" name="ETH_wallet" maxlength="100" placeholder="Your ETH wallet address for receive tokens*" required>
+            </div>
+            <div class="inputtext">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <input type="text" form="profile_data" name="country" maxlength="100" placeholder="Your country">
+            </div>
+            <div class="inputtext">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <input type="text" form="profile_data" name="facebook" maxlength="100" placeholder="Your facebook or any social profile">
+            </div>
+            <div class="inputtextarea">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <textarea form="profile_data" name="information" maxlength="1000" placeholder="Please write your feedback/review about our project!"></textarea>
+            </div>
+
+            <button type="submit" form="profile_data" class="button bttn">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                SAVE
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </button>
+            <div id="profile_data_cancel" class="button">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                CANCEL
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </div>
+        </form>
+    </div>
+
+</div>

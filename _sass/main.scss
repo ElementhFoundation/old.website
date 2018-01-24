@@ -640,15 +640,15 @@ button {
 
 #wl_ps, #wlmodal, .sign {z-index: 2;}
 
-.wlmodal {
+.wlmoda, #content.profile {
 	width: 100%;
 	overflow: inherit;
-	.description {
+	&l .description {
 		max-width: 961px;
 		margin: auto;
 		padding-top: 64px;
 	}
-	#wl_ps_form, .sign_form, #whitelist {
+	&l #wl_ps_form, #profile #profile_data, &l .sign_form, &l #whitelist {
 		max-width: 961px;
 		margin: 15px 15px 95px 16px;
 		.inputtext, .inputtextarea {
@@ -681,7 +681,7 @@ button {
 				&.round {
 					width: 100%;
 					height: 100%;
-					max-width: 288px;
+					max-width: 235px;
 				}
 				input {
 					width: 16px;
@@ -886,6 +886,55 @@ footer {
 }
 
 .section { margin-top: 31px; }
+
+/*---- PROFILE ---*/
+
+#profile {
+	margin-top: -1px;
+	.title {
+		line-height: 32px;
+		height: 32px;
+		padding: 0 15px 0 16px;
+	}
+	#verification.description {
+		line-height: 32px;
+		padding: 8px 16px 9px;
+		text-align: left;
+		background-color: rgba(255,0,0,.5);
+	}
+	#profile_data {
+		.description {
+			margin-bottom: 16px;
+		}
+	}
+	#wallet_data, #profile_data {
+		overflow: hidden;
+		margin: 0 15px 0 16px;
+		.description {
+			padding: 0;
+			text-align: left;
+			margin: {
+				right: 0;
+				left: 0;
+			}
+		}
+		.caption {
+			font-size: 14px;
+			opacity: .7;
+		}
+		.data_text {
+			font-size: 11px;
+		}
+		#get_eee {
+			margin: {
+				right: 0;
+				left: 0;
+			}
+		}
+		.inputtextarea, .inputtextarea textarea {height: 85px !important;}
+
+	}
+}
 
 /*----- HERO -----*/
 
