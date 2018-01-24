@@ -33,7 +33,12 @@
 	#content.height {
 		height: 100%;
 		#page {
-			margin: 24px auto;
+			margin: 8px auto;
+			#userblock {
+				position: relative;
+				top: -6px;
+				padding-bottom: 32px;
+			}
 			#text_logo {margin-bottom: 0;}
 			form {
 				margin:0 auto;
@@ -228,9 +233,13 @@
 	#advisors .title { padding-bottom: 44px; }
 	#contact .title { padding-bottom: 40px; }
 	footer {
-		height: 111px;
+		height: 176px;
 		margin-top: 48px;
 		.secondline { top: 56px; }
+		#userblock {
+			top: 40px;
+			text-align: right;
+		}
 	}
 }
 
@@ -319,6 +328,7 @@
 		margin-left: 304px;
 	}
 	footer {
+		height: 112px;
 		width: calc(100% - 288px);
 		left: 288px;
 	}

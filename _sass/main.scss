@@ -404,7 +404,7 @@ form { text-align: center; }
 			transform: translate(0,-50%);
 }
 
-footer .secondline { top: 32px; }
+footer .secondline { top: 48px; }
 
 .image {
 	height: inherit;
@@ -577,6 +577,15 @@ button {
 			button#join_wl {margin-top: 15px;}
 		}
 	}
+}
+
+#userblock {
+	position: absolute;
+	top: 22px;
+	right: 0;
+	text-align: right;
+	padding-top: 0;
+	span {margin-left: 16px;}
 }
 
 #join_wl {
@@ -855,11 +864,17 @@ header {
 footer {
 	position: relative;
 	width: 100%;
-	height: 65px;
+	height: 192px;
 	margin-top: 16px;
 	border-top: dotted 1px;
 	border-color: rgba(255,255,255,.3);
 	z-index: 2;
+	#userblock {
+		position: relative;
+		top: 86px;
+		text-align: left;
+		padding-left: 0;
+	}
 }
 
 /*------------ CONTENT ------------*/
