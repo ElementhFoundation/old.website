@@ -272,6 +272,20 @@ li.nolink:active { background-color: rgba(255,255,255,.0); }
 	.icon { display: inline-block; }
 }
 
+.line_icon {
+	position: relative;
+	top: 8px;
+	height: 24px;
+	width: 24px;
+	opacity: .9;
+	img {
+		margin: {
+			right: 8px;
+			left: 8px;
+		}
+	}
+}
+
 .rotate {
 	transform: rotate(90deg);
 	margin-top: 16px !important;
@@ -281,6 +295,12 @@ li.nolink:active { background-color: rgba(255,255,255,.0); }
 .close { z-index: 2; }
 
 .close		{ background: url(../img/icon/ic_close.svg)  center center no-repeat; }
+
+.edit		{ background: url(../img/icon/ic_edit.svg)  center center no-repeat; }
+
+.cancel		{ background: url(../img/icon/ic_cancel.svg)  center center no-repeat; }
+
+.done		{ background: url(../img/icon/ic_done.svg)  center center no-repeat; }
 
 .menu		{ background: url(../img/icon/ic_menu.svg)  center center no-repeat; }
 
