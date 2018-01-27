@@ -866,6 +866,7 @@ button {
 	left: 0;
 	z-index: 1000;
 	background-color: rgba(0,0,0,.95);
+	overflow-y: scroll;
 	.toast {
 		position: absolute;
 		left: 50%;
