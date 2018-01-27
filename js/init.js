@@ -286,7 +286,9 @@ $(function () {
         if (!data.verified) {
           $('#verification').removeClass('disnone')
         }else{
-          $('#wallet_data').removeClass('disnone')
+          if (data.round) {
+            $('#wallet_data').removeClass('disnone')
+          }
         }
 
         if (data.email) {
