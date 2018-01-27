@@ -29,11 +29,24 @@
 			}
 			.data_text {
 				line-height: 48px;
+				height: 48px;
 				margin-left: 120px;
+				margin-bottom: 16px;
+				form {
+					margin: 0;
+					.radioblock .inputradio p {padding-top: 0 !important;}
+
+					.line_icon.done_cancel {
+						top: -56px;
+						&.round {top: -42px;}
+					}
+				}
 			}
-			#get_eee {
-				margin: -96px 0 0 0;
-				float: right;
+			#get_eee_btc {
+				margin: 0 0 0 27px;
+			}
+			#get_eee_eth {
+				margin: 16px 0 0 0;
 			}
 		}
 	}
@@ -287,7 +300,11 @@
 		#wallet_data {
 			.data_text {
 				margin-left: 144px;
+				form {width: calc(100% - 217px);}
 			}
+			.button.pointer {float: right;}
+			#get_eee_eth {margin-top: -208px;}
+			#get_eee_btc {margin-top: -128px;}
 		}
 	}
 	.number {

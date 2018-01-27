@@ -8,7 +8,7 @@
 
     <title>Elementh Foundation pre-sale</title>
     <meta name="description" content="Contribute to Elementh Foundation" />
-    <link rel="stylesheet" type="text/css" href="/assets/main.css?v=20" />
+    <link rel="stylesheet" type="text/css" href="/assets/main.css?v=21" />
     <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic" rel="stylesheet">
@@ -117,93 +117,6 @@
             </form>
 
         </div>
-
-        <div id="wallet_eth_ok" class="disnone">
-            <div class="small_modal">
-                <p class="description">
-                    <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
-                    <span style="color: red">Do not send less than 10 ETH.</span>
-                        <br>
-                    <span>
-                        Please do not send funds from Exchanges and wallets like Jaxx etc. You need to use Wallets with ERC-20 support like Ethereum Wallet, MEW, Metamask, ImToken etc.
-                    </span>
-                    <br>
-                    <span  style="color: red">Minimum amount of gas:</span>
-                    <br>
-                        <span>150,000</span>
-                    <br>
-                    <span style="color: red">GAS PRICE:</span>
-                    <br>
-                    <span><span id="gasprice">20</span> Gwei</span>
-                    <br>
-                    <span style="color: red">ETH address:</span>
-                    <br>
-                    <span id="address_eth_div"></span>
-                </p>
-                <p id="wallet_eth_copy_ok" class="easy_toast">
-                    Copied
-                </p>
-                <form id="wallet_eth_copy">
-                    <input id="address_eth_form" form="wallet_eth_copy" value="" hidden>
-                    <button form="wallet_eth_copy" class="button bttn" data-clipboard-target="address_eth_form">
-                        <img src="img/details/a_medium.svg" class="angle left top">
-                        Copy Address
-                        <img src="img/details/a_medium.svg" class="angle right bottom">
-                    </button>
-                </form>
-                <div id="wallet_eth_ok_close" class="button">
-                    <img src="img/details/a_medium.svg" class="angle left top">
-                    OK
-                    <img src="img/details/a_medium.svg" class="angle right bottom">
-                </div>
-            </div>
-        </div>
-
-        <div id="wallet_btc_ok" class="disnone">
-            <div class="small_modal">
-                <p class="description">
-                    <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
-                    <span style="color: red">Do not send less than 1 BTC
-                    <br>
-                        Please do not send funds from Exchanges and wallets like Jaxx etc.
-                    </span>
-                    <br>
-                    BTC address:<br>
-                    <span id="address_btc_div"></span>
-                </p>
-                <p id="wallet_btc_copy_ok" class="easy_toast">
-                    Copied
-                </p>
-                <form id="wallet_btc_copy">
-                    <input id="address_btc_form" form="wallet_btc_copy" value="" hidden>
-                    <button form="wallet_btc_copy" class="button bttn" data-clipboard-target="address_btc_form">
-                        <img src="img/details/a_medium.svg" class="angle left top">
-                        Copy Address
-                        <img src="img/details/a_medium.svg" class="angle right bottom">
-                    </button>
-                </form>
-                <div id="wallet_btc_ok_close" class="button">
-                    <img src="img/details/a_medium.svg" class="angle left top">
-                    OK
-                    <img src="img/details/a_medium.svg" class="angle right bottom">
-                </div>
-            </div>
-        </div>
-
-        <div id="wallet_error" class="disnone">
-            <div class="small_modal">
-                <p class="description">
-                    <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
-                    <span id="wallet_error_msg"></span>
-                </p>
-                <div id="wallet_err_close" class="button floatnone">
-                    <img src="img/details/a_medium.svg" class="angle left top">
-                    OK
-                    <img src="img/details/a_medium.svg" class="angle right bottom">
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <div id="wl_ps" class="disnone">
@@ -315,10 +228,10 @@
         <div class="display_bg"><div class="lines"></div></div>
     </div>
 
-    <script src="js/jquery.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
     <script src="js/materialize.min.js" defer></script>
     <script src="js/clipboard.min.js" defer></script>
-    <script src="js/init.js?v=12" defer></script>
+    <script src="js/init.js?v=13" defer></script>
     <!—- Yandex.Metrika counter -—>
     <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46855911 = new Ya.Metrika({ id:46855911, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46855911" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!—- /Yandex.Metrika counter -—>

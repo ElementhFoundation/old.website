@@ -1,7 +1,6 @@
-<div id="signup_modal" class="sign disnone">
+<div id="signup_modal" class="sign">
     <div class="wlmodal">
         <div class="description">
-            <div id="signup_modal_close" class="icon close pointer" title="Close"></div>
             SIGN UP
         </div>
         <form id="signup_form" class="sign_form">
@@ -19,16 +18,17 @@
             </div>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="password" form="signup_form" name="password" maxlength="100" placeholder="Confirm your Password" required>
+                <input type="password" form="signup_form" name="confirm_password" maxlength="100" placeholder="Confirm your Password" required>
             </div>
             <p class="body">or</p>
-            <div class="continue_fb"></div>
+            <div class="fb-login-button" onlogin="checkLoginState();" scope="public_profile,email" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            <div class="error disnone"></div>
             <button type="submit" form="signup_form" class="button bttn">
                 <img src="img/details/a_medium.svg" class="angle left top">
                 SIGN UP
                 <img src="img/details/a_medium.svg" class="angle right bottom">
             </button>
-            <p class="body text_left">Already registered? <span id="singup_to_signin" class="underline pointer">Sign in</span></p>
+            <p class="body text_left">Already registered? <a href="signin.html" class="underline pointer">Sign in</a></p>
         </form>
     </div>
 

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div id="content" class="profile grid">
+<div id="content" class="profile grid height">
 
     <a id="go_back" href="/" class="rotate home icon button">
         <img src="img/details/a_small.svg" class="angle left top">
@@ -14,27 +14,87 @@ layout: default
     <div class="section" id="profile">
         {% include userblock.html %}
         <div class="title">PROFILE</div>
-        <div id="verification" class="description">
+        <div id="verification" class="description disnone">
             <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
             You need to verify your email for contribute.
         </div>
-        <div id="wallet_data">
-            <div class="caption">Your <span id="wallet_currency">ETH</span> wallet:</div>
-            <div id="user_wallet" class="data_text">0xa04197e566e13a7036aA185cF7cBd03898cF3cA8 </div>
+        <div id="wallet_data" class="disnone">
+            <div class="caption">Your ETH wallet:</div>
+            <div class="data_text">
+                <span id="user_wallet_eth">none</span>
+                <form id="wallet_eth_edit_form" class="disnone">
+                    <div class="inputtext">
+                        <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                        <input id="user_wallet_eth_input" name="ETH_wallet" type="text" value="">
+                    </div>
+                    <span class="line_icon done_cancel">
+                        <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
+                    </span>
+                </form>
+                <span class="line_icon"><img class="edit" src="img/icon/ic_edit.svg"></span>
+            </div>
+            <div class="caption">Your BTC wallet:</div>
+            <div class="data_text">
+                <span id="user_wallet_btc">none</span>
+                <form id="wallet_btc_edit_form" class="disnone">
+                    <div class="inputtext">
+                        <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                        <input id="user_wallet_btc_input" name="BTC_wallet" type="text" value="">
+                    </div>
+                    <span class="line_icon done_cancel">
+                        <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
+                    </span>
+                </form>
+                <span class="line_icon"><img class="edit" src="img/icon/ic_edit.svg"></span>
+            </div>
             <div class="caption">Listed in:</div>
-            <div id="user_round" class="data_text">Private Pre-Sale</div>
-            <div class="caption">Token tracker:</div>
-            <div id="user_token" class="data_text">0</div>
-            <div id="get_eee" class="button pointer">
+            <div class="data_text">
+                <span id="user_round"></span>
+                <form id="user_round_edit_form" class="disnone">
+                    <div class="radioblock round">
+                        <div class="inputradio round">
+                            <input id="inputradio_round_edit1" type="radio" form="user_round_edit_form" name="round" class="radiobox" value="Close Pre-Sale" checked>
+                            <p><label for="radio_presale">Private Pre-Sale</label></p>
+                        </div>
+                        <div class="inputradio round">
+                            <input id="inputradio_round_edit2" type="radio" form="user_round_edit_form" name="round" class="radiobox" value="Pre-ICO">
+                            <p><label for="radio_preico">Pre-ICO</label></p>
+                        </div>
+                        <div class="inputradio round">
+                            <input id="inputradio_round_edit3" type="radio" form="user_round_edit_form" name="round" class="radiobox" value="ICO">
+                            <p><label for="radio_ico">ICO</label></p>
+                        </div>
+                    </div>
+                    <span class="line_icon done_cancel round">
+                        <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
+                    </span>
+                </form>
+                <span class="line_icon"><img class="edit" src="img/icon/ic_edit.svg"><img class="done disnone" src="img/icon/ic_done.svg"><img class="cancel disnone" src="img/icon/ic_cancel.svg"></span>
+            </div>
+            <div class="caption">Token balance:</div>
+            <div id="user_token" class="data_text">loading...</div>
+            <div id="get_eee_eth" class="button pointer">
                 <img src="img/details/a_medium.svg" class="angle left top">
-                GET EEE
+                GET EEE BY ETH
                 <img src="img/details/a_medium.svg" class="angle right bottom">
             </div>
+            <div id="get_eee_btc" class="button pointer">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                GET EEE BY BTC
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </div>
+            <div class="caption">Your referral link:</div>
+            <div id="user_ref" class="data_text"></div>
         </div>
-        <form id="profile_data">
-            <div id="profile_data_fill" class="description">To complete registration, please fill in the form:</div>
-            <div id="profile_data_complete" class="description">Settings:</div>
+        <form id="profile_data" class="disnone">
+            <div id="profile_data_fill" class="description disnone">To complete registration, please fill in the form:</div>
+            <div id="profile_data_complete" class="description disnone">Settings:</div>
             <div class="radioblock round">
+                <div class="inputradio round">
+                    <input id="radio_presale" type="radio" form="profile_data" name="round" class="radiobox" value="Close Pre-Sale" checked>
+                    <p><label for="radio_presale">Private Pre-Sale</label></p>
+                    <p class="caption">15.01 - 31.01<br>Only whitelist<br>min. <span style="color: red;">10ETH</span> or <span style="color: red">1BTC</span><br>max. 100 investors<br>1EEE = 0,0001ETH<br>Whitelist BONUS: 50%</p>
+                </div>
                 <div class="inputradio round">
                     <input id="radio_preico" type="radio" form="profile_data" name="round" class="radiobox" value="Pre-ICO">
                     <p><label for="radio_preico">Pre-ICO</label></p>
@@ -62,7 +122,7 @@ layout: default
             </div>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="email" form="profile_data" name="email" maxlength="100" placeholder="Your Email*" required>
+                <input id="email" type="email" form="profile_data" name="email" maxlength="100" placeholder="Your Email*" required>
             </div>
             <div id="input_btc" class="inputtext disnone">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
@@ -90,12 +150,106 @@ layout: default
                 SAVE
                 <img src="img/details/a_medium.svg" class="angle right bottom">
             </button>
-            <div id="profile_data_cancel" class="button">
-                <img src="img/details/a_medium.svg" class="angle left top">
-                CANCEL
-                <img src="img/details/a_medium.svg" class="angle right bottom">
-            </div>
         </form>
     </div>
 
+    <div id="wallet_eth_ok" class="disnone">
+        <div class="small_modal">
+            <p class="description">
+                <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+                <span style="color: red">Do not send less than 10 ETH.</span>
+                <br>
+                <span>
+                        Please do not send funds from Exchanges and wallets like Jaxx etc. You need to use Wallets with ERC-20 support like Ethereum Wallet, MEW, Metamask, ImToken etc.
+                    </span>
+                <br>
+                <span  style="color: red">Minimum amount of gas:</span>
+                <br>
+                <span>150,000</span>
+                <br>
+                <span style="color: red">GAS PRICE:</span>
+                <br>
+                <span><span id="gasprice">20</span> Gwei</span>
+                <br>
+                <span style="color: red">ETH address:</span>
+                <br>
+                <span id="address_eth_div"></span>
+                <span class="qrcode" id="eth_qrcode"></span>
+            </p>
+            <p id="wallet_eth_copy_ok" class="easy_toast">
+                Copied
+            </p>
+            <form id="wallet_eth_copy">
+                <input id="address_eth_form" form="wallet_eth_copy" value="" type="hidden">
+                <button form="wallet_eth_copy" class="button bttn" data-clipboard-target="address_eth_form">
+                    <img src="img/details/a_medium.svg" class="angle left top">
+                    Copy Address
+                    <img src="img/details/a_medium.svg" class="angle right bottom">
+                </button>
+            </form>
+            <div id="wallet_eth_ok_close" class="button">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                OK
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </div>
+        </div>
+    </div>
+
+    <div id="wallet_btc_ok" class="disnone">
+        <div class="small_modal">
+            <p class="description">
+                <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+                <span style="color: red">Do not send less than 1 BTC
+                    <br>
+                        Please do not send funds from Exchanges and wallets like Jaxx etc.
+                    </span>
+                <br>
+                BTC address:<br>
+                <span id="address_btc_div"></span>
+                <span class="qrcode" id="btc_qrcode"></span>
+            </p>
+            <p id="wallet_btc_copy_ok" class="easy_toast">
+                Copied
+            </p>
+            <form id="wallet_btc_copy">
+                <input id="address_btc_form" form="wallet_btc_copy" value="" type="hidden">
+                <button form="wallet_btc_copy" class="button bttn" data-clipboard-target="address_btc_form">
+                    <img src="img/details/a_medium.svg" class="angle left top">
+                    Copy Address
+                    <img src="img/details/a_medium.svg" class="angle right bottom">
+                </button>
+            </form>
+            <div id="wallet_btc_ok_close" class="button">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                OK
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </div>
+        </div>
+    </div>
+
+    <div id="wallet_error" class="disnone">
+        <div class="small_modal">
+            <p class="description">
+                <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+                <span id="wallet_error_msg"></span>
+            </p>
+            <div id="wallet_err_close" class="button floatnone">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                OK
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </div>
+        </div>
+    </div>
+    <div id="emailVerified" class="disnone">
+        <div class="small_modal">
+            <p class="description">
+                <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+                Your email is verified
+            <a href="/profile" class="button floatnone">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                OK
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </a>
+        </div>
+    </div>
 </div>

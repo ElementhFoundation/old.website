@@ -1,20 +1,21 @@
-<div id="resetpass_modal" class="sign disnone">
+<div id="resetpass_modal" class="sign">
     <div class="wlmodal">
         <div class="description">
-            <div id="resetpass_modal_close" class="icon close pointer" title="Close"></div>
             SIGN IN
         </div>
         <form id="resetpass_form" class="sign_form">
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="email" form="resetpass_form" name="email" maxlength="100" placeholder="Your Email" required>
+                <input id="email" type="email" form="resetpass_form" name="email" maxlength="100" placeholder="Your Email" required>
             </div>
+            <div class="error disnone"></div>
+            <div class="allok disnone">Check your email and follow the instructions</div>
             <button type="submit" form="resetpass_form" class="button bttn">
                 <img src="img/details/a_medium.svg" class="angle left top">
                 Reset Password
                 <img src="img/details/a_medium.svg" class="angle right bottom">
             </button>
-            <p class="body text_left">Remembered it? <span id="resetpass_to_signin" class="underline pointer">Sign in</span></p>
+            <p class="body text_left">Remembered it? <a href="signin.html" class="underline pointer">Sign in</a></p>
         </form>
     </div>
 

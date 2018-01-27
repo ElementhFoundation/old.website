@@ -99,7 +99,7 @@ a:link, a:active, a:visited {
 .text_left 	{text-align: left;}
 .text_right {text-align: right;}
 
-.underline {text-decoration: underline;}
+.underline {text-decoration: underline !important;}
 
 .pointer {cursor: pointer;}
 
@@ -608,6 +608,7 @@ button {
 	text-align: right;
 	padding-top: 0;
 	span {margin-left: 16px;}
+	a {margin-left: 16px;}
 }
 
 #join_wl {
@@ -803,9 +804,61 @@ button {
 	}
 }
 
+.data_text {
+	form {
+		height: 49px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		text-align: left;
+		.radioblock {
+			width: calc(100% - 86px);
+			height: 49px;
+			.inputradio {
+				width: 33%;
+				height: 49px;
+				float: left;
+				input {float: left;}
+				p {
+					float: left;
+					line-height: 16px;
+					margin-left: 8px;
+					width: calc(100% - 32px);
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+		.inputtext {
+			width: calc(100% - 118px);
+			height: 49px;
+			position: relative;
+			margin-bottom: 15px;
+			padding-left: 16px;
+			padding-right: 15px;
+			background-color: rgba(255,255,255,.1);
+			input {
+				height: 49px;
+				width: 100%;
+				font: inherit;
+				color: rgba(255,255,255,.9);
+				background-color: rgba(255,255,255,0);
+				&::placeholder { color: rgba(255,255,255,.7); }
+			}
+		}
+		.line_icon.done_cancel {
+			display: block;
+			width: 80px;
+			float: right;
+			top: -52px;
+			&.round {top: -36px;}
+		}
+	}
+}
+
 #address_eth_div, #address_btc_div {font-size: 10px;}
 
-#toast-container, #wallet_eth_ok, #wallet_btc_ok, #wallet_error, #wl_ps_ok, #wl_ps_error, #loading {
+#toast-container, #wallet_eth_ok, #wallet_btc_ok, #wallet_error, #wl_ps_ok, #wl_ps_error, #loading, #emailVerified {
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -947,7 +1000,13 @@ footer {
 		.data_text {
 			font-size: 11px;
 		}
-		#get_eee {
+		#get_eee_btc {
+			margin: {
+				right: 0;
+				left: 0;
+			}
+		}
+		#get_eee_eth {
 			margin: {
 				right: 0;
 				left: 0;
@@ -1088,11 +1147,31 @@ footer {
 
 /*--- CONTACTS ---*/
 
-#contact {}
+#contact {
+	text-align: center;
+}
 
 .fb_iframe_widget span
 {
 	vertical-align: baseline !important;
+}
+
+.error{
+	margin-top: 31px;
+	color: red;
+}
+
+.allok{
+	margin-top: 31px;
+	color: green;
+}
+
+.green{
+	color: green;
+}
+
+.qrcode img{
+	margin: 0 auto;
 }
 
 @import 'media';

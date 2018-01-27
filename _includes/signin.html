@@ -1,7 +1,6 @@
-<div id="signin_modal" class="sign disnone">
+<div id="signin_modal" class="sign">
     <div class="wlmodal">
         <div class="description">
-            <div id="signin_modal_close" class="icon close pointer" title="Close"></div>
             SIGN IN
         </div>
         <form id="signin_form" class="sign_form">
@@ -14,14 +13,15 @@
                 <input type="password" form="signin_form" name="password" maxlength="100" placeholder="Password" required>
             </div>
             <p class="body">or</p>
-            <div class="continue_fb"></div>
+                <div class="fb-login-button" onlogin="checkLoginState();" scope="public_profile,email" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            <div class="error disnone"></div>
             <button type="submit" form="signin_form" class="button bttn">
                 <img src="img/details/a_medium.svg" class="angle left top">
                 SIGN IN
                 <img src="img/details/a_medium.svg" class="angle right bottom">
             </button>
-            <p class="body text_left">Not a member yet? <span id="singin_to_signup" class="underline pointer">Sign up</span></p>
-            <p class="body text_left">Forgotten your password? <span id="signin_to_resetpass" class="underline pointer">Reset password</span></p>
+            <p class="body text_left">Not a member yet? <a href="signup.html" class="underline pointer">Sign up</a></p>
+            <p class="body text_left">Forgotten your password? <a href="resetpass.html" class="underline pointer">Reset password</a></p>
         </form>
     </div>
 
