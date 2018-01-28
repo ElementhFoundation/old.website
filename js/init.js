@@ -321,6 +321,8 @@ $(function () {
           }
           if(data.round == 1){
             $('#user_round').html('Private Pre-Sale')
+            $('#get_eee_eth').removeClass('disnone')
+            $('#get_eee_btc').removeClass('disnone')
           }
           if(data.round == 2){
             $('#user_round').html('Pre-ICO')
