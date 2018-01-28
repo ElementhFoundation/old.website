@@ -199,11 +199,13 @@ $(function () {
       }
     })
     signup_form.submit(function (e) {
+      signup_form.find(':input[type="submit"]').prop('disabled', true)
       e.preventDefault();
       signup_form.find('.error').addClass('disnone')
       signUp($(this).serialize(), function (err, data) {
         if (err) {
           signup_form.find('.error').html(err).removeClass('disnone')
+          signup_form.find(':input[type="submit"]').prop('disabled', false)
         } else {
           window.location.href = "/profile"
         }
@@ -219,10 +221,12 @@ $(function () {
       }
     })
     signin_form.submit(function (e) {
+      signin_form.find(':input[type="submit"]').prop('disabled', true)
       e.preventDefault();
       signin_form.find('.error').addClass('disnone')
       signIn($(this).serialize(), function (err, data) {
         if (err) {
+          signin_form.find(':input[type="submit"]').prop('disabled', false)
           signin_form.find('.error').html(err).removeClass('disnone')
         } else {
           window.location.href = "/profile"
@@ -337,25 +341,16 @@ $(function () {
   var resetpass_form = $('#resetpass_form')
   if (resetpass_form.length) {
     resetpass_form.submit(function (e) {
+      resetpass_form.find(':input[type="submit"]').prop('disabled', true)
       resetpass_form.find('.error').addClass('disnone')
       resetpass_form.find('.allok').addClass('disnone')
       e.preventDefault();
       sendRecovery($('#email').val(),function (err, data) {
+        resetpass_form.find(':input[type="submit"]').prop('disabled', false)
         if (err) {
           resetpass_form.find('.error').html(err).removeClass('disnone')
         } else {
           resetpass_form.find('.allok').removeClass('disnone')
-        }
-      })
-    })
-    signin_form.submit(function (e) {
-      e.preventDefault();
-      signin_form.find('.error').addClass('disnone')
-      signIn($(this).serialize(), function (err, data) {
-        if (err) {
-          signin_form.find('.error').html(err).removeClass('disnone')
-        } else {
-          window.location.href = "profile.html"
         }
       })
     })
