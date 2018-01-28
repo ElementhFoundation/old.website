@@ -259,9 +259,25 @@ $(function () {
   if (user_round_edit_form.length) {
     user_round_edit_form.submit(function (e) {
       e.preventDefault();
-      console.log($(this).serialize())
       setRound($(this).serialize(), function (err, data) {
         location.reload()
+      })
+    })
+  }
+  var resend_form = $('#resend_form')
+  if (resend_form.length) {
+    resend_form.submit(function (e) {
+      resend_form.find(':input[type="submit"]').prop('disabled', true)
+      e.preventDefault();
+      resend_form.find('.error').addClass('disnone')
+      resend_form.find('.allok').addClass('disnone')
+      sendVerification(function (err, data) {
+        if (err) {
+          resend_form.find('.error').html(err).removeClass('disnone')
+        } else {
+          resend_form.find('.allok').removeClass('disnone')
+          resend_form.find(':input[type="submit"]').addClass('disnone').prop('disabled', false)
+        }
       })
     })
   }
@@ -287,7 +303,7 @@ $(function () {
       if (err || !data) {
         window.location.href = "/signup"
       } else {
-        if (!data.verified) {
+        if (!data.verified && data.email) {
           $('#verification').removeClass('disnone')
         }else{
           if (data.round) {

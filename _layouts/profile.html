@@ -14,9 +14,18 @@ layout: default
     <div class="section" id="profile">
         {% include userblock.html %}
         <div class="title">PROFILE</div>
-        <div id="verification" class="description disnone">
+        <div id="verification" class="description">
             <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
             You need to verify your email for contribute.
+            <form id="resend_form">
+                <div class="error disnone"></div>
+                <div class="allok disnone">Check your email and follow the instructions</div>
+                <button type="submit" form="profile_data" class="button bttn">
+                    <img src="img/details/a_medium.svg" class="angle left top">
+                    Send email again
+                    <img src="img/details/a_medium.svg" class="angle right bottom">
+                </button>
+            </form>
         </div>
         <div id="wallet_data" class="disnone">
             <div class="caption">Your ETH wallet:</div>
