@@ -295,13 +295,32 @@ $(function () {
     profile_data.submit(function (e) {
       e.preventDefault();
       profile_data.find('.error').addClass('disnone')
+      profile_data.find(':input[type="submit"]').prop('disabled', true)
       setProfile($(this).serialize(), function (err, data) {
         if (err) {
           profile_data.find('.error').html(err).removeClass('disnone')
+          profile_data.find(':input[type="submit"]').prop('disabled', false)
         } else {
           if(yaCounter46855911){
             yaCounter46855911.reachGoal('setProfile')
           }
+          location.reload()
+        }
+      })
+    })
+  }
+
+  var questionnaire_form = $('#questionnaire_form')
+  if (questionnaire_form.length) {
+    questionnaire_form.submit(function (e) {
+      e.preventDefault();
+      questionnaire_form.find('.error').addClass('disnone')
+      questionnaire_form.find(':input[type="submit"]').prop('disabled', true)
+      setInfo($(this).serialize(), function (err, data) {
+        if (err) {
+          questionnaire_form.find('.error').html(err).removeClass('disnone')
+          questionnaire_form.find(':input[type="submit"]').prop('disabled', false)
+        } else {
           location.reload()
         }
       })
@@ -331,6 +350,11 @@ $(function () {
             $('#user_ref').html(data.partnerUrl)
             $('#user_referralCount').html(data.referralCount)
           }
+
+          if(!data.quiz){
+            $('#questionnaire').removeClass('disnone')
+          }
+
           if(data.round == 1){
             $('#user_round').html('Private Pre-Sale')
             $('#get_eee_eth').removeClass('disnone')

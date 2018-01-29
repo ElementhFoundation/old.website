@@ -100,6 +100,10 @@ function setProfile (data, callback) {
   makeApiRequest('setProfile', 'POST', data, callback)
 }
 
+function setInfo (data, callback) {
+  makeApiRequest('setInfo', 'POST', data, callback)
+}
+
 function signUp (data, callback) {
   makeApiRequest('signUp', 'POST', data, callback)
 }
