@@ -30,7 +30,7 @@ input, textarea, button {
 	list-style-type: none;
 }
 
-input:disabled, button:disabled{
+input:disabled,input:read-only, button:disabled{
 	opacity: 0.5;
 }
 
