@@ -154,16 +154,12 @@ $(function () {
           text: 'ethereum:' + data.eth,
           width: 128,
           height: 128,
-          colorDark: "#FFFFFF",
-          colorLight: "#000000",
           correctLevel: QRCode.CorrectLevel.H
         })
       new QRCode(document.getElementById("btc_qrcode"), {
         text: 'bitcoin:' + data.btc,
         width: 128,
         height: 128,
-        colorDark: "#FFFFFF",
-        colorLight: "#000000",
         correctLevel: QRCode.CorrectLevel.H
       })
     }
