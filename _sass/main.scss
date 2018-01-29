@@ -30,6 +30,10 @@ input, textarea, button {
 	list-style-type: none;
 }
 
+input:disabled, button:disabled{
+	opacity: 0.5;
+}
+
 a:link, a:active, a:visited { 
 	border: none;
 	color: inherit;
