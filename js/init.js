@@ -329,6 +329,7 @@ $(function () {
         if (data.round) {
           if(data.partnerUrl) {
             $('#user_ref').html(data.partnerUrl)
+            $('#user_referralCount').html(data.referralCount)
           }
           if(data.round == 1){
             $('#user_round').html('Private Pre-Sale')
