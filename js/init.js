@@ -5,6 +5,9 @@ $(function () {
     if(hash === 'emailVerified') {
       $('#emailVerified').removeClass('disnone')
       $('#emailVerified').append('<img height="1" width="1" style="display:none" src="https://matchico.com/track-investor/87c734a9-5afb-487d-9355-6bad7f725c30/signup.gif"/>')
+      if(yaCounter46855911){
+        yaCounter46855911.reachGoal('verifyEmail')
+      }
     }
   }
 
@@ -177,6 +180,9 @@ $(function () {
 
   $('#get_eee_btc').on('click', function () {
     $('#wallet_btc_ok').removeClass('disnone')
+    if(yaCounter46855911){
+      yaCounter46855911.reachGoal('getBTC')
+    }
   })
 
   $('#wallet_btc_ok_close').on('click', function () {
@@ -185,6 +191,9 @@ $(function () {
 
   $('#get_eee_eth').on('click', function () {
     $('#wallet_eth_ok').removeClass('disnone')
+    if(yaCounter46855911){
+      yaCounter46855911.reachGoal('getEEE')
+    }
   })
 
   $('#wallet_eth_ok_close').on('click', function () {
@@ -207,6 +216,9 @@ $(function () {
           signup_form.find('.error').html(err).removeClass('disnone')
           signup_form.find(':input[type="submit"]').prop('disabled', false)
         } else {
+          if(yaCounter46855911){
+            yaCounter46855911.reachGoal('signup')
+          }
           window.location.href = "/profile"
         }
       })
@@ -291,6 +303,9 @@ $(function () {
         if (err) {
           profile_data.find('.error').html(err).removeClass('disnone')
         } else {
+          if(yaCounter46855911){
+            yaCounter46855911.reachGoal('setProfile')
+          }
           location.reload()
         }
       })
