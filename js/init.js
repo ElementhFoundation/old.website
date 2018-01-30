@@ -1,11 +1,11 @@
 $(function () {
 
   var hash = window.location.hash.substr(1)
-  if(hash){
-    if(hash === 'emailVerified') {
+  if (hash) {
+    if (hash === 'emailVerified') {
       $('#emailVerified').removeClass('disnone')
       $('#emailVerified').append('<img height="1" width="1" style="display:none" src="https://matchico.com/track-investor/87c734a9-5afb-487d-9355-6bad7f725c30/signup.gif"/>')
-      if(yaCounter46855911){
+      if (yaCounter46855911) {
         yaCounter46855911.reachGoal('verifyEmail')
       }
     }
@@ -147,7 +147,11 @@ $(function () {
     $('#address_eth_form').val(data.eth)
     $('#address_btc_div').html(data.btc)
     $('#address_btc_form').val(data.btc)
-    //var cnt = getContract(data.eth)
+
+    if ($('#preico').length) {
+      initContract(data.eth)
+      updateSmartConrtactData()
+    }
     if ($('#eth_qrcode').length) {
       new QRCode(document.getElementById("eth_qrcode"),
         {
@@ -164,7 +168,7 @@ $(function () {
       })
     }
     getUser(function (err, data2) {
-      if(data2 && data2.wallet_eth) {
+      if (data2 && data2.wallet_eth) {
         getBalance(data.tokenAddress, data2.wallet_eth, function (err, data) {
           if (data) {
             $('#user_token').html(data + ' EEE')
@@ -176,7 +180,7 @@ $(function () {
 
   $('#get_eee_btc').on('click', function () {
     $('#wallet_btc_ok').removeClass('disnone')
-    if(yaCounter46855911){
+    if (yaCounter46855911) {
       yaCounter46855911.reachGoal('getBTC')
     }
   })
@@ -187,7 +191,7 @@ $(function () {
 
   $('#get_eee_eth').on('click', function () {
     $('#wallet_eth_ok').removeClass('disnone')
-    if(yaCounter46855911){
+    if (yaCounter46855911) {
       yaCounter46855911.reachGoal('getEEE')
     }
   })
@@ -212,7 +216,7 @@ $(function () {
           signup_form.find('.error').html(err).removeClass('disnone')
           signup_form.find(':input[type="submit"]').prop('disabled', false)
         } else {
-          if(yaCounter46855911){
+          if (yaCounter46855911) {
             yaCounter46855911.reachGoal('signup')
           }
           window.location.href = "/profile"
@@ -301,7 +305,7 @@ $(function () {
           profile_data.find('.error').html(err).removeClass('disnone')
           profile_data.find(':input[type="submit"]').prop('disabled', false)
         } else {
-          if(yaCounter46855911){
+          if (yaCounter46855911) {
             yaCounter46855911.reachGoal('setProfile')
           }
           location.reload()
@@ -335,7 +339,7 @@ $(function () {
       } else {
         if (!data.verified && data.email) {
           $('#verification').removeClass('disnone')
-        }else{
+        } else {
           if (data.round) {
             $('#wallet_data').removeClass('disnone')
           }
@@ -346,31 +350,30 @@ $(function () {
         }
 
         if (data.round) {
-          if(data.partnerUrl) {
+          if (data.partnerUrl) {
             $('#user_ref').html(data.partnerUrl)
             $('#user_referralCount').html(data.referralCount)
           }
 
-          if(!data.quiz){
+          if (!data.quiz) {
             $('#questionnaire').removeClass('disnone')
           }
 
-          if(data.round == 1){
+          if (data.round == 1) {
             $('#user_round').html('Private Pre-Sale')
             $('#get_eee_eth').removeClass('disnone')
             $('#get_eee_btc').removeClass('disnone')
           }
-          if(data.round == 2){
+          if (data.round == 2) {
             $('#user_round').html('Pre-ICO')
           }
-          if(data.round == 3){
+          if (data.round == 3) {
             $('#user_round').html('ICO')
           }
 
-          if(data.whitelist){
+          if (data.whitelist) {
             $('#user_round').append('<span class="green"> (You are in whitelist)</span>')
           }
-
 
           if (data.wallet_btc) {
             $('#user_wallet_btc').html(data.wallet_btc)
@@ -399,7 +402,7 @@ $(function () {
       resetpass_form.find('.error').addClass('disnone')
       resetpass_form.find('.allok').addClass('disnone')
       e.preventDefault();
-      sendRecovery($('#email').val(),function (err, data) {
+      sendRecovery($('#email').val(), function (err, data) {
         resetpass_form.find(':input[type="submit"]').prop('disabled', false)
         if (err) {
           resetpass_form.find('.error').html(err).removeClass('disnone')
@@ -436,6 +439,25 @@ $(function () {
   })
 });
 
+function updateSmartConrtactData () {
+  getCap(function (err, cap) {
+    if(err){
+      setTimeout(updateSmartConrtactData, 10000)
+    }
+    else if (cap) {
+      $('#hardcap_data').html(cap + ' ETH')
+
+      getCollected(function (err, collected) {
+        if (collected) {
+          $('#balance_data').html(collected + ' ETH')
+          $('#percent_number').html(Math.round(collected / cap * 100)  + '%')
+          $('#percent_line').width(Math.round(collected / cap * 100)  + '%')
+        }
+        setTimeout(updateSmartConrtactData, 10000)
+      })
+    }
+  })
+}
 
 function checkLoginState () {
   FB.getLoginStatus(function (response) {
