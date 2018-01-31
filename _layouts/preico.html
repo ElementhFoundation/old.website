@@ -28,7 +28,19 @@ layout: default
                         <p class="description">Balance:</p>
                         <p id="balance_data" class="title"></p>
                     </div>
-                    <div class="progressline"><div id="percent_line" style="width: 0%;"></div></div>
+                    <div class="progressline">
+                        <div id="percent_line"></div>
+                        <div id="softcap_line" title="SoftCap" style="width: 20%;"></div>
+                    </div>
+                    <div class="softcap">
+                        <p class="description">SoftCap:</p>
+                        <p class="title">
+                        <span><svg fill="#0088cc" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg></span>
+                            300.00 ETH</p>
+                    </div>
                     <div class="hardcap">
                         <p class="description">HardCap:</p>
                         <p id="hardcap_data" class="title"></p>

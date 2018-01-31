@@ -336,6 +336,8 @@ li.nolink:active { background-color: rgba(255,255,255,.0); }
 
 .submit		{ background: url(../img/icon/ic_submit.svg)  center center no-repeat; }
 
+.add_person { background: url(../img/icon/ic_person_add.svg)  center center no-repeat; }
+
 /*------------ BLOCKS ------------*/
 
 .title, .button { font-size: 24px; }
@@ -624,8 +626,9 @@ button {
 
 .progressbar {
 	width: 100%;
-	height: 144px;
+	height: 192px;
 	margin-top: 16px;
+	overflow: hidden;
 	.percent_number {
 		width: 65px;
 		height: 89px;
@@ -638,7 +641,7 @@ button {
 		width: calc(100% - 81px);
 		height: 145px;
 		float: left;
-		.balance, .hardcap {
+		.balance, .hardcap, .softcap {
 			height: 70px;
 			.description, .title {
 				margin: 0;
@@ -647,13 +650,32 @@ button {
 				line-height: 32px;
 			}
 		}
+		.hardcap {
+			position: relative;
+			top: -28px;
+		}
+		.softcap {
+			width: calc(100% + 80px);
+			height: 32px;
+			position: relative;
+			top: 85px;
+			left: -80px;
+			.description {float: left;}
+			.title {float: right;}
+		}
 		.progressline {
 			width: 100%;
 			height: 5px;
 			background-color: rgba(255,255,255,.2);
 			div {
+				position: relative;
 				height: 5px;
-				background-color: rgba(255,255,255,.7);
+				background-color: rgba(255,255,255,1);
+			}
+			#softcap_line {
+				top: -5px;
+				border-right: 2px solid #0088cc;
+				&:hover {background-color: #0088cc;}
 			}
 		}
 	}
@@ -1115,6 +1137,8 @@ footer {
 .t9 { background-image: url(../img/team/t_9c.jpg); }
 
 .t10 { background-image: url(../img/team/t_10c.jpg); }
+
+.icon_person { background-image: url(../img/icon/ic_person.svg); }
 
 /*--- ADVISORS ---*/
 

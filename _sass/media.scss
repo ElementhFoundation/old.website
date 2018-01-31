@@ -60,8 +60,8 @@
 		}
 		.progressdata {
 			width: calc(100% - 177px);
-			.balance, .hardcap {
-				height: 70px;
+			.balance, .hardcap, .softcap {
+				height: 48px;
 				.description {
 					float: left;
 				}
@@ -69,11 +69,24 @@
 					float: right;
 				}
 				.description, .title {
-					height: 51px;
+					height: 40px;
 					margin: 0;
-					padding: 19px 0 0 0;
+					padding: 8px 0 0 0;
 				}
 			}
+			.progressline {
+				height: 17px;
+				div {height: 17px;}
+				#softcap_line {top: -17px;}
+			}
+			.softcap {
+				width: 100%;
+				height: 32px;
+				top: 0;
+				left: 0;
+				.description, .title {height: 24px;}
+			}
+			.hardcap {top: 0;}
 		}
 	}
 	.info {
