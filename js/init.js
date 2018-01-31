@@ -1,3 +1,5 @@
+var countDownDate = 1517436000000
+var btcWalllet = null
 $(function () {
 
   var hash = window.location.hash.substr(1)
@@ -86,13 +88,12 @@ $(function () {
   }
   if ($('#timer').length) {
     var curDate = new Date().getTime();
-    var countDownDate = 1515974400000;
 
     if (curDate < countDownDate) {
-      $('#timerTitle').html('50% bonus at Private Pre-Sale round starts in:')
-    } else {
-      countDownDate = 1517436000000;
       $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
+    } else {
+      countDownDate = 1517443200000;
+      $('#timerTitle').html('30% bonus at Pre-ICO round stars in:')
       $('#presaleLink').show(0)
     }
 
@@ -125,9 +126,8 @@ $(function () {
       // If the count down is finished, write some text
       if (distance < 0) {
 
-        $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
+        $('#timerTitle').html('30% bonus at Pre-ICO round stars in:')
         countDownDate = 1517443200000;
-        $('#presaleLink').show(0)
       }
     }, 1000);
   }
@@ -147,6 +147,8 @@ $(function () {
     $('#address_eth_form').val(data.eth)
     $('#address_btc_div').html(data.btc)
     $('#address_btc_form').val(data.btc)
+
+    btcWalllet = data.btc
 
     if ($('#preico').length) {
       initContract(data.eth)
@@ -437,6 +439,25 @@ $(function () {
       window.location.href = "/"
     })
   })
+
+  var wallet_btc_sent_form = $('#wallet_btc_sent_form')
+  if (wallet_btc_sent_form.length) {
+    wallet_btc_sent_form.submit(function (e) {
+      wallet_btc_sent_form.find(':input[type="submit"]').prop('disabled', true)
+      wallet_btc_sent_form.find('.error').addClass('disnone')
+      wallet_btc_sent_form.find('.allok').addClass('disnone')
+      e.preventDefault();
+      checkAddress(function (err, data) {
+        wallet_btc_sent_form.find(':input[type="submit"]').prop('disabled', false)
+        if (err) {
+          wallet_btc_sent_form.find('.error').html(err).removeClass('disnone')
+        } else {
+          wallet_btc_sent_form.find('.allok').removeClass('disnone')
+        }
+      })
+    })
+  }
+
 });
 
 function updateSmartConrtactData () {

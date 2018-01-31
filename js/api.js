@@ -84,6 +84,10 @@ function getCrowdAddresses (callback) {
   }
 }
 
+function checkAddress (callback) {
+  makeApiRequest('checkAddress', 'GET', null, callback)
+}
+
 function authFacebook (access_token, callback) {
   makeApiRequest('auth/facebook', 'POST', {access_token}, callback)
 }
