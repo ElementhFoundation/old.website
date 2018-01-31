@@ -93,7 +93,7 @@ $(function () {
       $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
     } else {
       countDownDate = 1517443200000;
-      $('#timerTitle').html('30% bonus at Pre-ICO round stars in:')
+      $('#timerTitle').html('30% bonus at Pre-ICO round starts in:')
       $('#presaleLink').show(0)
     }
 
@@ -126,7 +126,7 @@ $(function () {
       // If the count down is finished, write some text
       if (distance < 0) {
 
-        $('#timerTitle').html('30% bonus at Pre-ICO round stars in:')
+        $('#timerTitle').html('30% bonus at Pre-ICO round starts in:')
         countDownDate = 1517443200000;
       }
     }, 1000);
@@ -361,13 +361,10 @@ $(function () {
             $('#questionnaire').removeClass('disnone')
           }
 
-          if (data.round == 1) {
-            $('#user_round').html('Private Pre-Sale')
-            $('#get_eee_eth').removeClass('disnone')
-            $('#get_eee_btc').removeClass('disnone')
-          }
           if (data.round == 2) {
             $('#user_round').html('Pre-ICO')
+            //$('#get_eee_eth').removeClass('disnone')
+            //$('#get_eee_btc').removeClass('disnone')
           }
           if (data.round == 3) {
             $('#user_round').html('ICO')
