@@ -91,7 +91,7 @@ $(function () {
     if (curDate < countDownDate) {
       $('#timerTitle').html('50% bonus at Private Pre-Sale round starts in:')
     } else {
-      countDownDate = 1517443200000;
+      countDownDate = 1517436000000;
       $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
       $('#presaleLink').show(0)
     }
