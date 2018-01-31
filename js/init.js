@@ -1,4 +1,4 @@
-var countDownDate = 1517436000000
+var countDownDate = 1517443200000
 var btcWalllet = null
 $(function () {
 
@@ -90,11 +90,11 @@ $(function () {
     var curDate = new Date().getTime();
 
     if (curDate < countDownDate) {
-      $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
-    } else {
-      countDownDate = 1517443200000;
       $('#timerTitle').html('30% bonus at Pre-ICO round starts in:')
-      $('#presaleLink').show(0)
+    } else {
+      countDownDate = 1517529600000;
+      $('#timerTitle').html('30% bonus at Pre-ICO round end in:')
+      $('#preico').removeClass('disnone')
     }
 
     var x = setInterval(function () {
@@ -124,10 +124,11 @@ $(function () {
 
       $('#timer').html(days + "d " + hours + ":" + minutes + ":" + seconds)
       // If the count down is finished, write some text
-      if (distance < 0) {
+      if (distance <= 0) {
 
-        $('#timerTitle').html('30% bonus at Pre-ICO round starts in:')
-        countDownDate = 1517443200000;
+        $('#timerTitle').html('30% bonus at Pre-ICO round end in:')
+        countDownDate = 1517529600000;
+        $('#preico').removeClass('disnone')
       }
     }, 1000);
   }
@@ -363,8 +364,8 @@ $(function () {
 
           if (data.round == 2) {
             $('#user_round').html('Pre-ICO')
-            //$('#get_eee_eth').removeClass('disnone')
-            //$('#get_eee_btc').removeClass('disnone')
+            $('#get_eee_eth').removeClass('disnone')
+            $('#get_eee_btc').removeClass('disnone')
           }
           if (data.round == 3) {
             $('#user_round').html('ICO')
