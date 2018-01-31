@@ -364,8 +364,8 @@ $(function () {
 
           if (data.round == 2) {
             $('#user_round').html('Pre-ICO')
-            //$('#get_eee_eth').removeClass('disnone')
-            //$('#get_eee_btc').removeClass('disnone')
+            $('#get_eee_eth').removeClass('disnone')
+            $('#get_eee_btc').removeClass('disnone')
           }
           if (data.round == 3) {
             $('#user_round').html('ICO')
