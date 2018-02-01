@@ -1,4 +1,4 @@
-var countDownDate = 1517443200000
+var countDownDate = 1517529600000
 var btcWalllet = null
 $(function () {
 
@@ -90,10 +90,10 @@ $(function () {
     var curDate = new Date().getTime();
 
     if (curDate < countDownDate) {
-      $('#timerTitle').html('30% bonus at Pre-ICO round starts in:')
+      $('#timerTitle').html('30% bonus at Pre-ICO round ends in:')
     } else {
-      countDownDate = 1517529600000;
-      $('#timerTitle').html('30% bonus at Pre-ICO round end in:')
+      countDownDate = 1517616000000;
+      $('#timerTitle').html('15% bonus at Pre-ICO round ends in:')
       $('#preico').removeClass('disnone')
     }
 
@@ -126,8 +126,8 @@ $(function () {
       // If the count down is finished, write some text
       if (distance <= 0) {
 
-        $('#timerTitle').html('30% bonus at Pre-ICO round end in:')
-        countDownDate = 1517529600000;
+        $('#timerTitle').html('15% bonus at Pre-ICO round ends in:')
+        countDownDate = 1517616000000;
         $('#preico').removeClass('disnone')
       }
     }, 1000);
