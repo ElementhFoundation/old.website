@@ -175,6 +175,10 @@ $(function () {
         getBalance(data.tokenAddress, data2.wallet_eth, function (err, data) {
           if (data) {
             $('#user_token').html(data + ' EEE')
+
+            if(data > 0){
+              $('#howToWatchEEE').removeClass('disnone')
+            }
           }
         })
       }
