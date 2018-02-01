@@ -18,7 +18,7 @@ $(function () {
   function resize () {
     if ($window.width() < 1280) {
       $('#table').removeClass('table-of-contents');
-      $('#featured, #cases, #dapps, #mission, #roadmap, #rewards, #partner, #team, #advisors, #media, #contact').removeClass('scrollspy');
+      $('#features, #cases, #dapps, #mission, #market, #roadmap, #rating, #product, #rewards, #partner, #team, #advisors, #media, #competitors, #meetup, #reviews, #faq, #contact').removeClass('scrollspy');
     }
   }
 
