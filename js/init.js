@@ -7,6 +7,8 @@ $(function () {
     if (hash === 'emailVerified') {
       $('#emailVerified').removeClass('disnone')
       $('#emailVerified').append('<img height="1" width="1" style="display:none" src="https://matchico.com/track-investor/87c734a9-5afb-487d-9355-6bad7f725c30/signup.gif"/>')
+      $('#emailVerified').append('<!-- Reddit Conversion Pixel --> <script>var i=new Image();i.src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAAAEHsCU6AA==&s=HHUkLOGwK4RVah69HdhkQ7g5rR0_Cf0mSb0oOKK9eBw=";</script><noscript><img height="1" width="1" style="display:none" src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAAAEHsCU6AA==&s=HHUkLOGwK4RVah69HdhkQ7g5rR0_Cf0mSb0oOKK9eBw="/></noscript><!-- DO NOT MODIFY --> <!-- End Reddit Conversion Pixel -->')
+
       if (typeof yaCounter46855911 !== 'undefined') {
         yaCounter46855911.reachGoal('verifyEmail')
       }
@@ -178,6 +180,7 @@ $(function () {
 
             if(data > 0){
               $('#howToWatchEEE').removeClass('disnone')
+              $('#investors_chat').removeClass('disnone')
             }
           }
         })
