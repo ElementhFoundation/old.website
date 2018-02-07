@@ -1,3 +1,5 @@
+var countDownDate = 1517616000000
+var btcWalllet = null
 $(function () {
 
   var hash = window.location.hash.substr(1)
@@ -5,7 +7,9 @@ $(function () {
     if (hash === 'emailVerified') {
       $('#emailVerified').removeClass('disnone')
       $('#emailVerified').append('<img height="1" width="1" style="display:none" src="https://matchico.com/track-investor/87c734a9-5afb-487d-9355-6bad7f725c30/signup.gif"/>')
-      if (yaCounter46855911) {
+      $('#emailVerified').append('<!-- Reddit Conversion Pixel --> <script>var i=new Image();i.src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAAAEHsCU6AA==&s=HHUkLOGwK4RVah69HdhkQ7g5rR0_Cf0mSb0oOKK9eBw=";</script><noscript><img height="1" width="1" style="display:none" src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAAAEHsCU6AA==&s=HHUkLOGwK4RVah69HdhkQ7g5rR0_Cf0mSb0oOKK9eBw="/></noscript><!-- DO NOT MODIFY --> <!-- End Reddit Conversion Pixel -->')
+
+      if (typeof yaCounter46855911 !== 'undefined') {
         yaCounter46855911.reachGoal('verifyEmail')
       }
     }
@@ -16,7 +20,7 @@ $(function () {
   function resize () {
     if ($window.width() < 1280) {
       $('#table').removeClass('table-of-contents');
-      $('#featured, #cases, #dapps, #mission, #roadmap, #rewards, #partner, #team, #advisors, #media, #contact').removeClass('scrollspy');
+      $('#features, #cases, #dapps, #mission, #market, #roadmap, #rating, #product, #rewards, #partner, #team, #advisors, #media, #competitors, #meetup, #reviews, #faq, #contact').removeClass('scrollspy');
     }
   }
 
@@ -86,14 +90,13 @@ $(function () {
   }
   if ($('#timer').length) {
     var curDate = new Date().getTime();
-    var countDownDate = 1515974400000;
 
     if (curDate < countDownDate) {
-      $('#timerTitle').html('50% bonus at Private Pre-Sale round starts in:')
+      $('#timerTitle').html('15% bonus at Pre-ICO round ends in:')
     } else {
-      countDownDate = 1517436000000;
-      $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
-      $('#presaleLink').show(0)
+      countDownDate = 1518566400000;
+      $('#timerTitle').html('Pre-ICO round end in:')
+      $('#preico').removeClass('disnone')
     }
 
     var x = setInterval(function () {
@@ -123,11 +126,11 @@ $(function () {
 
       $('#timer').html(days + "d " + hours + ":" + minutes + ":" + seconds)
       // If the count down is finished, write some text
-      if (distance < 0) {
+      if (distance <= 0) {
 
-        $('#timerTitle').html('50% bonus at Private Pre-Sale round ends in:')
-        countDownDate = 1517443200000;
-        $('#presaleLink').show(0)
+        $('#timerTitle').html('Pre-ICO round end in:')
+        countDownDate = 1518566400000;
+        $('#preico').removeClass('disnone')
       }
     }, 1000);
   }
@@ -147,6 +150,8 @@ $(function () {
     $('#address_eth_form').val(data.eth)
     $('#address_btc_div').html(data.btc)
     $('#address_btc_form').val(data.btc)
+
+    btcWalllet = data.btc
 
     if ($('#preico').length) {
       initContract(data.eth)
@@ -172,6 +177,11 @@ $(function () {
         getBalance(data.tokenAddress, data2.wallet_eth, function (err, data) {
           if (data) {
             $('#user_token').html(data + ' EEE')
+
+            if(data > 0){
+              $('#howToWatchEEE').removeClass('disnone')
+              $('#investors_chat').removeClass('disnone')
+            }
           }
         })
       }
@@ -180,7 +190,7 @@ $(function () {
 
   $('#get_eee_btc').on('click', function () {
     $('#wallet_btc_ok').removeClass('disnone')
-    if (yaCounter46855911) {
+    if (typeof yaCounter46855911 !== 'undefined') {
       yaCounter46855911.reachGoal('getBTC')
     }
   })
@@ -191,7 +201,7 @@ $(function () {
 
   $('#get_eee_eth').on('click', function () {
     $('#wallet_eth_ok').removeClass('disnone')
-    if (yaCounter46855911) {
+    if (typeof yaCounter46855911 !== 'undefined') {
       yaCounter46855911.reachGoal('getEEE')
     }
   })
@@ -216,7 +226,7 @@ $(function () {
           signup_form.find('.error').html(err).removeClass('disnone')
           signup_form.find(':input[type="submit"]').prop('disabled', false)
         } else {
-          if (yaCounter46855911) {
+          if (typeof yaCounter46855911 !== 'undefined') {
             yaCounter46855911.reachGoal('signup')
           }
           window.location.href = "/profile"
@@ -305,7 +315,7 @@ $(function () {
           profile_data.find('.error').html(err).removeClass('disnone')
           profile_data.find(':input[type="submit"]').prop('disabled', false)
         } else {
-          if (yaCounter46855911) {
+          if (typeof yaCounter46855911 !== 'undefined') {
             yaCounter46855911.reachGoal('setProfile')
           }
           location.reload()
@@ -359,13 +369,10 @@ $(function () {
             $('#questionnaire').removeClass('disnone')
           }
 
-          if (data.round == 1) {
-            $('#user_round').html('Private Pre-Sale')
-            $('#get_eee_eth').removeClass('disnone')
-            $('#get_eee_btc').removeClass('disnone')
-          }
           if (data.round == 2) {
             $('#user_round').html('Pre-ICO')
+            $('#get_eee_eth').removeClass('disnone')
+            $('#get_eee_btc').removeClass('disnone')
           }
           if (data.round == 3) {
             $('#user_round').html('ICO')
@@ -437,6 +444,25 @@ $(function () {
       window.location.href = "/"
     })
   })
+
+  var wallet_btc_sent_form = $('#wallet_btc_sent_form')
+  if (wallet_btc_sent_form.length) {
+    wallet_btc_sent_form.submit(function (e) {
+      wallet_btc_sent_form.find(':input[type="submit"]').prop('disabled', true)
+      wallet_btc_sent_form.find('.error').addClass('disnone')
+      wallet_btc_sent_form.find('.allok').addClass('disnone')
+      e.preventDefault();
+      checkAddress(function (err, data) {
+        wallet_btc_sent_form.find(':input[type="submit"]').prop('disabled', false)
+        if (err) {
+          wallet_btc_sent_form.find('.error').html(err).removeClass('disnone')
+        } else {
+          wallet_btc_sent_form.find('.allok').removeClass('disnone')
+        }
+      })
+    })
+  }
+
 });
 
 function updateSmartConrtactData () {

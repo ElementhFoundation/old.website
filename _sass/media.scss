@@ -317,8 +317,8 @@
 				form {width: calc(100% - 217px);}
 			}
 			.button.pointer {float: right;}
-			#get_eee_eth {margin-top: -208px;}
-			#get_eee_btc {margin-top: -128px;}
+			#get_eee_eth {margin-top: -496px;}
+			#get_eee_btc {margin-top: -416px;}
 		}
 	}
 	.number {
@@ -337,7 +337,7 @@
 	#calltoaction {
 		width: 225px;
 		bottom: 0px;
-		left: 32px;
+		right: 32px;
 		.button {
 			width: 225px;
 			height: 40px;
@@ -443,7 +443,7 @@
 	}
 	#calltoaction {
 		bottom: 46px;
-		left: 48px;
+		right: 48px;
 		.button {
 			height: 49px;
 			padding-top: 16px;
