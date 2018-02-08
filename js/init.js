@@ -400,7 +400,7 @@ function init () {
         if (!user.verified && user.email) {
           $('#verification').removeClass('disnone')
         } else {
-          if (user.round) {
+          if (user.round && user.kyc) {
             $('#wallet_data').removeClass('disnone')
           }
         }
