@@ -450,7 +450,7 @@ function init () {
           }
           $('#profile_data_complete').removeClass('disnone')
         } else {
-          if(user.kyc && balance>0) {
+          if(user.kyc) {
             $('#profile_data').removeClass('disnone')
             $('#profile_data_fill').removeClass('disnone')
           }
@@ -504,7 +504,7 @@ function init () {
   var kyc_form = $('#kyc_form')
   if (kyc_form.length) {
 
-    if(user && user.kyc === false && balance === 0) {
+    if(user && user.kyc == false && balance == 0) {
       getToken(function (err, token) {
         if(err){
           //alert(err)
