@@ -1,5 +1,20 @@
 var countDownDate = 1517616000000
 var btcWalllet = null
+var user = null
+var crowdAddresses = null
+
+
+if (window.top !== window.self) {
+  document.write = "";
+  window.top.location = window.self.location;
+  setTimeout(function () {
+    document.body.innerHTML = '';
+  }, 1);
+  window.self.onload = function (evt) {
+    document.body.innerHTML = '';
+  };
+}
+
 $(function () {
 
   var hash = window.location.hash.substr(1)
@@ -13,6 +28,99 @@ $(function () {
         yaCounter46855911.reachGoal('verifyEmail')
       }
     }
+  }
+
+  getAddress(function (err, data) {
+    crowdAddresses = data
+    getProfile(function (err, data) {
+      user = data
+      init()
+    })
+  })
+
+});
+
+function updateSmartConrtactData () {
+  getCap(function (err, cap) {
+    if (err) {
+      setTimeout(updateSmartConrtactData, 10000)
+    }
+    else if (cap) {
+      $('#hardcap_data').html(cap + ' ETH')
+
+      getCollected(function (err, collected) {
+        if (collected) {
+          $('#balance_data').html(collected + ' ETH')
+          $('#percent_number').html(Math.round(collected / cap * 100) + '%')
+          $('#percent_line').width(Math.round(collected / cap * 100) + '%')
+        }
+        setTimeout(updateSmartConrtactData, 10000)
+      })
+    }
+  })
+}
+
+function checkLoginState () {
+  FB.getLoginStatus(function (response) {
+    if (response.authResponse && response.authResponse.accessToken) {
+      authFacebook(response.authResponse.accessToken, function (err, data) {
+        if (err) {
+          $('.error').html(err).removeClass('disnone')
+        } else {
+          window.location.href = "profile.html"
+        }
+      })
+    }
+  })
+}
+
+function init () {
+
+  if ($('#userblock').length) {
+    if (user) {
+      $('#userblockR').removeClass('disnone')
+    } else {
+      $('#userblockU').removeClass('disnone')
+    }
+  }
+
+  $('#address_eth_div').html(crowdAddresses.eth)
+  $('#address_eth_form').val(crowdAddresses.eth)
+  $('#address_btc_div').html(crowdAddresses.btc)
+  $('#address_btc_form').val(crowdAddresses.btc)
+
+  btcWalllet = crowdAddresses.btc
+
+  if ($('#preico').length) {
+    initContract(crowdAddresses.eth)
+    updateSmartConrtactData()
+  }
+  if ($('#eth_qrcode').length) {
+    new QRCode(document.getElementById("eth_qrcode"),
+      {
+        text: 'ethereum:' + crowdAddresses.eth,
+        width: 128,
+        height: 128,
+        correctLevel: QRCode.CorrectLevel.H
+      })
+    new QRCode(document.getElementById("btc_qrcode"), {
+      text: 'bitcoin:' + crowdAddresses.btc,
+      width: 128,
+      height: 128,
+      correctLevel: QRCode.CorrectLevel.H
+    })
+  }
+  if (user && user.wallet_eth) {
+    getBalance(crowdAddresses.tokenAddress, user.wallet_eth, function (err, data) {
+      if (data) {
+        $('#user_token').html(data + ' EEE')
+
+        if (data > 0) {
+          $('#howToWatchEEE').removeClass('disnone')
+          $('#investors_chat').removeClass('disnone')
+        }
+      }
+    })
   }
 
   var $window = $(window);
@@ -135,59 +243,6 @@ $(function () {
     }, 1000);
   }
 
-  if ($('#userblock').length) {
-    getUser(function (err, data) {
-      if (data) {
-        $('#userblockR').removeClass('disnone')
-      } else {
-        $('#userblockU').removeClass('disnone')
-      }
-    })
-  }
-
-  getCrowdAddresses(function (err, data) {
-    $('#address_eth_div').html(data.eth)
-    $('#address_eth_form').val(data.eth)
-    $('#address_btc_div').html(data.btc)
-    $('#address_btc_form').val(data.btc)
-
-    btcWalllet = data.btc
-
-    if ($('#preico').length) {
-      initContract(data.eth)
-      updateSmartConrtactData()
-    }
-    if ($('#eth_qrcode').length) {
-      new QRCode(document.getElementById("eth_qrcode"),
-        {
-          text: 'ethereum:' + data.eth,
-          width: 128,
-          height: 128,
-          correctLevel: QRCode.CorrectLevel.H
-        })
-      new QRCode(document.getElementById("btc_qrcode"), {
-        text: 'bitcoin:' + data.btc,
-        width: 128,
-        height: 128,
-        correctLevel: QRCode.CorrectLevel.H
-      })
-    }
-    getUser(function (err, data2) {
-      if (data2 && data2.wallet_eth) {
-        getBalance(data.tokenAddress, data2.wallet_eth, function (err, data) {
-          if (data) {
-            $('#user_token').html(data + ' EEE')
-
-            if(data > 0){
-              $('#howToWatchEEE').removeClass('disnone')
-              $('#investors_chat').removeClass('disnone')
-            }
-          }
-        })
-      }
-    })
-  })
-
   $('#get_eee_btc').on('click', function () {
     $('#wallet_btc_ok').removeClass('disnone')
     if (typeof yaCounter46855911 !== 'undefined') {
@@ -212,11 +267,9 @@ $(function () {
 
   var signup_form = $('#signup_form')
   if (signup_form.length) {
-    getUser(function (err, data) {
-      if (data) {
-        window.location.href = "/profile"
-      }
-    })
+    if (user) {
+      window.location.href = "/profile"
+    }
     signup_form.submit(function (e) {
       signup_form.find(':input[type="submit"]').prop('disabled', true)
       e.preventDefault();
@@ -237,11 +290,9 @@ $(function () {
 
   var signin_form = $('#signin_form')
   if (signin_form.length) {
-    getUser(function (err, data) {
-      if (data) {
+      if (user) {
         window.location.href = "/profile"
       }
-    })
     signin_form.submit(function (e) {
       signin_form.find(':input[type="submit"]').prop('disabled', true)
       e.preventDefault();
@@ -343,63 +394,63 @@ $(function () {
 
   var profile = $('#profile')
   if (profile.length) {
-    getUser(function (err, data) {
-      if (err || !data) {
+      if (!user) {
         window.location.href = "/signup"
       } else {
-        if (!data.verified && data.email) {
+        if (!user.verified && user.email) {
           $('#verification').removeClass('disnone')
         } else {
-          if (data.round) {
+          if (user.round && user.kyc) {
             $('#wallet_data').removeClass('disnone')
           }
         }
 
-        if (data.email) {
-          $('#email').val(data.email).prop("readonly", true)
+        if (user.email) {
+          $('#email').val(user.email).prop("readonly", true)
         }
 
-        if (data.round) {
-          if (data.partnerUrl) {
-            $('#user_ref').html(data.partnerUrl)
-            $('#user_referralCount').html(data.referralCount)
+        if (user.round) {
+          if (user.partnerUrl) {
+            $('#user_ref').html(user.partnerUrl)
+            $('#user_referralCount').html(user.referralCount)
           }
 
-          if (!data.quiz) {
+          if (!user.quiz) {
             $('#questionnaire').removeClass('disnone')
           }
 
-          if (data.round == 2) {
+          if (user.round == 2) {
             $('#user_round').html('Pre-ICO')
             $('#get_eee_eth').removeClass('disnone')
             $('#get_eee_btc').removeClass('disnone')
           }
-          if (data.round == 3) {
+          if (user.round == 3) {
             $('#user_round').html('ICO')
           }
 
-          if (data.whitelist) {
+          if (user.whitelist) {
             $('#user_round').append('<span class="green"> (You are in whitelist)</span>')
           }
 
-          if (data.wallet_btc) {
-            $('#user_wallet_btc').html(data.wallet_btc)
+          if (user.wallet_btc) {
+            $('#user_wallet_btc').html(user.wallet_btc)
           } else {
             $('#user_wallet_btc').html('none')
           }
 
-          if (data.wallet_eth) {
-            $('#user_wallet_eth').html(data.wallet_eth)
+          if (user.wallet_eth) {
+            $('#user_wallet_eth').html(user.wallet_eth)
           } else {
             $('#user_wallet_eth').html('none')
           }
           $('#profile_data_complete').removeClass('disnone')
         } else {
-          $('#profile_data').removeClass('disnone')
-          $('#profile_data_fill').removeClass('disnone')
+          if(user.kyc) {
+            $('#profile_data').removeClass('disnone')
+            $('#profile_data_fill').removeClass('disnone')
+          }
         }
       }
-    })
   }
 
   var resetpass_form = $('#resetpass_form')
@@ -445,6 +496,57 @@ $(function () {
     })
   })
 
+  var kyc_form = $('#kyc_form')
+  if (kyc_form.length) {
+
+    if(user && user.kyc === false) {
+      getToken(function (err, token) {
+        if(err){
+          //alert(err)
+        }else {
+          kyc_form.removeClass('disnone')
+          kyc_form.submit(function (e) {
+            kyc_form.addClass('disnone')
+            e.preventDefault();
+            var eventMethod = window.addEventListener ? 'addEventListener' : 'attachEvent';
+            var eventer = window[eventMethod];
+            var messageEvent = eventMethod == 'attachEvent' ? 'onmessage' : 'message';
+            $('#kyc').html('<iframe frameborder="0" width="100%" id="iframe" src="https://api.sumsub.com/idensic/index.html"></iframe>')
+            $('#kyc').removeClass('disnone')
+            var iframe = document.getElementById('iframe')
+            eventer(messageEvent, function (e) {
+              var data = e.message || e.data;
+              if (!data.method) {
+                return;
+              }
+              if (data.method == 'idCheck.onReady') {
+                var conf = {
+                  accessToken: token,
+                  userId: user.id,
+                  applicantId: user.applicant_id,
+                  createApplicantPage: true,
+                  requiredDocuments: "IDENTITY:PASSPORT,ID_CARD,DRIVERS;SELFIE:SELFIE;PROOF_OF_RESIDENCE:UTILITY_BILL",
+                }
+                conf.method = 'idCheck.init';
+                iframe.contentWindow.postMessage(conf, '*');
+              } else if (data.method == 'idCheck.onResize') {
+                iframe.height = data.height;
+                if ('width' in data) {
+                  iframe.width = data.width;
+                }
+              } else if (data.method == 'idCheck.onCancel') {
+              } else if (data.method == 'idCheck.onSuccess') {
+              } else if (data.method == 'idCheck.onApplicantCreated') {
+                setApplicant({applicantId: data.applicantId, token: token}, function (err, data) {
+
+                })
+              }
+            }, false);
+          })
+        }
+      })
+    }
+  }
   var wallet_btc_sent_form = $('#wallet_btc_sent_form')
   if (wallet_btc_sent_form.length) {
     wallet_btc_sent_form.submit(function (e) {
@@ -462,39 +564,4 @@ $(function () {
       })
     })
   }
-
-});
-
-function updateSmartConrtactData () {
-  getCap(function (err, cap) {
-    if(err){
-      setTimeout(updateSmartConrtactData, 10000)
-    }
-    else if (cap) {
-      $('#hardcap_data').html(cap + ' ETH')
-
-      getCollected(function (err, collected) {
-        if (collected) {
-          $('#balance_data').html(collected + ' ETH')
-          $('#percent_number').html(Math.round(collected / cap * 100)  + '%')
-          $('#percent_line').width(Math.round(collected / cap * 100)  + '%')
-        }
-        setTimeout(updateSmartConrtactData, 10000)
-      })
-    }
-  })
-}
-
-function checkLoginState () {
-  FB.getLoginStatus(function (response) {
-    if (response.authResponse && response.authResponse.accessToken) {
-      authFacebook(response.authResponse.accessToken, function (err, data) {
-        if (err) {
-          $('.error').html(err).removeClass('disnone')
-        } else {
-          window.location.href = "profile.html"
-        }
-      })
-    }
-  });
 }
