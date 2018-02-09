@@ -1,5 +1,6 @@
 var countDownDate = 1517616000000
 var btcWalllet = null
+var balance = 0
 var user = null
 var crowdAddresses = null
 
@@ -34,7 +35,14 @@ $(function () {
     crowdAddresses = data
     getProfile(function (err, data) {
       user = data
-      init()
+      if (user && user.wallet_eth) {
+        getBalance(crowdAddresses.tokenAddress, user.wallet_eth, function (err, data) {
+          balance = data
+          init()
+        })
+      }else{
+        init()
+      }
     })
   })
 
@@ -110,17 +118,14 @@ function init () {
       correctLevel: QRCode.CorrectLevel.H
     })
   }
-  if (user && user.wallet_eth) {
-    getBalance(crowdAddresses.tokenAddress, user.wallet_eth, function (err, data) {
-      if (data) {
-        $('#user_token').html(data + ' EEE')
 
-        if (data > 0) {
-          $('#howToWatchEEE').removeClass('disnone')
-          $('#investors_chat').removeClass('disnone')
-        }
-      }
-    })
+  if (balance) {
+    $('#user_token').html(balance + ' EEE')
+
+    if (balance > 0) {
+      $('#howToWatchEEE').removeClass('disnone')
+      $('#investors_chat').removeClass('disnone')
+    }
   }
 
   var $window = $(window);
@@ -400,7 +405,7 @@ function init () {
         if (!user.verified && user.email) {
           $('#verification').removeClass('disnone')
         } else {
-          if (user.round && user.kyc) {
+          if (user.round && (user.kyc || balance>0)) {
             $('#wallet_data').removeClass('disnone')
           }
         }
@@ -445,7 +450,7 @@ function init () {
           }
           $('#profile_data_complete').removeClass('disnone')
         } else {
-          if(user.kyc) {
+          if(user.kyc && balance>0) {
             $('#profile_data').removeClass('disnone')
             $('#profile_data_fill').removeClass('disnone')
           }
@@ -499,7 +504,7 @@ function init () {
   var kyc_form = $('#kyc_form')
   if (kyc_form.length) {
 
-    if(user && user.kyc === false) {
+    if(user && (user.kyc === false || balance>0)) {
       getToken(function (err, token) {
         if(err){
           //alert(err)
