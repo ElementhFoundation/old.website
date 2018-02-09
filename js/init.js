@@ -504,7 +504,7 @@ function init () {
   var kyc_form = $('#kyc_form')
   if (kyc_form.length) {
 
-    if(user && (user.kyc === false || balance>0)) {
+    if(user && (user.kyc === false || balance === 0)) {
       getToken(function (err, token) {
         if(err){
           //alert(err)
