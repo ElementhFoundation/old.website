@@ -1,9 +1,8 @@
-var countDownDate = 1517616000000
+var countDownDate = 1518566400000
 var btcWalllet = null
 var balance = 0
 var user = null
 var crowdAddresses = null
-
 
 if (window.top !== window.self) {
   document.write = "";
@@ -17,6 +16,20 @@ if (window.top !== window.self) {
 }
 
 $(function () {
+  /*
+   i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
+   'debug': true,
+   'fallbackLng': 'en',
+   backend: {
+   // load from i18next-gitbook repo
+   loadPath: '/locales/{{lng}}/{{ns}}.json',
+   crossDomain: true
+   }
+   }, function(err, t) {
+   jqueryI18next.init(i18next, $);
+   $('body').localize()
+   });
+   */
 
   var hash = window.location.hash.substr(1)
   if (hash) {
@@ -40,7 +53,7 @@ $(function () {
           balance = data
           init()
         })
-      }else{
+      } else {
         init()
       }
     })
@@ -205,47 +218,50 @@ function init () {
     var curDate = new Date().getTime();
 
     if (curDate < countDownDate) {
-      $('#timerTitle').html('15% bonus at Pre-ICO round ends in:')
-    } else {
-      countDownDate = 1518566400000;
       $('#timerTitle').html('Pre-ICO round end in:')
       $('#preico').removeClass('disnone')
+    } else {
+      countDownDate = null;
+      $('#timerTitle').html('ICO coming soon')
     }
 
-    var x = setInterval(function () {
+    if (countDownDate) {
+      var x = setInterval(function () {
 
-      // Get todays date and time
-      var now = new Date().getTime();
+        // Get todays date and time
+        var now = new Date().getTime();
 
-      // Find the distance between now an the count down date
-      var distance = countDownDate - now;
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
 
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      if (hours < 10) {
-        hours = '0' + hours
-      }
-      if (minutes < 10) {
-        minutes = '0' + minutes
-      }
-      if (seconds < 10) {
-        seconds = '0' + seconds
-      }
-      // Display the result in the element with id="demo"
+        if (hours < 10) {
+          hours = '0' + hours
+        }
+        if (minutes < 10) {
+          minutes = '0' + minutes
+        }
+        if (seconds < 10) {
+          seconds = '0' + seconds
+        }
+        // Display the result in the element with id="demo"
 
-      $('#timer').html(days + "d " + hours + ":" + minutes + ":" + seconds)
-      // If the count down is finished, write some text
-      if (distance <= 0) {
+        $('#timer').html(days + "d " + hours + ":" + minutes + ":" + seconds)
+        // If the count down is finished, write some text
+        if (distance <= 0) {
 
-        $('#timerTitle').html('Pre-ICO round end in:')
-        countDownDate = 1518566400000;
-        $('#preico').removeClass('disnone')
-      }
-    }, 1000);
+          $('#timerTitle').html('ICO coming soon')
+          countDownDate = null;
+          clearInterval(x)
+          $('#preico').removeClass('disnone')
+        }
+      }, 1000);
+    }
   }
 
   $('#get_eee_btc').on('click', function () {
@@ -295,9 +311,9 @@ function init () {
 
   var signin_form = $('#signin_form')
   if (signin_form.length) {
-      if (user) {
-        window.location.href = "/profile"
-      }
+    if (user) {
+      window.location.href = "/profile"
+    }
     signin_form.submit(function (e) {
       signin_form.find(':input[type="submit"]').prop('disabled', true)
       e.preventDefault();
@@ -399,63 +415,63 @@ function init () {
 
   var profile = $('#profile')
   if (profile.length) {
-      if (!user) {
-        window.location.href = "/signup"
+    if (!user) {
+      window.location.href = "/signup"
+    } else {
+      if (!user.verified && user.email) {
+        $('#verification').removeClass('disnone')
       } else {
-        if (!user.verified && user.email) {
-          $('#verification').removeClass('disnone')
-        } else {
-          if (user.round && (user.kyc || balance>0)) {
-            $('#wallet_data').removeClass('disnone')
-          }
-        }
-
-        if (user.email) {
-          $('#email').val(user.email).prop("readonly", true)
-        }
-
-        if (user.round) {
-          if (user.partnerUrl) {
-            $('#user_ref').html(user.partnerUrl)
-            $('#user_referralCount').html(user.referralCount)
-          }
-
-          if (!user.quiz) {
-            $('#questionnaire').removeClass('disnone')
-          }
-
-          if (user.round == 2) {
-            $('#user_round').html('Pre-ICO')
-            $('#get_eee_eth').removeClass('disnone')
-            $('#get_eee_btc').removeClass('disnone')
-          }
-          if (user.round == 3) {
-            $('#user_round').html('ICO')
-          }
-
-          if (user.whitelist) {
-            $('#user_round').append('<span class="green"> (You are in whitelist)</span>')
-          }
-
-          if (user.wallet_btc) {
-            $('#user_wallet_btc').html(user.wallet_btc)
-          } else {
-            $('#user_wallet_btc').html('none')
-          }
-
-          if (user.wallet_eth) {
-            $('#user_wallet_eth').html(user.wallet_eth)
-          } else {
-            $('#user_wallet_eth').html('none')
-          }
-          $('#profile_data_complete').removeClass('disnone')
-        } else {
-          if(user.kyc) {
-            $('#profile_data').removeClass('disnone')
-            $('#profile_data_fill').removeClass('disnone')
-          }
+        if (user.round && (user.kyc || balance > 0)) {
+          $('#wallet_data').removeClass('disnone')
         }
       }
+
+      if (user.email) {
+        $('#email').val(user.email).prop("readonly", true)
+      }
+
+      if (user.round) {
+        if (user.partnerUrl) {
+          $('#user_ref').html(user.partnerUrl)
+          $('#user_referralCount').html(user.referralCount)
+        }
+
+        if (!user.quiz) {
+          $('#questionnaire').removeClass('disnone')
+        }
+
+        if (user.round == 2) {
+          $('#user_round').html('Pre-ICO')
+          $('#get_eee_eth').removeClass('disnone')
+          $('#get_eee_btc').removeClass('disnone')
+        }
+        if (user.round == 3) {
+          $('#user_round').html('ICO')
+        }
+
+        if (user.whitelist) {
+          $('#user_round').append('<span class="green"> (You are in whitelist)</span>')
+        }
+
+        if (user.wallet_btc) {
+          $('#user_wallet_btc').html(user.wallet_btc)
+        } else {
+          $('#user_wallet_btc').html('none')
+        }
+
+        if (user.wallet_eth) {
+          $('#user_wallet_eth').html(user.wallet_eth)
+        } else {
+          $('#user_wallet_eth').html('none')
+        }
+        $('#profile_data_complete').removeClass('disnone')
+      } else {
+        if (user.kyc) {
+          $('#profile_data').removeClass('disnone')
+          $('#profile_data_fill').removeClass('disnone')
+        }
+      }
+    }
   }
 
   var resetpass_form = $('#resetpass_form')
@@ -504,11 +520,11 @@ function init () {
   var kyc_form = $('#kyc_form')
   if (kyc_form.length) {
 
-    if(user && user.kyc == false && balance == 0) {
+    if (user && user.kyc == false && balance == 0) {
       getToken(function (err, token) {
-        if(err){
+        if (err) {
           //alert(err)
-        }else {
+        } else {
           kyc_form.removeClass('disnone')
           kyc_form.submit(function (e) {
             kyc_form.addClass('disnone')
