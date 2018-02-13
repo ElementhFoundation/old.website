@@ -51,6 +51,40 @@
 		}
 	}
 
+	.tabs {
+		margin: 11px 15px 31px 16px;
+	}
+
+	.data {
+		padding-bottom: 0;
+		border-bottom: none;
+		margin-bottom: 32px;
+		.data_name {
+			height: 48px;
+			font-size: 14px;
+			line-height: 48px;
+			float: left;
+		}
+		.data_user {
+			line-height: 48px;
+			height: 48px;
+			margin-top: 15px;
+			margin-left: 144px;
+			.wallet_address {
+				font-size: 14px;
+				line-height: 48px;
+			}
+			form {
+				margin: 0;
+				.inputtext {margin-bottom: 0;}
+				.line_icon.done_cancel {
+					top: -42px;
+					&.round {top: -42px;}
+				}
+			}
+		}
+	}
+
 	.progressbar {
 		margin-top: 32px;
 		height: 145px;
@@ -310,6 +344,36 @@
 
 @media (min-width: 960px) {
 
+	.dropdown_line {display: none;}
+
+	.tabs_list {
+		display: block;
+		top: 0;
+		height: 49px;
+		padding: 0;
+		background-color: rgba(255,255,255,.025);
+		li {
+			width: 16.66%;
+			padding: 9px 0 8px;
+			color: rgba(255,255,255,.7);
+			float: left;
+			text-align: center;
+			&:hover {background-color: rgba(255,255,255,.05);}
+			&:active {background-color: rgba(255,255,255,.1);}
+			&.active {background-color: rgba(255,255,255,.1);}
+		}
+	}
+
+	.tabs {
+		margin-top: 27px;
+		.tabs_container {
+			padding: 64px 32px 18px 32px;
+			background-color: rgba(255,255,255,0.025);
+			.title {display: none;}
+			.data.data_last {margin-bottom: 0;}
+		}
+	}
+
 	#profile {
 		#wallet_data {
 			.data_text {
@@ -334,6 +398,13 @@
 }
 
 @media (min-width: 1280px) {
+
+	.tabs {
+		max-width: 1025px;
+		margin: 0 auto;
+		margin-top: 27px;
+	}
+
 	#calltoaction {
 		width: 225px;
 		bottom: 0px;

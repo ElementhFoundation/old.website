@@ -332,7 +332,7 @@ li.nolink:active { background-color: rgba(255,255,255,.0); }
 
 .medium		{ background: url(../img/icon/ic_medium.svg)  center center no-repeat; }
 
-.ic_foxico		{ background: url(../img/icon/ic_foxico.svg)  center center no-repeat; }
+.ic_foxico	{ background: url(../img/icon/ic_foxico.svg)  center center no-repeat; }
 
 .steemit	{ background: url(../img/icon/ic_steemit.svg)  center center no-repeat; }
 
@@ -836,7 +836,7 @@ button {
 	}
 }
 
-.data_text {
+.data_text, .data_user {
 	form {
 		height: 49px;
 		margin-top: 8px;
@@ -1049,6 +1049,92 @@ footer {
 		}
 		.inputtextarea, .inputtextarea textarea {height: 85px !important;}
 
+	}
+}
+
+/*----- TABS -----*/
+
+.tabs {
+	position: relative;
+	margin: -1px 15px 31px 16px;
+	.tabs_container {
+		display: none;
+		&.disblock {display: block;}
+		.title {
+			height: 20px;
+			padding: 14px 15px 15px 16px;
+			margin-bottom: 31px;
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+}
+.data {
+	padding-bottom: 16px;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	margin-bottom: 15px;
+	&.data_last {
+		padding-bottom: 0;
+		border-bottom: none;
+		margin-bottom: 32px;
+	}
+	.data_name {
+		height: 16px;
+		font-size: 14px;
+		line-height: 16px;
+		opacity: .7;
+	}
+	.data_user {
+		margin-top: 16px;
+		font-size: 14px;
+		line-height: 16px;
+		.wallet_address {
+			font-size: 10px;
+			line-height: 12px;
+		}
+		.data_btn {
+			float: right;
+			opacity: .7;
+			cursor: pointer;
+			&:hover {opacity: 1;}
+		}
+		.verify {
+			color: #ff0000;
+			margin-right: 16px;
+		}
+	}
+}
+.dropdown_line {
+	position: absolute;
+	width: 100%;
+	height: 49px;
+	background-color: rgba(255,255,255,.1);
+	&:hover {background-color: rgba(255,255,255,.15);}
+	&:active {background-color: rgba(255,255,255,.2);}
+	.dropdown {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		opacity: .7;
+	}
+}
+.tabs_list {
+	display: none;
+	position: absolute;
+	top: -8px;
+	width: 100%;
+	padding: 8px 0 9px 0;
+	background-color: rgba(255,255,255,1);
+	z-index: 1;
+	&.disblock {display: block;}
+	li {
+		margin: 0 !important;
+		padding: 12px 15px 12px 16px;
+		color: #212121;
+		z-index: 2;
+		&:hover {background-color: rgba(0,0,0,.05);}
+		&:active {background-color: rgba(0,0,0,.1);}
+		&.active {background-color: rgba(0,0,0,.1);}
 	}
 }
 
