@@ -1,7 +1,5 @@
 # Elementh.io site
 
-*A Site Starter Materialize Templates.
-
 The theme is a fork of the [minima][1]
 
 
