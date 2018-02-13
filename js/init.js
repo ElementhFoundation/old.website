@@ -17,6 +17,20 @@ if (window.top !== window.self) {
 }
 
 $(function () {
+  /*
+  i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
+    'debug': true,
+    'fallbackLng': 'en',
+    backend: {
+      // load from i18next-gitbook repo
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      crossDomain: true
+    }
+  }, function(err, t) {
+    jqueryI18next.init(i18next, $);
+    $('body').localize()
+  });
+  */
 
   var hash = window.location.hash.substr(1)
   if (hash) {
