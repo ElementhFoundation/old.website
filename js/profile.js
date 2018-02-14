@@ -1,4 +1,4 @@
-function init () {
+$(function () {
 
     $('#profile_dropdown').on('click', function () {
         $('#profile_tabs_list').addClass('disblock')
@@ -42,4 +42,19 @@ function init () {
         $('#tabs_list_profile').addClass('active')
         $('#tabs_container_profile').addClass('disblock')
     })
-}
+
+    $('#unique_referral_link_copy').on('click', function () {
+        $('#unique_referral_link_copy').addClass('disnone')
+        $('#unique_referral_link_copied').addClass('disblock')
+    })
+    $('#unique_referral_link_copied').on('click', function () {
+        $('#unique_referral_link_copy').removeClass('disnone')
+        $('#unique_referral_link_copied').removeClass('disblock')
+    })
+
+    $('#verify_email').on('click', function () {
+        $('#user_email_edit').addClass('disnone')
+        $('#verify_email').addClass('disnone')
+        $('#confirmed_email').addClass('disblock')
+    })
+});
