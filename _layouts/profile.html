@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div id="content" class="grid height">
+<div id="content" class="">
 
     <a id="go_back" href="/" title="home" class="rotate home icon button">
         <img src="img/details/a_small.svg" class="angle left top">
@@ -19,14 +19,14 @@ layout: default
         </div>
         <ul id="profile_tabs_list" class="tabs_list pointer">
             <li id="tabs_list_contribute">CONTRIBUTE</li>
-            <li id="tabs_list_pool">POOL</li>
+            <!-- <li id="tabs_list_pool">POOL</li> -->
             <li id="tabs_list_bounty">BOUNTY</li>
             <li id="tabs_list_airdrop">AIRDROP</li>
             <li id="tabs_list_referral">REFERRAL</li>
             <li id="tabs_list_profile" class="active">PROFILE</li>
         </ul>
         {% include tabs_container_contribute.html %}
-        {% include tabs_container_pool.html %}
+        <!-- {% include tabs_container_pool.html %} -->
         {% include tabs_container_bounty.html %}
         {% include tabs_container_airdrop.html %}
         {% include tabs_container_referral.html %}
@@ -322,5 +322,6 @@ layout: default
             </a>
         </div>
     </div>
+    {% include iconpack.html %}
 
 </div>

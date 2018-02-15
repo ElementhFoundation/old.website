@@ -1056,7 +1056,7 @@ footer {
 
 .tabs {
 	position: relative;
-	margin: -1px 15px 31px 16px;
+	margin: -1px 15px 32px 16px;
 	.tabs_container {
 		display: none;
 		&.disblock {display: block;}
@@ -1067,7 +1067,27 @@ footer {
 			font-size: 20px;
 			line-height: 20px;
 		}
+		.description {
+			margin: 0 0 8px 0;
+			padding: 0;
+			text-align: left;
+			&.mbottom {margin-bottom: 16px;}
+		}
+		.body {
+			margin: 0 0 8px 0;
+			padding: 0;
+		}
 	}
+}
+.big_button {
+	display: block;
+	position: relative;
+	padding: 16px 16px 17px;
+	margin: 0 0 15px 0;
+	text-align: center;
+	background-color: rgba(0,136,204,.2);
+	&:hover {background-color: rgba(0,136,204,.3)}
+	&:active {background-color: rgba(0,136,204,.4)}
 }
 .data {
 	padding-bottom: 16px;
@@ -1076,7 +1096,7 @@ footer {
 	&.data_last {
 		padding-bottom: 0;
 		border-bottom: none;
-		margin-bottom: 32px;
+		margin-bottom: 16px;
 	}
 	.data_name {
 		height: 16px;
@@ -1089,18 +1109,49 @@ footer {
 		font-size: 14px;
 		line-height: 16px;
 		.wallet_address {
-			font-size: 10px;
+			font-size: 9px;
 			line-height: 12px;
 		}
 		.data_btn {
 			float: right;
 			opacity: .7;
 			cursor: pointer;
-			&:hover {opacity: 1;}
+			margin-left: 16px;
+			&:hover {
+				opacity: 1;
+			}
+			&.copied {
+				display: none;
+				color: #0f9d58;
+				&.disblock {display: block;}
+			}
 		}
 		.verify {
 			color: #ff0000;
-			margin-right: 16px;
+		}
+		.confirmed {
+			display: none;
+			color: #0f9d58;
+			&.disblock {display: block;}
+		}
+		&.readonly {
+			margin-bottom: 23px;
+			form {
+				.inputtext {
+					&.copy {
+						width: calc(100% - 95px);
+					}
+				}
+				.data_btn {
+					margin-top: -48px;
+					float: right;
+					opacity: .7;
+					cursor: pointer;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 }

@@ -10,6 +10,8 @@
 
 @media (min-width: 600px) {
 
+	#content.height_hd {height: 1024px;}
+
 	#profile {
 		margin-top: 11px;
 		.title {
@@ -53,6 +55,11 @@
 
 	.tabs {
 		margin: 11px 15px 31px 16px;
+		.tabs_container {
+			.body {
+				margin-bottom: 24px;
+			}
+		}
 	}
 
 	.data {
@@ -69,7 +76,7 @@
 			line-height: 48px;
 			height: 48px;
 			margin-top: 15px;
-			margin-left: 144px;
+			margin-left: 160px;
 			.wallet_address {
 				font-size: 14px;
 				line-height: 48px;
@@ -81,6 +88,9 @@
 					top: -42px;
 					&.round {top: -42px;}
 				}
+			}
+			&.readonly {
+				margin: 16px 0 33px 0;
 			}
 		}
 	}
@@ -353,7 +363,7 @@
 		padding: 0;
 		background-color: rgba(255,255,255,.025);
 		li {
-			width: 16.66%;
+			width: 20%;
 			padding: 9px 0 8px;
 			color: rgba(255,255,255,.7);
 			float: left;
@@ -399,10 +409,22 @@
 
 @media (min-width: 1280px) {
 
+	#content.height_hd {height: 1080px;}
+
 	.tabs {
 		max-width: 1025px;
-		margin: 0 auto;
-		margin-top: 27px;
+		margin: 27px auto 31px;
+	}
+	.data {
+		.data_name {
+			font-size: 16px;
+		}
+		.data_user {
+			font-size: 16px;
+			.wallet_address {
+				font-size: 16px;
+			}
+		}
 	}
 
 	#calltoaction {
@@ -520,8 +542,12 @@
 			padding-top: 16px;
 		}
 	}
-	.display_bg { background-image: url(../img/bg/bg_full_hd.jpg); }
-	header { margin: 48px 47px 47px 48px; }
+	.display_bg {
+		background-image: url(../img/bg/bg_full_hd.jpg);
+	}
+	header {
+		margin: 48px 47px 47px 48px;
+	}
 	.title {
 		height: 78px;
 		padding: 65px 112px;
@@ -529,26 +555,39 @@
 	#menu {
 		width: 321px;
 		.grid {
-          padding: 208px 48px 48px 48px;
-          li {
-            a {
-              height: 32px;
-              padding: 8px 0;
-            }
-          }
-        }
+			padding: 208px 48px 48px 48px;
+			li {
+				a {
+					height: 32px;
+					padding: 8px 0;
+				}
+			}
+		}
 	}
-	.section { margin-left: 592px; }
-	#media, #rewards, #partner, #rating { margin-left: 608px; }
-	footer{
+	.section {
+		margin-left: 592px;
+	}
+	#media, #rewards, #partner, #rating {
+		margin-left: 608px;
+	}
+	footer {
 		width: calc(100% - 320px);
 		left: 320px;
-		.secondline { margin-left: 336px; }
+		.secondline {
+			margin-left: 336px;
+		}
 	}
 }
 
 @media (min-width: 2560px) {
-	.section { margin-left: 752px; }
-	#media, #rewards, #partner, #rating { margin-left: 768px; }
-	footer .secondline { margin-left: 464px; }
+	#content.height_hd {height: 1440px;}
+	.section {
+		margin-left: 752px;
+	}
+	#media, #rewards, #partner, #rating {
+		margin-left: 768px;
+	}
+	footer .secondline {
+		margin-left: 464px;
+	}
 }
