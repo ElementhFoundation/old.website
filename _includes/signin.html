@@ -4,13 +4,15 @@
             SIGN IN
         </div>
         <form id="signin_form" class="sign_form">
+            <p class="body text_left">Your Email:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="email" form="signin_form" name="email" maxlength="100" placeholder="Your Email" required>
+                <input type="email" form="signin_form" name="email" maxlength="100" placeholder="johndoe@site.com" required>
             </div>
+            <p class="body text_left">Password:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="password" form="signin_form" name="password" maxlength="100" placeholder="Password" required>
+                <input type="password" form="signin_form" name="password" maxlength="100" placeholder="" required>
             </div>
             <p class="body">or</p>
                 <div class="fb-login-button" onlogin="checkLoginState();" scope="public_profile,email" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>

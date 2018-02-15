@@ -563,7 +563,7 @@ li { margin: 0 15px 15px 16px; }
 			font: inherit;
 			color: rgba(255,255,255,.9);
 			background-color: rgba(255,255,255,0);
-			&::placeholder { color: rgba(255,255,255,.7); }
+			&::placeholder { color: rgba(255,255,255,.3); }
 		}
 	}
 }
@@ -718,7 +718,7 @@ button {
 				font: inherit;
 				color: rgba(255,255,255,.9);
 				background-color: rgba(255,255,255,0);
-				&::placeholder { color: rgba(255,255,255,.7); }
+				&::placeholder { color: rgba(255,255,255,.3); }
 			}
 		}
 		.radioblock{
@@ -875,7 +875,7 @@ button {
 				font: inherit;
 				color: rgba(255,255,255,.9);
 				background-color: rgba(255,255,255,0);
-				&::placeholder { color: rgba(255,255,255,.7); }
+				&::placeholder { color: rgba(255,255,255,.3); }
 			}
 		}
 		.line_icon.done_cancel {
@@ -1085,9 +1085,28 @@ footer {
 	padding: 16px 16px 17px;
 	margin: 0 0 15px 0;
 	text-align: center;
+    cursor: pointer;
 	background-color: rgba(0,136,204,.2);
 	&:hover {background-color: rgba(0,136,204,.3)}
 	&:active {background-color: rgba(0,136,204,.4)}
+    &.disabled {
+        background-color: rgba(255,255,255,0.05);
+        color: rgba(255,255,255,0.2);
+        cursor: auto;
+        &:hover {background-color: rgba(255,255,255,0.05)}
+        &:active {background-color: rgba(255,255,255,0.05)}
+        .angle {opacity: .1;}
+    }
+}
+.button_block {
+    width: 100%;
+    height: 57px;
+    margin-bottom: 31px;
+    .big_button {
+        width: calc(50% - 40px);
+        float: left;
+        &.right {float: right;}
+    }
 }
 .data {
 	padding-bottom: 16px;
