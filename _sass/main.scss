@@ -296,6 +296,8 @@ li.nolink:active { background-color: rgba(255,255,255,.0); }
 	margin-left: 16px !important;
 }
 
+.home {z-index: 100;}
+
 .close { z-index: 2; }
 
 .close		{ background: url(../img/icon/ic_close.svg)  center center no-repeat; }
