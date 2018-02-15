@@ -563,7 +563,7 @@ li { margin: 0 15px 15px 16px; }
 			font: inherit;
 			color: rgba(255,255,255,.9);
 			background-color: rgba(255,255,255,0);
-			&::placeholder { color: rgba(255,255,255,.7); }
+			&::placeholder { color: rgba(255,255,255,.3); }
 		}
 	}
 }
@@ -718,7 +718,7 @@ button {
 				font: inherit;
 				color: rgba(255,255,255,.9);
 				background-color: rgba(255,255,255,0);
-				&::placeholder { color: rgba(255,255,255,.7); }
+				&::placeholder { color: rgba(255,255,255,.3); }
 			}
 		}
 		.radioblock{
@@ -875,7 +875,7 @@ button {
 				font: inherit;
 				color: rgba(255,255,255,.9);
 				background-color: rgba(255,255,255,0);
-				&::placeholder { color: rgba(255,255,255,.7); }
+				&::placeholder { color: rgba(255,255,255,.3); }
 			}
 		}
 		.line_icon.done_cancel {
