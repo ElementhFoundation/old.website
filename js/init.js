@@ -326,104 +326,6 @@ function init () {
     })
   }
 
-  var profile_data = $('#profile_data')
-  if (profile_data.length) {
-    profile_data.submit(function (e) {
-      e.preventDefault();
-      profile_data.find('.error').addClass('disnone')
-      profile_data.find(':input[type="submit"]').prop('disabled', true)
-      setProfile($(this).serialize(), function (err, data) {
-        if (err) {
-          profile_data.find('.error').html(err).removeClass('disnone')
-          profile_data.find(':input[type="submit"]').prop('disabled', false)
-        } else {
-          if (typeof yaCounter46855911 !== 'undefined') {
-            yaCounter46855911.reachGoal('setProfile')
-          }
-          location.reload()
-        }
-      })
-    })
-  }
-
-  var questionnaire_form = $('#questionnaire_form')
-  if (questionnaire_form.length) {
-    questionnaire_form.submit(function (e) {
-      e.preventDefault();
-      questionnaire_form.find('.error').addClass('disnone')
-      questionnaire_form.find(':input[type="submit"]').prop('disabled', true)
-      setInfo($(this).serialize(), function (err, data) {
-        if (err) {
-          questionnaire_form.find('.error').html(err).removeClass('disnone')
-          questionnaire_form.find(':input[type="submit"]').prop('disabled', false)
-        } else {
-          location.reload()
-        }
-      })
-    })
-  }
-
-  var profile = $('#profile')
-  if (profile.length) {
-    if (!user) {
-      window.location.href = "/signup"
-    } else {
-      if (!user.verified && user.email) {
-        $('#verification').removeClass('disnone')
-      } else {
-        if (user.round && (user.kyc || balance > 0)) {
-          $('#wallet_data').removeClass('disnone')
-        }
-      }
-
-      if (user.email) {
-        $('#email').val(user.email).prop("readonly", true)
-      }
-
-      if (user.round) {
-        if (user.partnerUrl) {
-          $('#user_ref').html(user.partnerUrl)
-          $('#user_referralCount').html(user.referralCount)
-        }
-
-        if (!user.quiz) {
-          $('#questionnaire').removeClass('disnone')
-        }
-
-        if (user.round == 2) {
-          $('#user_round').html('Pre-ICO')
-          $('#get_eee_eth').removeClass('disnone')
-          $('#get_eee_btc').removeClass('disnone')
-        }
-        if (user.round == 3) {
-          $('#user_round').html('ICO')
-        }
-
-        if (user.whitelist) {
-          $('#user_round').append('<span class="green"> (You are in whitelist)</span>')
-        }
-
-        if (user.wallet_btc) {
-          $('#user_wallet_btc').html(user.wallet_btc)
-        } else {
-          $('#user_wallet_btc').html('none')
-        }
-
-        if (user.wallet_eth) {
-          $('#user_wallet_eth').html(user.wallet_eth)
-        } else {
-          $('#user_wallet_eth').html('none')
-        }
-        $('#profile_data_complete').removeClass('disnone')
-      } else {
-        if (user.kyc) {
-          $('#profile_data').removeClass('disnone')
-          $('#profile_data_fill').removeClass('disnone')
-        }
-      }
-    }
-  }
-
   var resetpass_form = $('#resetpass_form')
   if (resetpass_form.length) {
     resetpass_form.submit(function (e) {
@@ -443,22 +345,29 @@ function init () {
   }
   $('.edit').on('click', function () {
     var parent = $(this).parent()
-    parent.addClass('disnone')
+    $(this).addClass('disnone')
     parent.parent().find('span:first-child').addClass('disnone')
     parent.parent().find('form').removeClass('disnone')
-    parent.parent().find('form').find('input').focus()
+    parent.parent().find('form').find('input').focus().val(parent.parent().find('span:first-child').html())
+    parent.parent().find('.verify').addClass('disnone')
   })
 
   $('.done').on('click', function () {
     var closest = $(this).closest('form')
-    closest.submit()
+    closest.addClass('disnone')
+    closest.parent().find('span:first-child').removeClass('disnone')
+    closest.parent().children('.edit').removeClass('disnone')
+    closest.parent().children('.verify').removeClass('disnone')
+    closest.parent().children('span:first-child').html(closest.find('input').val())
+    //closest.submit()
   })
 
   $('.cancel').on('click', function () {
     var closest = $(this).closest('form')
     closest.addClass('disnone')
     closest.parent().find('span:first-child').removeClass('disnone')
-    closest.parent().children('.line_icon').removeClass('disnone')
+    closest.parent().children('.edit').removeClass('disnone')
+    closest.parent().children('.verify').removeClass('disnone')
   })
 
   $('#logout_link').on('click', function () {
