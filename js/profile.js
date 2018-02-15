@@ -43,6 +43,17 @@ $(function () {
         $('#tabs_container_profile').addClass('disblock')
     })
 
+    $('#airdrop_verify_email').on('click', function () {
+        $('#airdrop_user_email_edit').addClass('disnone')
+        $('#airdrop_verify_email').addClass('disnone')
+        $('#airdrop_confirmed_email').addClass('disblock')
+    })
+    $('#airdrop_verify_telegram').on('click', function () {
+        $('#airdrop_user_telegram_edit').addClass('disnone')
+        $('#airdrop_verify_telegram').addClass('disnone')
+        $('#airdrop_confirmed_telegram').addClass('disblock')
+    })
+
     $('#unique_referral_link_copy').on('click', function () {
         $('#unique_referral_link_copy').addClass('disnone')
         $('#unique_referral_link_copied').addClass('disblock')
@@ -56,5 +67,10 @@ $(function () {
         $('#user_email_edit').addClass('disnone')
         $('#verify_email').addClass('disnone')
         $('#confirmed_email').addClass('disblock')
+    })
+    $('#verify_telegram').on('click', function () {
+        $('#user_telegram_edit').addClass('disnone')
+        $('#verify_telegram').addClass('disnone')
+        $('#confirmed_telegram').addClass('disblock')
     })
 });
