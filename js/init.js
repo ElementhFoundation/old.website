@@ -127,8 +127,16 @@ function init () {
           $('#questionnaire').removeClass('disnone')
         }
         $('#airdrop_check').on('click', function () {
+          $('#loading').removeClass('disnone')
           checkAirdrop(function (err,data) {
-            alert(data)
+            $('#loading').addClass('disnone')
+            if(data.status) {
+              $('#user_referral_airdrop_count').html(data.referralAirdropCount)
+              $('#airdrop_yes').removeClass('disnone')
+              $('#airdrop_check').addClass('disnone')
+            }else{
+              $('#airdrop_no').removeClass('disnone')
+            }
           })
         })
         profile_tabs.removeClass('disnone')

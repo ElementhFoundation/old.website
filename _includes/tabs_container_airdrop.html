@@ -21,35 +21,47 @@
                                                                            class="angle left bottom">
         Check your Airdrop status
     </div>
-    <p class="body">
-        Earn 1 extra stake for each of your referrals!<br>
-        You can increase your the number of your tokens by total of 20x by adding 19 more referrals. They have to join
-        Elementh Airdrop and participate untill the end of Airdrop.<br>
-        Fake users and fraud attempts is strictly prohibited. Posting your referral link in our Telegram Community is
-        not allowed. You may lose your entire airdrop tokens if you are found to have engaged in any fraudulent
-        behaviour.<br>
-        Here is your unique referral link, you can use it or use the social buttons to share:
-    </p>
-    <p class="description">Copy your unique link below to share:</p>
-    <div class="data data_last">
-        <div class="data_user readonly">
-            <form id="unique_airdrop_link_copy_form">
-                <div class="inputtext copy">
-                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg"
-                                                                                    class="angle right bottom">
-                    <input id="unique_airdrop_link_input" name="unique_airdrop_link" type="text"
-                           value="https://elementh.io/8e23f9c79aeb433933f9c13d1e79bf617d47f9be" readonly>
-                </div>
-                <span id="unique_airdrop_link_copy" class="data_btn" data-clipboard-target="#unique_airdrop_link_input">COPY</span>
-                <span id="unique_airdrop_link_copied" class="data_btn copied">COPIED</span>
-            </form>
+    <div id="airdrop_yes" class="disnone">
+        <p class="body">
+            Earn 1 extra stake for each of your referrals!<br>
+            You can increase your the number of your tokens by total of 20x by adding 19 more referrals. They have to
+            join
+            Elementh Airdrop and participate untill the end of Airdrop.<br>
+            Fake users and fraud attempts is strictly prohibited. Posting your referral link in our Telegram Community
+            is
+            not allowed. You may lose your entire airdrop tokens if you are found to have engaged in any fraudulent
+            behaviour.<br>
+            Here is your unique referral link, you can use it or use the social buttons to share:
+        </p>
+        <p class="description">Copy your unique link below to share:</p>
+        <div class="data data_last">
+            <div class="data_user readonly">
+                <form id="unique_airdrop_link_copy_form">
+                    <div class="inputtext copy">
+                        <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg"
+                                                                                        class="angle right bottom">
+                        <input id="unique_airdrop_link_input" name="unique_airdrop_link" type="text"
+                               value="https://elementh.io/8e23f9c79aeb433933f9c13d1e79bf617d47f9be" readonly>
+                    </div>
+                    <span id="unique_airdrop_link_copy" class="data_btn"
+                          data-clipboard-target="#unique_airdrop_link_input">COPY</span>
+                    <span id="unique_airdrop_link_copied" class="data_btn copied">COPIED</span>
+                </form>
+            </div>
+        </div>
+        <p class="description">STATS:</p>
+        <div class="data data_last">
+            <div class="data_name"></div>
+            <div class="data_user">
+                Now you have <span id="user_referral_airdrop_count"></span> stake(s) including yourself. You can still
+                make more referrals!<br>
+            </div>
         </div>
     </div>
-    <p class="description">STATS:</p>
-    <div class="data data_last">
-        <div class="data_name"></div>
-        <div class="data_user">
-            Now you have <span id="user_referral_airdrop_count"></span> stake(s) including yourself. You can still make more referrals!<br>
-        </div>
+    <div id="airdrop_no" class="disnone red">
+        Currently, you are not a participant of Elementh Airdrop, to participate you need to:<br>
+        Join Elementh Community by clicking "Join Elementh Airdrop on Telegram"<br>
+        Verify your Telegram ID<br>
+        Fill your Ethereum wallet address
     </div>
 </div>
