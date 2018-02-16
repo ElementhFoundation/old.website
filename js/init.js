@@ -107,6 +107,15 @@ function init () {
   if (profile_tabs.length) {
     if (user) {
       if(user.verified) {
+        if (typeof yaCounter46855911 !== 'undefined') {
+          yaCounter46855911.setUserID(user.id)
+          yaCounter46855911.userParams({
+            country: user.country,
+            wallet_btc: user.wallet_btc,
+            wallet_eth: user.wallet_eth,
+            referral: user.referral
+          })
+        }
         var questionnaire_form = $('#questionnaire_form')
         if (questionnaire_form.length) {
           questionnaire_form.submit(function (e) {
@@ -134,6 +143,9 @@ function init () {
               $('#user_referral_airdrop_count').html(data.referralAirdropCount)
               $('#airdrop_yes').removeClass('disnone')
               $('#airdrop_check').addClass('disnone')
+              if (typeof yaCounter46855911 !== 'undefined') {
+                yaCounter46855911.reachGoal('airdropYes')
+              }
             }else{
               $('#airdrop_no').removeClass('disnone')
             }
@@ -143,6 +155,7 @@ function init () {
         $('#user_username').html(user.username)
         $('#user_email').html(user.email)
         $('#user_telegram').html(user.telegram_username)
+        $('#user_wallet_btc').html(user.wallet_btc)
         $('#user_wallet_eth').html(user.wallet_eth)
         $('#user_country').html(user.country)
         $('#unique_referral_link_input').val(user.partnerUrl)
@@ -211,15 +224,6 @@ function init () {
       height: 128,
       correctLevel: QRCode.CorrectLevel.H
     })
-  }
-
-  if (balance) {
-    $('#user_token').html(balance + ' EEE')
-
-    if (balance > 0) {
-      $('#howToWatchEEE').removeClass('disnone')
-      $('#investors_chat').removeClass('disnone')
-    }
   }
 
   var $window = $(window);
@@ -384,6 +388,15 @@ function init () {
         $('#error').removeClass('disnone')
         $('#error_msg').html(err)
       }else {
+        user = data
+        if (typeof yaCounter46855911 !== 'undefined') {
+          yaCounter46855911.userParams({
+            country: user.country,
+            wallet_btc: user.wallet_btc,
+            wallet_eth: user.wallet_eth,
+            referral: user.referral
+          })
+        }
         form.addClass('disnone')
         form.parent().find('span:first-child').removeClass('disnone')
         form.parent().children('.edit').removeClass('disnone')
@@ -464,6 +477,13 @@ function init () {
           })
         }
       })
+    }else{
+      $('#forAdopters').removeClass('disnone')
+      $('#user_token').html(balance + ' EEE')
+      if (balance > 0) {
+        $('#howToWatchEEE').removeClass('disnone')
+        $('#investors_chat').removeClass('disnone')
+      }
     }
   }
   var wallet_btc_sent_form = $('#wallet_btc_sent_form')
