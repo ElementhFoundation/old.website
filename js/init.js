@@ -163,6 +163,11 @@ function init () {
         $('#user_referral_count').html(user.referralCount)
         $('#user_referral_airdrop_count').html(user.referralAirdropCount)
         $('#airdrop_join_telegram').attr("href", user.telegram_secret)
+        if(user.referralAirdropCount > 0){
+          $('#user_referral_airdrop_count').html(user.referralAirdropCount)
+          $('#airdrop_yes').removeClass('disnone')
+          $('#airdrop_check').addClass('disnone')
+        }
         new Clipboard('#unique_referral_link_copy').on('success', function (e) {
           $('#unique_referral_link_copy').addClass('disnone')
           $('#unique_referral_link_copied').addClass('disblock')
