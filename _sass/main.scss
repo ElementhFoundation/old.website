@@ -1211,6 +1211,7 @@ footer {
 						padding: 16px 16px 16px 15px;
 						textarea {
 							height: 65px;
+							line-height: 24px;
 						}
 					}
 					.purchase {
@@ -1228,6 +1229,8 @@ footer {
 							}
 							select {
 								color: rgba(255,255,255,.8);
+								background-color: rgba(255,255,255,0);
+								border: none;
 								font-size: 16px;
 							}
 							&.select {
@@ -1238,7 +1241,7 @@ footer {
 								background-color: rgba(255,255,255,0);
 							}
 						}
-						.dropdown {
+						.select_dropdown {
 							position: relative;
 							top: 18px;
 							left: -32px;
