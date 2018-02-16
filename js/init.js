@@ -139,7 +139,7 @@ function init () {
           $('#loading').removeClass('disnone')
           checkAirdrop(function (err,data) {
             $('#loading').addClass('disnone')
-            if(data.status) {
+            if(data.airdrop) {
               $('#user_referral_airdrop_count').html(data.referralAirdropCount)
               $('#airdrop_yes').removeClass('disnone')
               $('#airdrop_check').addClass('disnone')
