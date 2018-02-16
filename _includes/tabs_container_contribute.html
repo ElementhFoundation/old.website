@@ -11,45 +11,62 @@
             <img src="img/details/a_medium.svg" class="angle right bottom">
         </button>
     </form>
-    <div id="questionnaire" class="disnone">
-        <div class="title">SURVEY</div>
-        <form id="questionnaire_form">
-            <div class="inputtextarea">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <textarea form="questionnaire_form" name="info1" maxlength="1000" placeholder="What is your business?" required></textarea>
-            </div>
-            <div class="inputtextarea">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <textarea form="questionnaire_form" name="info2" maxlength="1000" placeholder="Why do you like Elementh ICO?" required></textarea>
-            </div>
-            <div class="inputtextarea">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <textarea form="questionnaire_form" name="info3" maxlength="1000" placeholder="How can you help our project?" required></textarea>
-            </div>
-            <div class="inputtextarea">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <textarea form="questionnaire_form" name="info4" maxlength="1000" placeholder="How can Elementh help you?" required></textarea>
-            </div>
-            <div class="inputtextarea">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <textarea form="questionnaire_form" name="info5" maxlength="1000" placeholder="Your Telegram/Kakaotalk/QQ/WeChat/Whatsup?" required></textarea>
-            </div>
-            <div class="inputtextarea">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <textarea form="questionnaire_form" name="info6" maxlength="1000" placeholder="Where did you know about Elementh?" required></textarea>
-            </div>
-            <div class="inputtextarea">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <textarea form="questionnaire_form" name="info7" maxlength="1000" placeholder="Do you know any local chats/websites/boards/channels etc. in your country, that we can use to attract investors? Please send links here" required></textarea>
-            </div>
-            <div class="error disnone"></div>
-            <button type="submit" form="questionnaire_form" class="button bttn">
-                <img src="img/details/a_medium.svg" class="angle left top">
-                SAVE
-                <img src="img/details/a_medium.svg" class="angle right bottom">
-            </button>
-        </form>
+    <p class="description">SURVEY:</p>
+    <div id="questionnaire" class="data disnone">
+        <div class="data_user readonly">
+            <form id="questionnaire_form" class="survey">
+                <div class="purchase">
+                    <span style="margin-right: 16px">I would like to purchase tokens equal to</span>
+                    <span class="inputtext">
+                        <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                        <input form="questionnaire_form" name="info8" maxlength="1000" placeholder="amount" required>
+                    </span>
+                    <span class="inputtext select">
+                        <select form="questionnaire_form" name="info9" required>
+                            <option value="ETH">ETH</option>
+                            <option value="BTC">BTC</option>
+                        </select>
+                    </span>
+                    <img src="img/icon/ic_dropdown.svg" class="dropdown">
+                </div>
+                <div class="inputtextarea">
+                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                    <textarea form="questionnaire_form" name="info1" maxlength="1000" placeholder="What is your business?" required></textarea>
+                </div>
+                <div class="inputtextarea">
+                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                    <textarea form="questionnaire_form" name="info2" maxlength="1000" placeholder="Why do you like Elementh ICO?" required></textarea>
+                </div>
+                <div class="inputtextarea">
+                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                    <textarea form="questionnaire_form" name="info3" maxlength="1000" placeholder="How can you help our project?" required></textarea>
+                </div>
+                <div class="inputtextarea">
+                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                    <textarea form="questionnaire_form" name="info4" maxlength="1000" placeholder="How can Elementh help you?" required></textarea>
+                </div>
+                <div class="inputtextarea">
+                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                    <textarea form="questionnaire_form" name="info5" maxlength="1000" placeholder="Your Telegram / Kakaotalk / QQ / WeChat / Whatsup?" required></textarea>
+                </div>
+                <div class="inputtextarea">
+                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                    <textarea form="questionnaire_form" name="info6" maxlength="1000" placeholder="Where did you know about Elementh?" required></textarea>
+                </div>
+                <div class="inputtextarea">
+                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                    <textarea form="questionnaire_form" name="info7" maxlength="1000" placeholder="Do you know any local chats / websites / boards / channels etc. in your country, that we can use to attract investors? Please send links here" required></textarea>
+                </div>
+                <div class="error disnone"></div>
+                <button type="submit" form="questionnaire_form" class="button bttn">
+                    <img src="img/details/a_medium.svg" class="angle left top">
+                    SAVE
+                    <img src="img/details/a_medium.svg" class="angle right bottom">
+                </button>
+            </form>
+        </div>
     </div>
+
     <div class="button_block">
         <div id="contribute_get_eth" class="big_button disabled">
             <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right top"><img src="img/details/a_medium.svg" class="angle right bottom"><img src="img/details/a_medium.svg" class="angle left bottom">

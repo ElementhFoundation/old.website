@@ -864,7 +864,7 @@ button {
 				}
 			}
 		}
-		.inputtext {
+		.inputtext, .inputtextarea {
 			width: calc(100% - 118px);
 			height: 49px;
 			position: relative;
@@ -872,7 +872,7 @@ button {
 			padding-left: 16px;
 			padding-right: 15px;
 			background-color: rgba(255,255,255,.1);
-			input {
+			input, textarea {
 				height: 49px;
 				width: 100%;
 				font: inherit;
@@ -1150,6 +1150,12 @@ footer {
 		line-height: 16px;
 		opacity: .7;
 	}
+	&#questionnaire {
+		.data_name {
+			opacity: 1;
+		}
+		.data_user {height: 100% !important;}
+	}
 	.data_user {
 		margin-top: 16px;
 		font-size: 14px;
@@ -1195,6 +1201,55 @@ footer {
 					cursor: pointer;
 					&:hover {
 						opacity: 1;
+					}
+				}
+				&.survey {
+					height: 100%;
+					.inputtextarea, .inputtext {
+						width: calc(100% - 31px);
+						height: 100%;
+						padding: 16px 16px 16px 15px;
+						textarea {
+							height: 65px;
+						}
+					}
+					.purchase {
+						padding: 0 0 16px 0;
+						.inputtext {
+							display: inline-block;
+							width: 104px;
+							height: 24px;
+							margin-right: 16px;
+							padding: 8px 16px;
+							position: relative;
+							top: 12px;
+							input {
+								height: 24px;
+							}
+							select {
+								color: rgba(255,255,255,.8);
+								font-size: 16px;
+							}
+							&.select {
+								width: 72px;
+								z-index: 2;
+								padding: 8px 0;
+								margin-right: 0;
+								background-color: rgba(255,255,255,0);
+							}
+						}
+						.dropdown {
+							position: relative;
+							top: 18px;
+							left: -32px;
+						}
+					}
+				}
+				button {
+					display: block;
+					margin: {
+						left: auto;
+						right: auto;
 					}
 				}
 			}
