@@ -139,8 +139,8 @@ function init () {
           $('#loading').removeClass('disnone')
           checkAirdrop(function (err,data) {
             $('#loading').addClass('disnone')
-            if(data.result.status) {
-              $('#user_referral_airdrop_count').html(data.result.referralAirdropCount)
+            if(data.status) {
+              $('#user_referral_airdrop_count').html(data.referralAirdropCount)
               $('#airdrop_yes').removeClass('disnone')
               $('#airdrop_check').addClass('disnone')
               if (typeof yaCounter46855911 !== 'undefined') {
