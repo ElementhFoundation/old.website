@@ -107,6 +107,30 @@ function init () {
   if (profile_tabs.length) {
     if (user) {
       if(user.verified) {
+        var questionnaire_form = $('#questionnaire_form')
+        if (questionnaire_form.length) {
+          questionnaire_form.submit(function (e) {
+            e.preventDefault();
+            questionnaire_form.find('.error').addClass('disnone')
+            questionnaire_form.find(':input[type="submit"]').prop('disabled', true)
+            setInfo($(this).serialize(), function (err, data) {
+              if (err) {
+                questionnaire_form.find('.error').html(err).removeClass('disnone')
+                questionnaire_form.find(':input[type="submit"]').prop('disabled', false)
+              } else {
+                $('#questionnaire').addClass('disnone')
+              }
+            })
+          })
+        }
+        if (!user.quiz) {
+          $('#questionnaire').removeClass('disnone')
+        }
+        $('#airdrop_check').on('click', function () {
+          checkAirdrop(function (err,data) {
+            alert(data)
+          })
+        })
         profile_tabs.removeClass('disnone')
         $('#user_username').html(user.username)
         $('#user_email').html(user.email)

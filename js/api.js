@@ -90,6 +90,10 @@ function setCountry (data, callback) {
   makeApiRequest('setCountry', 'POST', data, callback)
 }
 
+function checkAirdrop (callback) {
+  makeApiRequest('checkAirdrop', 'GET',null, callback)
+}
+
 function setWalletETH (data, callback) {
   makeApiRequest('setWalletETH', 'POST', data, callback)
 }
