@@ -143,6 +143,7 @@ function init () {
               $('#user_referral_airdrop_count').html(data.referralAirdropCount)
               $('#airdrop_yes').removeClass('disnone')
               $('#airdrop_check').addClass('disnone')
+              $('#how_to_airdrop').addClass('disnone')
               if (typeof yaCounter46855911 !== 'undefined') {
                 yaCounter46855911.reachGoal('airdropYes')
               }
@@ -167,6 +168,7 @@ function init () {
           $('#user_referral_airdrop_count').html(user.referralAirdropCount)
           $('#airdrop_yes').removeClass('disnone')
           $('#airdrop_check').addClass('disnone')
+          $('#how_to_airdrop').addClass('disnone')
         }
         new Clipboard('#unique_referral_link_copy').on('success', function (e) {
           $('#unique_referral_link_copy').addClass('disnone')
