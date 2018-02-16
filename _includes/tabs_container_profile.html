@@ -1,13 +1,13 @@
 <div id="tabs_container_profile" class="tabs_container disblock">
     <p class="title">PROFILE</p>
     <div class="data">
-        <div class="data_name">First Name:</div>
+        <div class="data_name">Your Name:</div>
         <div class="data_user">
-            <span id="user_username">Peter Gashitsky</span>
-            <form id="user_username_edit_form" class="disnone">
+            <span id="user_username"></span>
+            <form id="user_username_edit_form" class="disnone ajaxForm" action="setUsername">
                 <div class="inputtext">
                     <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                    <input id="user_username_input" name="user_first_name" type="text" value="">
+                    <input id="user_username_input" name="username" type="text" value="" placeholder="John Doe">
                 </div>
                 <span class="line_icon done_cancel">
                     <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
@@ -17,29 +17,13 @@
         </div>
     </div>
     <div class="data">
-        <div class="data_name">Email:</div>
-        <div class="data_user">
-            <span id="user_email">gashitsky@gmail.com</span>
-            <form id="user_email_edit_form" class="disnone">
-                <div class="inputtext">
-                    <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                    <input id="user_email_input" name="user_email" type="text" value="">
-                </div>
-                <span class="line_icon done_cancel">
-                    <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
-                </span>
-            </form>
-            <span id="user_email_edit" class="edit data_btn">EDIT</span><span id="verify_email" class="data_btn verify">VERIFY</span><span id="confirmed_email" class="data_btn confirmed">CONFIRMED</span>
-        </div>
-    </div>
-    <div class="data">
         <div class="data_name">Password:</div>
         <div class="data_user">
-            <span id="user_password">none</span>
-            <form id="user_password_edit_form" class="disnone">
+            <span id="user_password"></span>
+            <form id="user_password_edit_form" class="disnone ajaxForm" action="setPassword">
                 <div class="inputtext">
                     <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                    <input id="user_password_input" name="user_password" type="password" value="">
+                    <input id="user_password_input" name="password" type="password" value="" placeholder="minimum 8 symbols">
                 </div>
                 <span class="line_icon done_cancel">
                     <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
@@ -51,27 +35,27 @@
     <div class="data">
         <div class="data_name">Telegram account:</div>
         <div class="data_user">
-            <span id="user_telegram">@gashitsky</span>
-            <form id="user_telegram_edit_form" class="disnone">
+            <span id="user_telegram"></span>
+            <form id="user_telegram_edit_form" class="disnone ajaxForm" action="setTelegramUsername">
                 <div class="inputtext">
                     <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                    <input id="user_telegram_input" name="user_telegram" type="text" value="">
+                    <input id="user_telegram_input" name="telegram_username" type="text" value="" placeholder="@johndoe">
                 </div>
                 <span class="line_icon done_cancel">
                     <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
                 </span>
             </form>
-            <span id="user_telegram_edit" class="edit data_btn">EDIT</span><span id="verify_telegram" class="data_btn verify">VERIFY</span><span id="confirmed_telegram" class="data_btn confirmed">CONFIRMED</span>
+            <span id="user_telegram_edit" class="edit data_btn">EDIT</span>
         </div>
     </div>
     <div class="data">
         <div class="data_name">ETH address:</div>
         <div class="data_user">
-            <span id="user_wallet_eth" class="wallet_address">0x0000000000000000000000000000000000000000</span>
-            <form id="wallet_eth_edit_form" class="disnone">
+            <span id="user_wallet_eth" class="wallet_address"></span>
+            <form id="wallet_eth_edit_form" class="disnone ajaxForm" action="setWalletETH">
                 <div class="inputtext">
                     <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                    <input id="user_wallet_eth_input" name="user_wallet_eth" type="text" value="">
+                    <input id="user_wallet_eth_input" name="ETH_wallet" type="text" value="" placeholder="0x0000000000000000000000000000000000000000">
                 </div>
                 <span class="line_icon done_cancel">
                     <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">
@@ -83,11 +67,11 @@
     <div class="data data_last">
         <div class="data_name">Country:</div>
         <div class="data_user">
-            <span id="user_country">Russia</span>
-            <form id="wallet_country_form" class="disnone">
+            <span id="user_country"></span>
+            <form id="wallet_country_form" class="disnone ajaxForm" action="setCountry">
                 <div class="inputtext">
                     <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                    <input id="user_country_input" name="user_country" type="text" value="">
+                    <input id="user_country_input" name="country" type="text" value="">
                 </div>
                 <span class="line_icon done_cancel">
                     <img class="done" src="img/icon/ic_done.svg"><img class="cancel" src="img/icon/ic_cancel.svg">

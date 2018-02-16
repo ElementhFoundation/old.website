@@ -4,40 +4,40 @@
             SIGN UP
         </div>
         <form id="signup_form" class="sign_form">
-            <p class="body text_left">Your name:</p>
+            <p class="body text_left">Your name<span class="red">*</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
                 <input type="text" form="signup_form" name="username" maxlength="100" placeholder="John Doe" required>
             </div>
-            <p class="body text_left">Your Email:</p>
+            <p class="body text_left">Your Email<span class="red">*</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
                 <input type="email" form="signup_form" name="email" maxlength="100" placeholder="johndoe@site.com" required>
             </div>
-            <p class="body text_left">Password:</p>
+            <p class="body text_left">Password<span class="red">*</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="password" form="signup_form" name="password" maxlength="100" placeholder="" required>
+                <input type="password" form="signup_form" name="password" maxlength="100" placeholder="minimum 8 symbols" required>
             </div>
-            <p class="body text_left">Confirm your Password:</p>
+            <p class="body text_left">Confirm your Password<span class="red">*</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
                 <input type="password" form="signup_form" name="confirm_password" maxlength="100" placeholder="" required>
             </div>
-            <p class="body text_left">Your Telegram account:</p>
+            <p class="body text_left">Your ETH address<span class="red">*</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="text" form="signup_form" name="telegram" maxlength="100" placeholder="@johndoe" required>
+                <input type="text" form="signup_form" name="ETH_wallet" maxlength="100" placeholder="0x0000000000000000000000000000000000000000" required>
             </div>
-            <p class="body text_left">Your ETH address:</p>
-            <div class="inputtext">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                <input type="text" form="signup_form" name="eth-address" maxlength="100" placeholder="0x0000000000000000000000000000000000000000" required>
-            </div>
-            <p class="body text_left">Your country:</p>
+            <p class="body text_left">Your country<span class="red">*</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
                 <input type="text" form="signup_form" name="country" maxlength="100" placeholder="" required>
+            </div>
+            <p class="body text_left">Your Telegram account:</p>
+            <div class="inputtext">
+                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                <input type="text" form="signup_form" name="telegram_username" maxlength="100" placeholder="@johndoe">
             </div>
             <p class="body">or</p>
             <div class="fb-login-button" onlogin="checkLoginState();" scope="public_profile,email" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>

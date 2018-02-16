@@ -10,7 +10,20 @@
 {{ content }}
 
 {% include script.html %}
-
+<div id="loading"><div class="small_modal">Loading...</div></div>
+<div id="error" class="disnone">
+    <div class="small_modal">
+        <p class="description">
+            <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+            <span id="error_msg"></span>
+        </p>
+        <div id="err_close" class="button floatnone">
+            <img src="img/details/a_medium.svg" class="angle left top">
+            OK
+            <img src="img/details/a_medium.svg" class="angle right bottom">
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

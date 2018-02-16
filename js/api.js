@@ -78,12 +78,28 @@ function checkVerification (code, callback) {
 function getAddress (callback) {
   makeApiRequest('getAddress', 'GET', null, callback)
 }
-function setPassword (password, callback) {
-  makeApiRequest('setPassword', 'POST', {password}, callback)
+function setPassword (data, callback) {
+  makeApiRequest('setPassword', 'POST', data, callback)
+}
+
+function setEmail (data, callback) {
+  makeApiRequest('setEmail', 'POST', data, callback)
+}
+
+function setCountry (data, callback) {
+  makeApiRequest('setCountry', 'POST', data, callback)
 }
 
 function setWalletETH (data, callback) {
   makeApiRequest('setWalletETH', 'POST', data, callback)
+}
+
+function setUsername (data, callback) {
+  makeApiRequest('setUsername', 'POST', data, callback)
+}
+
+function setTelegramUsername (data, callback) {
+  makeApiRequest('setTelegramUsername', 'POST', data, callback)
 }
 
 function setWalletBTC (data, callback) {

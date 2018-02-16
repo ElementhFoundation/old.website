@@ -40,6 +40,9 @@ a:link, a:active, a:visited {
 	text-decoration: none;
 }
 
+.red{
+  color: red;
+}
 /*-------------- BG --------------*/
 
 .display_bg, .lines, .dots_bg, .bigdots_bg, .alldots_bg {
@@ -890,7 +893,7 @@ button {
 
 #address_eth_div, #address_btc_div {font-size: 10px;}
 
-#toast-container, #wallet_eth_ok, #wallet_btc_ok, #wallet_error, #wl_ps_ok, #wl_ps_error, #loading, #emailVerified {
+#toast-container, #error, #wallet_eth_ok, #wallet_btc_ok, #wallet_error, #wl_ps_ok, #wl_ps_error, #loading, #emailVerified {
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -996,6 +999,14 @@ footer {
 .section { margin-top: 31px; }
 
 /*---- PROFILE ---*/
+#verification.description {
+	max-width: 480px;
+	line-height: 32px;
+	padding: 24px 16px 9px;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(255,0,0,.5);
+}
 
 #profile {
 	margin-top: -1px;
@@ -1003,12 +1014,6 @@ footer {
 		line-height: 32px;
 		height: 32px;
 		padding: 0 15px 0 16px;
-	}
-	#verification.description {
-		line-height: 32px;
-		padding: 8px 16px 9px;
-		text-align: left;
-		background-color: rgba(255,0,0,.5);
 	}
 	#profile_data {
 		.description {
@@ -1116,6 +1121,28 @@ footer {
 		padding-bottom: 0;
 		border-bottom: none;
 		margin-bottom: 16px;
+		&.add_email_div {
+			max-width: 480px;
+			margin: {
+				left: auto;
+				right: auto;
+			}
+			.data_user {
+				width: 100%;
+				margin: {
+					left: 0;
+					right: 0;
+				}
+				form .inputtext {width: calc(100% - 31px);}
+				form button {
+					display: block;
+					margin: {
+						left: auto;
+						right: auto;
+					}
+				}
+			}
+		}
 	}
 	.data_name {
 		height: 16px;

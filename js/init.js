@@ -87,7 +87,7 @@ function checkLoginState () {
         if (err) {
           $('.error').html(err).removeClass('disnone')
         } else {
-          window.location.href = "profile.html"
+          window.location.href = "/profile"
         }
       })
     }
@@ -101,6 +101,56 @@ function init () {
       $('#userblockR').removeClass('disnone')
     } else {
       $('#userblockU').removeClass('disnone')
+    }
+  }
+  var profile_tabs = $('#profile_tabs')
+  if (profile_tabs.length) {
+    if (user) {
+      if(user.verified) {
+        profile_tabs.removeClass('disnone')
+        $('#user_username').html(user.username)
+        $('#user_email').html(user.email)
+        $('#user_telegram').html(user.telegram_username)
+        $('#user_wallet_eth').html(user.wallet_eth)
+        $('#user_country').html(user.country)
+        $('#unique_referral_link_input').val(user.partnerUrl)
+        $('#unique_airdrop_link_input').val(user.partnerUrl)
+        $('#user_referral_count').html(user.referralCount)
+        $('#user_referral_airdrop_count').html(user.referralAirdropCount)
+        $('#airdrop_join_telegram').attr("href", user.telegram_secret)
+        new Clipboard('#unique_referral_link_copy').on('success', function (e) {
+          $('#unique_referral_link_copy').addClass('disnone')
+          $('#unique_referral_link_copied').addClass('disblock')
+        });
+
+        new Clipboard('#unique_airdrop_link_copy').on('success', function (e) {
+          $('#unique_airdrop_link_copy').addClass('disnone')
+          $('#unique_airdrop_link_copied').addClass('disblock')
+        });
+      }else{
+        if(user.email) {
+          $('#verification').removeClass('disnone')
+        }else{
+          $('#addemail_div').removeClass('disnone')
+          var user_email_edit_form = $('#user_email_edit_form')
+          user_email_edit_form.submit(function (e) {
+            user_email_edit_form.find(':input[type="submit"]').prop('disabled', true)
+            e.preventDefault();
+            user_email_edit_form.find('.error').addClass('disnone')
+            console.log(user_email_edit_form.serialize())
+            setEmail(user_email_edit_form.serialize(), function (err, data) {
+              if (err) {
+                user_email_edit_form.find('.error').html(err).removeClass('disnone')
+                user_email_edit_form.find(':input[type="submit"]').prop('disabled', false)
+              } else {
+                window.location.href = "/profile"
+              }
+            })
+          })
+        }
+      }
+    }else{
+      window.location.href = "/signup"
     }
   }
 
@@ -161,38 +211,6 @@ function init () {
       data: $('#sbmt').serialize()
     });
   });
-
-  var clipboardEth = new Clipboard('#wallet_eth_copy');
-  clipboardEth.on('success', function (e) {
-    $('#wallet_eth_copy_ok').addClass('visible');
-  });
-
-  var clipboardBtc = new Clipboard('#wallet_btc_copy');
-  clipboardBtc.on('success', function (e) {
-    $('#wallet_btc_copy_ok').addClass('visible');
-  });
-
-  $('#wallet_eth_copy').on('click', function (e) {
-    e.preventDefault();
-    var $temp = $('<input>');
-    $('body').append($temp);
-    $temp.val($('#address_eth_div').text()).select();
-    document.execCommand('copy');
-    $temp.remove();
-
-    $('#wallet_eth_copy_ok').addClass('visible');
-  })
-
-  $('#wallet_btc_copy').on('click', function (e) {
-    e.preventDefault();
-    var $temp = $('<input>');
-    $('body').append($temp);
-    $temp.val($('#address_btc_div').text()).select();
-    document.execCommand('copy');
-    $temp.remove();
-
-    $('#wallet_btc_copy_ok').addClass('visible');
-  })
 
   $('input[name=currency]:radio').change(function () {
 
@@ -279,35 +297,6 @@ function init () {
     })
   }
 
-  var wallet_eth_edit_form = $('#wallet_eth_edit_form')
-  if (wallet_eth_edit_form.length) {
-    wallet_eth_edit_form.submit(function (e) {
-      e.preventDefault();
-      setWalletETH($(this).serialize(), function (err, data) {
-        location.reload()
-      })
-    })
-  }
-
-  var wallet_btc_edit_form = $('#wallet_btc_edit_form')
-  if (wallet_btc_edit_form.length) {
-    wallet_btc_edit_form.submit(function (e) {
-      e.preventDefault();
-      setWalletBTC($(this).serialize(), function (err, data) {
-        location.reload()
-      })
-    })
-  }
-
-  var user_round_edit_form = $('#user_round_edit_form')
-  if (user_round_edit_form.length) {
-    user_round_edit_form.submit(function (e) {
-      e.preventDefault();
-      setRound($(this).serialize(), function (err, data) {
-        location.reload()
-      })
-    })
-  }
   var resend_form = $('#resend_form')
   if (resend_form.length) {
     resend_form.submit(function (e) {
@@ -352,14 +341,32 @@ function init () {
     parent.parent().find('.verify').addClass('disnone')
   })
 
+  $('.ajaxForm').submit(function (e) {
+    e.preventDefault()
+    var action = $(this).attr('action')
+    var form = $(this)
+    $('#loading').removeClass('disnone')
+    window[action](form.serialize(), function (err, data) {
+      $('#loading').addClass('disnone')
+      if(err){
+        $('#error').removeClass('disnone')
+        $('#error_msg').html(err)
+      }else {
+        form.addClass('disnone')
+        form.parent().find('span:first-child').removeClass('disnone')
+        form.parent().children('.edit').removeClass('disnone')
+        form.parent().children('.verify').removeClass('disnone')
+        form.parent().children('span:first-child').html(form.find('input').val())
+      }
+    })
+  })
+
+  $('#err_close').on('click', function () {
+    $('#error').addClass('disnone')
+  })
+
   $('.done').on('click', function () {
-    var closest = $(this).closest('form')
-    closest.addClass('disnone')
-    closest.parent().find('span:first-child').removeClass('disnone')
-    closest.parent().children('.edit').removeClass('disnone')
-    closest.parent().children('.verify').removeClass('disnone')
-    closest.parent().children('span:first-child').html(closest.find('input').val())
-    //closest.submit()
+    $(this).closest('form').submit()
   })
 
   $('.cancel').on('click', function () {
@@ -444,4 +451,6 @@ function init () {
       })
     })
   }
+
+  $('#loading').addClass('disnone')
 }

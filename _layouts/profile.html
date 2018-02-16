@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div id="content" class="profile_2">
+<div id="content">
     {% include userblock.html %}
     <a id="go_back" href="/" title="home" class="rotate home icon button">
         <img src="img/details/a_small.svg" class="angle left top">
@@ -11,7 +11,42 @@ layout: default
         <img src="img/details/a_small.svg" class="angle right bottom">
     </a>
 
-    <div id="profile_tabs" class="tabs">
+    <div id="verification" class="description disnone">
+        <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right top">
+        <img src="img/details/a_medium.svg" class="angle left bottom"><img src="img/details/a_medium.svg" class="angle right bottom">
+        You need to verify your email.
+        <form id="resend_form">
+            <div class="error disnone"></div>
+            <div class="allok disnone">Check your email and follow the instructions</div>
+            <button type="submit" form="resend_form" class="button bttn">
+                <img src="img/details/a_medium.svg" class="angle left top">
+                Send email
+                <img src="img/details/a_medium.svg" class="angle right bottom">
+            </button>
+        </form>
+    </div>
+
+    <div id="addemail_div" class="description disnone">
+        <div class="data data_last add_email_div">
+            <div class="data_user">
+                <form id="user_email_edit_form">
+                    <div class="inputtext copy">
+                        <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
+                        <input id="email_input" form="user_email_edit_form" name="email" type="text" value="" placeholder="johndoe@site.com">
+                    </div>
+                    <div class="error disnone"></div>
+                    <div class="allok disnone">Check your email and follow the instructions</div>
+                    <button type="submit" form="user_email_edit_form" class="button bttn">
+                        <img src="img/details/a_medium.svg" class="angle left top">
+                        Save email
+                        <img src="img/details/a_medium.svg" class="angle right bottom">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile_tabs" class="tabs disnone">
         <div id="profile_dropdown" class="dropdown_line pointer">
             <img src="img/details/a_small.svg" class="angle left top">
             <img src="img/details/a_small.svg" class="angle right bottom">
@@ -31,18 +66,6 @@ layout: default
         {% include tabs_container_airdrop.html %}
         {% include tabs_container_referral.html %}
         {% include tabs_container_profile.html %}
-        <div id="kyc" class="disnone"></div>
-        <form id="kyc_form" class="disnone">
-            <div class="description">
-                <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
-                Verify your identity to participate in the Elementh token sale
-            </div>
-            <button type="submit" form="kyc_form" class="button bttn">
-                <img src="img/details/a_medium.svg" class="angle left top">
-                START KYC
-                <img src="img/details/a_medium.svg" class="angle right bottom">
-            </button>
-        </form>
         <div class="title">CONTACTS</div>
         {% include iconpack.html %}
     </div>
@@ -50,13 +73,16 @@ layout: default
     <div id="emailVerified" class="disnone">
         <div class="small_modal">
             <p class="description">
-                <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg" class="angle right top"><img src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg" class="angle right bottom">
+                <img src="img/details/a_big.svg" class="angle left top"><img src="img/details/a_big.svg"
+                                                                             class="angle right top"><img
+                    src="img/details/a_big.svg" class="angle left bottom"><img src="img/details/a_big.svg"
+                                                                               class="angle right bottom">
                 Your email is verified
-            <a href="/profile" class="button floatnone">
-                <img src="img/details/a_medium.svg" class="angle left top">
-                OK
-                <img src="img/details/a_medium.svg" class="angle right bottom">
-            </a>
+                <a href="/profile" class="button floatnone">
+                    <img src="img/details/a_medium.svg" class="angle left top">
+                    OK
+                    <img src="img/details/a_medium.svg" class="angle right bottom">
+                </a>
         </div>
     </div>
 </div>
