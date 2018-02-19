@@ -1,10 +1,6 @@
 $(function () {
 
-    $('#profile_dropdown').on('click', function () {
-        $('#profile_tabs_list').addClass('disblock')
-    })
     $('#tabs_list_contribute, #tabs_list_pool, #tabs_list_bounty, #tabs_list_airdrop, #tabs_list_referral, #tabs_list_profile').on('click', function () {
-        $('#profile_tabs_list').removeClass('disblock')
         $('#tabs_list_contribute').removeClass('active')
         $('#tabs_list_pool').removeClass('active')
         $('#tabs_list_bounty').removeClass('active')
