@@ -152,6 +152,13 @@ function init () {
             }
           })
         })
+        $('#contribute_prefund').on('click', function () {
+          $('#contribute_prefund').parent().addClass('disnone')
+          $('#prefund_block').removeClass('disnone')
+          if (typeof yaCounter46855911 !== 'undefined') {
+            yaCounter46855911.reachGoal('prefund')
+          }
+        })
         profile_tabs.removeClass('disnone')
         $('#user_username').html(user.username)
         $('#user_email').html(user.email)
@@ -164,6 +171,8 @@ function init () {
         $('#user_referral_count').html(user.referralCount)
         $('#user_referral_airdrop_count').html(user.referralAirdropCount)
         $('#airdrop_join_telegram').attr("href", user.telegram_secret)
+        $('#prefund_link_input').val(crowdAddresses.prefund)
+
         if(user.referralAirdropCount > 0){
           $('#user_referral_airdrop_count').html(user.referralAirdropCount)
           $('#airdrop_yes').removeClass('disnone')
@@ -178,6 +187,11 @@ function init () {
         new Clipboard('#unique_airdrop_link_copy').on('success', function (e) {
           $('#unique_airdrop_link_copy').addClass('disnone')
           $('#unique_airdrop_link_copied').addClass('disblock')
+        });
+
+        new Clipboard('#prefund_link_copy').on('success', function (e) {
+          $('#prefund_link_copy').addClass('disnone')
+          $('#prefund_link_copied').addClass('disblock')
         });
       }else{
         if(user.email) {
