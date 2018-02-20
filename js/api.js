@@ -1,4 +1,4 @@
-var apiUrl = 'https://api.elementh.io/'
+var apiUrl = 'http://testapi.elementh.io/'
 
 var isCrowdAddressesLoaded = null
 var web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/XQF4D1KpJZSQXYZOZxIX'))
