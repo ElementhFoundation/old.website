@@ -78,6 +78,10 @@ function checkVerification (code, callback) {
 function getAddress (callback) {
   makeApiRequest('getAddress', 'GET', null, callback)
 }
+
+function getInit (callback) {
+  makeApiRequest('init', 'GET', null, callback)
+}
 function setPassword (data, callback) {
   makeApiRequest('setPassword', 'POST', data, callback)
 }
