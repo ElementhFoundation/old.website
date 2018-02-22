@@ -107,5 +107,19 @@
   "faq4Q":"блабла?",
   "faq4A":"блабла!",
   "faq5Q":"блабла?",
-  "faq5A":"блабла!"
+  "faq5A":"блабла!",
+  "YourName": "Ваше ФИО",
+  "YourEmail": "Ваш Email",
+  "AlreadyRegistered": "Уже зарегистрированы",
+  "yahooDescription": "У нас есать проблемы с доставкой писем @yahoo.com, пожалуйста используйте другую почту",
+  "Password": "Пароль",
+  "ResetPassword": "Сбросить пароль",
+  "ConfirmYourPassword": "Повторите пароль",
+  "YourETHAddress": "Ваш ETH адрес",
+  "YourCountry": "Ваша страна",
+  "YourTelegramAccount": "Ваш Telegram",
+  "or": "или",
+  "NotAMemberYet": "Ещё не член",
+  "ForgottenYourPassword": "Забыли свой пароль",
+  "RememberedIt": "Вспоминили"
 }

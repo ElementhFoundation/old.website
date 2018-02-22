@@ -4,6 +4,22 @@ var balance = 0
 var user = null
 var crowdAddresses = null
 
+function setCookie(key, value) {
+  var expires = new Date();
+  expires.setTime(expires.getTime() + (24 * 60 * 60 * 1000));
+  document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+}
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 if (window.top !== window.self) {
   document.write = "";
   window.top.location = window.self.location;
@@ -15,19 +31,30 @@ if (window.top !== window.self) {
   };
 }
 
+var lng = getParameterByName("lng")
+
+if(lng) {
+  setCookie("i18next", lng)
+  var newUrl = window.location.href.replace('?lng=' + lng , '')
+  console.log(newUrl)
+  window.top.location = newUrl
+}
+
 $(function () {
-   i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
-   'debug': false,
-   'fallbackLng': 'en',
-   backend: {
-   // load from i18next-gitbook repo
-   loadPath: '/locales/{{lng}}/{{ns}}.json',
-   crossDomain: true
-   }
-   }, function(err, t) {
-   jqueryI18next.init(i18next, $);
-   $('body').localize()
-   });
+  i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
+    'debug': true,
+    'fallbackLng': 'en',
+    detection: {
+      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+    },
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      crossDomain: true
+    }
+  }, function (err, t) {
+    jqueryI18next.init(i18next, $);
+    $('body').localize()
+  });
 
   var hash = window.location.hash.substr(1)
   if (hash) {
@@ -153,7 +180,7 @@ function init () {
   var profile_tabs = $('#profile_tabs')
   if (profile_tabs.length) {
     if (user) {
-      if(user.verified) {
+      if (user.verified) {
         if (typeof yaCounter46855911 !== 'undefined') {
           yaCounter46855911.setUserID(user.id)
           yaCounter46855911.userParams({
@@ -184,9 +211,9 @@ function init () {
         }
         $('#airdrop_check').on('click', function () {
           $('#loading').removeClass('disnone')
-          checkAirdrop(function (err,data) {
+          checkAirdrop(function (err, data) {
             $('#loading').addClass('disnone')
-            if(data.airdrop) {
+            if (data.airdrop) {
               $('#user_referral_airdrop_count').html(data.referralAirdropCount)
               $('#airdrop_yes').removeClass('disnone')
               $('#airdrop_check').addClass('disnone')
@@ -194,7 +221,7 @@ function init () {
               if (typeof yaCounter46855911 !== 'undefined') {
                 yaCounter46855911.reachGoal('airdropYes')
               }
-            }else{
+            } else {
               $('#airdrop_no').removeClass('disnone')
             }
           })
@@ -220,7 +247,7 @@ function init () {
         $('#airdrop_join_telegram').attr("href", user.telegram_secret)
         $('#prefund_link_input').val(crowdAddresses.prefund)
 
-        if(user.referralAirdropCount > 0){
+        if (user.referralAirdropCount > 0) {
           $('#user_referral_airdrop_count').html(user.referralAirdropCount)
           $('#airdrop_yes').removeClass('disnone')
           $('#airdrop_check').addClass('disnone')
@@ -240,10 +267,10 @@ function init () {
           $('#prefund_link_copy').addClass('disnone')
           $('#prefund_link_copied').addClass('disblock')
         });
-      }else{
-        if(user.email) {
+      } else {
+        if (user.email) {
           $('#verification').removeClass('disnone')
-        }else{
+        } else {
           $('#addemail_div').removeClass('disnone')
           var user_email_edit_form = $('#user_email_edit_form')
           user_email_edit_form.submit(function (e) {
@@ -262,7 +289,7 @@ function init () {
           })
         }
       }
-    }else{
+    } else {
       window.location.href = "/signup"
     }
   }
@@ -315,7 +342,6 @@ function init () {
       data: $('#sbmt').serialize()
     });
   });
-
 
   $('input[name=currency]:radio').change(function () {
 
@@ -453,10 +479,10 @@ function init () {
     $('#loading').removeClass('disnone')
     window[action](form.serialize(), function (err, data) {
       $('#loading').addClass('disnone')
-      if(err){
+      if (err) {
         $('#error').removeClass('disnone')
         $('#error_msg').html(err)
-      }else {
+      } else {
         user = data
         if (typeof yaCounter46855911 !== 'undefined') {
           yaCounter46855911.userParams({
@@ -546,7 +572,7 @@ function init () {
           })
         }
       })
-    }else{
+    } else {
       $('#forAdopters').removeClass('disnone')
       $('#user_token').html(balance + ' EEE')
       if (balance > 0) {

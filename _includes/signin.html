@@ -1,29 +1,29 @@
 <div id="signin_modal" class="sign">
     <div class="wlmodal">
-        <div class="description">
+        <div class="description" data-i18n="Sign in">
             SIGN IN
         </div>
         <form id="signin_form" class="sign_form">
-            <p class="body text_left">Your Email:</p>
+            <p class="body text_left"><span data-i18n="YourEmail">Your Email</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
                 <input type="email" form="signin_form" name="email" maxlength="100" placeholder="johndoe@site.com" required>
             </div>
-            <p class="body text_left">Password:</p>
+            <p class="body text_left"><span data-i18n="Password">Password</span>:</p>
             <div class="inputtext">
                 <img src="img/details/a_medium.svg" class="angle left top"><img src="img/details/a_medium.svg" class="angle right bottom">
                 <input type="password" form="signin_form" name="password" maxlength="100" placeholder="" required>
             </div>
-            <p class="body">or</p>
+            <p class="body" data-i18n="or">or</p>
                 <div class="fb-login-button" onlogin="checkLoginState();" scope="public_profile,email" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
             <div class="error disnone"></div>
             <button type="submit" form="signin_form" class="button bttn">
                 <img src="img/details/a_medium.svg" class="angle left top">
-                SIGN IN
+                <span data-i18n="Sign in">SIGN IN</span>
                 <img src="img/details/a_medium.svg" class="angle right bottom">
             </button>
-            <p class="body text_left">Not a member yet? <a href="signup" class="underline pointer">Sign up</a></p>
-            <p class="body text_left">Forgotten your password? <a href="resetpass" class="underline pointer">Reset password</a></p>
+            <p class="body text_left"><span data-i18n="NotAMemberYet">Not a member yet</span>? <a href="signup" class="underline pointer" data-i18n="Sign up">Sign up</a></p>
+            <p class="body text_left"><span data-i18n="ForgottenYourPassword">Forgotten your password</span>? <a href="resetpass" class="underline pointer" data-i18n="ResetPassword">Reset password</a></p>
         </form>
     </div>
     <div class="display_bg"><div class="lines"></div></div>
