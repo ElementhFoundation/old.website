@@ -16,9 +16,8 @@ if (window.top !== window.self) {
 }
 
 $(function () {
-  /*
    i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
-   'debug': true,
+   'debug': false,
    'fallbackLng': 'en',
    backend: {
    // load from i18next-gitbook repo
@@ -29,7 +28,6 @@ $(function () {
    jqueryI18next.init(i18next, $);
    $('body').localize()
    });
-   */
 
   var hash = window.location.hash.substr(1)
   if (hash) {
@@ -44,19 +42,17 @@ $(function () {
     }
   }
 
-  getAddress(function (err, data) {
-    crowdAddresses = data
-    getProfile(function (err, data) {
-      user = data
-      if (user && user.wallet_eth) {
-        getBalance(crowdAddresses.tokenAddress, user.wallet_eth, function (err, data) {
-          balance = data
-          init()
-        })
-      } else {
+  getInit(function (err, data) {
+    crowdAddresses = data.address
+    user = data.profile
+    if (user && user.wallet_eth) {
+      getBalance(crowdAddresses.tokenAddress, user.wallet_eth, function (err, data) {
+        balance = data
         init()
-      }
-    })
+      })
+    } else {
+      init()
+    }
   })
 
 });

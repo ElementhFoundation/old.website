@@ -1,4 +1,4 @@
-var apiUrl = 'https://api.elementh.io/'
+var apiUrl = 'http://testapi.elementh.io/'
 
 var isCrowdAddressesLoaded = null
 var web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/XQF4D1KpJZSQXYZOZxIX'))
@@ -77,6 +77,10 @@ function checkVerification (code, callback) {
 
 function getAddress (callback) {
   makeApiRequest('getAddress', 'GET', null, callback)
+}
+
+function getInit (callback) {
+  makeApiRequest('init', 'GET', null, callback)
 }
 function setPassword (data, callback) {
   makeApiRequest('setPassword', 'POST', data, callback)
