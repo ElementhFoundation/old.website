@@ -36,11 +36,13 @@ var lng = getParameterByName("lng")
 if(lng) {
   setCookie("i18next", lng)
   var newUrl = window.location.href.replace('?lng=' + lng , '')
-  console.log(newUrl)
-  window.top.location = newUrl
+  window.location.href = newUrl
 }
 
 $(function () {
+  $('#lngSelect').on('change', function() {
+    window.location.href = '?lng=' + this.value
+  })
   i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
     'debug': true,
     'fallbackLng': 'en',
