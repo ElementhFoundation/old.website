@@ -44,7 +44,7 @@ $(function () {
     window.location.href = '?lng=' + this.value
   })
   i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
-    'debug': true,
+    'debug': false,
     'fallbackLng': 'en',
     detection: {
       order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
@@ -57,6 +57,11 @@ $(function () {
     jqueryI18next.init(i18next, $);
     $('body').localize()
   });
+
+  i18next.on('languageChanged', function(lng) {
+    $('#lngSelect').find('option[value="'+ lng +'"]').prop('selected', true)
+  })
+
 
   var hash = window.location.hash.substr(1)
   if (hash) {
