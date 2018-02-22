@@ -624,12 +624,12 @@ button {
 
 #userblock {
 	position: absolute;
-	top: 22px;
-	right: 50px;
+	top: 51px;
+	right: 16px;
 	text-align: right;
 	padding-top: 0;
-	span {margin-left: 16px;}
-	a {margin-left: 16px;}
+	span {margin-left: 0;}
+	a {margin-left: 8px;}
 }
 
 #join_wl {
@@ -1265,6 +1265,25 @@ footer {
 		}
 	}
 }
+
+#userblock {
+	select {
+		font-family: 'Play', Helvetica, sans-serif;
+		color: rgba(255,255,255,.8);
+		background-color: rgba(255,255,255,0);
+		border: none;
+		font-size: 14px;
+		width: 88px;
+		z-index: 2;
+		position: relative;
+		right: -24px;
+	}
+	.select_dropdown {
+		position: relative;
+		top: 8px;
+	}
+}
+
 .dropdown_line {
 	display: none;
 	position: absolute;
@@ -1364,6 +1383,8 @@ footer {
 .icomarks { background-image: url(../img/partner/icomarks.svg); }
 
 .wiser { background-image: url(../img/partner/wiser.png); }
+
+.gmt { background-image: url(../img/partner/gmt.png); }
 
 /*----- TEAM -----*/
 

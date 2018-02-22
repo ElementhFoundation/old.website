@@ -10,6 +10,13 @@
 
 @media (min-width: 600px) {
 
+	#userblock {
+		position: absolute;
+		top: 35px;
+		right: 64px;
+		span a, span span {margin-left: 16px;}
+	}
+
 	#content.height_hd {height: 1024px;}
 
 	#profile {
@@ -471,6 +478,11 @@
 				 }
 			 }
 		 }
+	}
+
+	#userblock {
+		select {right: 0;}
+		.select_dropdown {display: none;}
 	}
 
 	#calltoaction {
