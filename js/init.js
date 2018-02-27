@@ -586,6 +586,12 @@ function init () {
         $('#howToWatchEEE').removeClass('disnone')
         $('#investors_chat').removeClass('disnone')
       }
+
+      getPrefundTokens(function (err, data) {
+        if(data){
+          $('#user_token_ico').html(data.total + ' EEE')
+        }
+      })
     }
   }
   var wallet_btc_sent_form = $('#wallet_btc_sent_form')

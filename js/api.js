@@ -98,6 +98,10 @@ function checkAirdrop (callback) {
   makeApiRequest('checkAirdrop', 'GET',null, callback)
 }
 
+function getPrefundTokens (callback) {
+  makeApiRequest('getPrefundTokens', 'GET',null, callback)
+}
+
 function setWalletETH (data, callback) {
   makeApiRequest('setWalletETH', 'POST', data, callback)
 }
