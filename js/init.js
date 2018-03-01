@@ -187,6 +187,11 @@ function init () {
   var profile_tabs = $('#profile_tabs')
   if (profile_tabs.length) {
     if (user) {
+      getReferralsInfo(function (err, data) {
+        if(data && data.total && data.total.bonus){
+          $('#user_referral_balance').html(data.total.bonus + ' ETH')
+        }
+      })
       if (user.verified) {
         if (typeof yaCounter46855911 !== 'undefined') {
           yaCounter46855911.setUserID(user.id)

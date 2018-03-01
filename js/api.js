@@ -98,6 +98,9 @@ function checkAirdrop (callback) {
   makeApiRequest('checkAirdrop', 'GET',null, callback)
 }
 
+function getReferralsInfo (callback) {
+  makeApiRequest('getReferralsInfo', 'GET',null, callback)
+}
 function getPrefundTokens (callback) {
   makeApiRequest('getPrefundTokens', 'GET',null, callback)
 }
