@@ -15,6 +15,12 @@
     <meta property="og:image" content="https://old.elementh.io/img/1200x630.jpg">
     <meta property="og:description" content="Elementh is a blockchain for e-commerce, which is a register of ownership of goods with the ability to write specialized smart contracts and use of the nomenclature standard to quickly create various decentralized and centralized applications for e-commerce.">
     <meta name="twitter:card" content="summary_large_image">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/10.3.0/i18next.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-xhr-backend/1.5.1/i18nextXHRBackend.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/2.1.0/i18nextBrowserLanguageDetector.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.min.js" defer></script>
+    <script src="{{ "js/initLangs.js" | relative_url }}" defer></script>
     {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
     {% endif %}
