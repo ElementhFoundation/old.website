@@ -84,7 +84,7 @@ function init () {
     var curDate = new Date().getTime();
 
     if (curDate < countDownDate) {
-      $('#timerTitle').html('ICO starts in:')
+      $('#timerTitle').html('Token sale starts in:')
       //$('#preico').removeClass('disnone')
     } else {
       countDownDate = null;
