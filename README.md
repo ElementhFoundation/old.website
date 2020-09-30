@@ -1,4 +1,4 @@
-# Elementh.io site
+# Elementh.io Site
 
 The theme is a fork of the [minima][1]
 
